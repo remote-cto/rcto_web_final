@@ -2,36 +2,25 @@ import React from "react";
 
 const BannerPage = () => {
   return (
-    <div className="mt-10">
-      <section className="bg-gray-50">
+    <div className="mt-10 ">
+      <section className="bg-gradient-to-r from-indigo-500 to-blue-500 mb-10">
+        <h1 className="text-3xl text-white font-extrabold sm:text-3xl px-10 ">Remote CTO</h1>
         <div className="mx-auto  lg:flex lg:h-screen lg:items-center">
           <div className="mx-auto max-w-xl text-center">
-            <h1 className="text-3xl font-extrabold sm:text-5xl">
+            <h1 className="text-3xl text-white font-extrabold sm:text-8xl">
               Leave the
-              <strong className="font-extrabold text-red-700 sm:block">
-                tech to us.{" "}
-              </strong>
+            </h1>
+            <h1 className="text-3xl text-white font-extrabold sm:text-8xl">
+              tech to us
             </h1>
 
-            <p className="mt-4 sm:text-xl/relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              illo tenetur fuga ducimus numquam ea!
-            </p>
-
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
-                className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-                href="#"
-              >
-                Get Started
-              </a>
-
-              <a
-                className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-                href="#"
+              <button
+                type="button"
+                className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2  mb-10 lg:mb-2"
               >
                 Learn More
-              </a>
+              </button>
             </div>
           </div>
         </div>
