@@ -5,6 +5,7 @@ import WhatWeOffer from "./components/WhatWeOffer";
 import RemoteCTOWay from "./components/RemoteCTOWay";
 import WhyRemoteCTO from "./components/WhyRemoteCTO";
 import WhatClientSay from "./components/WhatClientSay";
+import FooterForm from "./components/FooterForm";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
    <WhatWeOffer/>
    <WhyRemoteCTO/>
    <WhatClientSay/>
+   <FooterForm/>
    
    </div>
   );
