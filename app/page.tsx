@@ -10,6 +10,9 @@ import DeepTechResearch from "./components/DeepTechReserach";
 import DataManagement from "./components/DataManagement";
 import CyberSecurity from "./components/CyberSecurity";
 import ManagedIT from "./components/ManagedIT";
+import FractionalCTO from "./components/FractionalCTO";
+import EmergingTech from "./components/EmergingTech";
+import Revolutionize from "./components/Revolutionize";
 
 export default function Home() {
   return (
@@ -18,13 +21,18 @@ export default function Home() {
    <BannerPage/>
    <RemoteCTOWay/>
    <WhatWeOffer/>
-   <WhyRemoteCTO/>
+   <Revolutionize/>
    <WhatClientSay/>
    <DeepTechResearch/>
    <DataManagement/>
    <CyberSecurity/>
    <ManagedIT/>
+   <FractionalCTO/>
+   <EmergingTech/>
+   <WhyRemoteCTO/>
+   
    <FooterForm/>
+
    
    
    </div>
