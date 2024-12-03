@@ -48,7 +48,7 @@ const FooterForm = () => {
                                 className="text-lg mt-10 lg:text-4xl text-white underline cursor-pointer"
                                 onClick={handleRedirect}
                             >
-                                Click to schedule ->
+                                Click to schedule &gt;
                                 <h2 className="text-lg lg:text-4xl text-white underline">
                                     a free 30 min call with our founder
                                 </h2>
@@ -115,7 +115,7 @@ const FooterForm = () => {
                                         transition duration-300 ease-in-out 
                                         placeholder-gray-500"
                                         placeholder="Message"
-                                        rows="8"
+                                        
                                         id="message"
                                     ></textarea>
                                 </div>
