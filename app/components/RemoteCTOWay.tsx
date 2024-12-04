@@ -1,10 +1,11 @@
+
 "use client"
 import React, { useState } from 'react';
 import Image from "next/image";
 import { motion } from 'framer-motion';
 
 const RemoteCTOWay = () => {
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeSection, setActiveSection] = useState<number | null>(null);
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -36,6 +37,10 @@ const RemoteCTOWay = () => {
       description: "Get strategic technical leadership without the cost of a full-time CTO, tailored to your business needs."
     }
   ];
+
+  const handleSectionToggle = (index: number) => {
+    setActiveSection(prevActive => prevActive === index ? null : index);
+  };
 
   return (
     <div className="bg-gray-50">
@@ -97,7 +102,7 @@ const RemoteCTOWay = () => {
                 initial="hidden"
                 whileInView="visible"
                 whileHover="hover"
-                onClick={() => setActiveSection(activeSection === index ? null : index)}
+                onClick={() => handleSectionToggle(index)}
                 className={`p-6 rounded-lg shadow-md cursor-pointer transition-all duration-300 
                   ${activeSection === index 
                     ? 'bg-[#061BB0] text-white' 
