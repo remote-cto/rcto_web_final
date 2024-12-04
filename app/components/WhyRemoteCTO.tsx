@@ -8,14 +8,14 @@ const WhyRemoteCTO = () => {
         <div className=" lg:flex lg:items-center">
           <div className="mx-auto max-w-xl text-center">
             <h1 className="text-3xl font-extrabold sm:text-2xl">
-              <strong className="font-extrabold text-[#061BB0] text-2xl sm:block">
+              <strong className="font-extrabold text-[#061BB0]  text-xl lg:text-5xl sm:block font-mono">
                 Why Remote CTO ?
               </strong>
             </h1>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 mt-2 gap-8 max-w-7xl mx-auto">
         <div className="max-w-sm mx-auto  transition-shadow duration-300 ease-in-out">
             <Image
                src="/images/ManagedIT.jpg"
