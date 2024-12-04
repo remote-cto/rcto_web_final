@@ -2,7 +2,7 @@ import React from "react";
 
 const BannerPage = () => {
   return (
-    <div className="mt-10 ">
+    <div className="mt-10 font-mono">
       <section className="bg-gradient-to-r from-indigo-500 to-blue-500 mb-10">
         <h1 className="text-3xl text-white font-extrabold sm:text-3xl px-10 ">Remote CTO</h1>
         <div className="mx-auto  lg:flex lg:h-screen lg:items-center">

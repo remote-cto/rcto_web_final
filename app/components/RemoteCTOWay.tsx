@@ -4,11 +4,11 @@ import Image from "next/image";
 const RemoteCTOWay = () => {
   return (
     <>
-      <section className="mt-20">
+      <section className="mt-2 lg:mt-10">
         <div className="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center">
           <div className="mx-auto max-w-xl text-center">
-            <h1 className="text-3xl font-extrabold sm:text-2xl">
-              <strong className="font-extrabold text-[#061BB0] sm:block">
+            <h1 className="text-xl font-extrabold lg:text-5xl">
+              <strong className="font-extrabold text-[#061BB0] sm:block font-mono">
                 The REMOTE CTO Way
               </strong>
             </h1>

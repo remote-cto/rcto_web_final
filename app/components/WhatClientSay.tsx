@@ -20,12 +20,12 @@ const WhatClientSay: React.FC = () => {
   return (
     <section className="bg-[#f5f7ff] py-10 px-4 md:px-16 lg:px-24">
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0026ff] mb-8">
+      <h2 className="text-xl lg:text-5xl font-bold text-center text-[#0026ff] mb-8 font-mono">
         What Our Clients Say
       </h2>
 
       {/* Image */}
-      <div className="flex justify-center mb-8">
+      <div className="flex justify-center mb-3">
         <Image
           src="/images/ClientSay.png" 
           alt="Client testimonial image"

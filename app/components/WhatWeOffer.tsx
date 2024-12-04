@@ -5,18 +5,18 @@ import React from "react";
 const WhatWeOffer = () => {
   return (
     <div>
-      <section className="mb-10">
+      <section className="mt-10 mb-10">
         <div className=" lg:flex lg:items-center">
           <div className="mx-auto max-w-xl text-center">
-            <h1 className="text-3xl font-extrabold sm:text-2xl">
-              <strong className="font-extrabold text-[#061BB0] text-2xl sm:block">
+          <h1 className="text-xl font-extrabold lg:text-5xl">
+              <strong className="font-extrabold text-[#061BB0] sm:block font-mono">
                 What We Offer
               </strong>
             </h1>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-8 max-w-7xl mx-auto">
           <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300 ease-in-out">
             <Image
               src="/images/DeepTechResearch.jpg"
