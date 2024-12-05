@@ -71,10 +71,10 @@ const Page = () => {
 
           <div className="flex flex-col md:flex-row items-center mb-10">
             <div className="md:w-2/3 pr-8">
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              <h1 className="text-xl lg:text-4xl font-bold text-white mb-4 leading-tight">
                 Cyber Security Solutions
               </h1>
-              <p className="text-xl text-gray-200 mb-6">
+              <p className="text-base lg:text-xl text-gray-200 mb-6">
                 Remote CTO provides cutting-edge cybersecurity services designed
                 to fortify your digital ecosystem against evolving threats.
               </p>
