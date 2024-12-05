@@ -19,10 +19,10 @@ const Revolutionize = () => {
         </div>
         
         <TypingAnimation
-      className="text-4xl font-bold text-center text-[#eaecf2] font-mono"
+      className="text-base lg:text-4xl font-bold text-center text-[#eaecf2] font-mono"
       text="Revolutionize your business with REMOTE CTO."
     />
-        <h3 className="text-3xl font-bold text-center text-[#eaecf2] mt-10 font-mono">
+        <h3 className=" text-base lg:text-3xl font-bold text-center text-[#eaecf2] mt-10 font-mono">
           Seamlessly blend data management, cybersecurity, and digital
           transformation for unparalleled success!
         </h3>
