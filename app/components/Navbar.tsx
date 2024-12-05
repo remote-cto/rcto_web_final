@@ -197,7 +197,7 @@ const Navbar = () => {
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#27448D] 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                    href="workshop"
+                    href="/services"
                   >
                     <GrWorkshop className="mr-2" />
                     SERVICES
