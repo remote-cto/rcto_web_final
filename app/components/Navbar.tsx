@@ -30,7 +30,7 @@ const Navbar = () => {
   }, []);
   if (isLoading) {
     return (
-      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white bg-opacity-80 z-50">
+      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white bg-opacity-80 z-50 font-mono">
         <motion.div
           className="flex items-center justify-center"
           initial={{ scale: 0 }}

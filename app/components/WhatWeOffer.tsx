@@ -95,7 +95,7 @@ const WhatWeOffer = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="bg-gradient-to-br from-blue-50 to-white py-16"
+      className="bg-gradient-to-br from-blue-50 to-white py-16 font-mono"
     >
       <div className="container mx-auto px-4">
         <motion.h1 

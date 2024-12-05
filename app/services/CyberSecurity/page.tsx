@@ -57,7 +57,7 @@ const Page = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-indigo-500 to-blue-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-r from-indigo-500 to-blue-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-mono">
       <div className="max-w-6xl mx-auto bg-black rounded-2xl shadow-2xl overflow-hidden">
         <div className="p-6 sm:p-10 relative">
           {/* Back button positioned in top right */}

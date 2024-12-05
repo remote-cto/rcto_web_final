@@ -47,7 +47,7 @@ const WhyRemoteCTO = () => {
         transition={{ duration: 0.6 }}
         className="container mx-auto px-4"
       >
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 ">
           <motion.h1 
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -90,10 +90,10 @@ const WhyRemoteCTO = () => {
               </div>
               
               <div className="p-6 text-center">
-                <h2 className="text-xl font-bold text-[#061BB0] mb-3">
+                <h2 className="text-xl font-bold text-[#061BB0] mb-3 font-mono">
                   {card.title}
                 </h2>
-                <p className="text-gray-700">
+                <p className="text-gray-700 font-mono">
                   {card.description}
                 </p>
                 

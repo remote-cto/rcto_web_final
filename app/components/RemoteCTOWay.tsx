@@ -47,9 +47,9 @@ const RemoteCTOWay = () => {
       <motion.section 
         initial="hidden"
         animate="visible"
-        className="pt-10 pb-16"
+        className="pt-10 pb-16 "
       >
-        <div className="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center">
+        <div className="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center font-mono">
           <div className="mx-auto max-w-xl text-center">
             <motion.h1 
               initial={{ opacity: 0, scale: 0.9 }}
@@ -69,7 +69,7 @@ const RemoteCTOWay = () => {
             initial="hidden"
             animate="visible"
             variants={sectionVariants}
-            className="text-gray-600 leading-relaxed"
+            className="text-gray-600 leading-relaxed font-mono"
           >
             Remote CTO is a pioneering deep technology consulting and implementation company that offers fractional CTO services to businesses of all sizes. Based in Ahmedabad, India's first Heritage City, we pride ourselves on our deep tech advisory and digital transformation expertise.
           </motion.p>
@@ -108,8 +108,8 @@ const RemoteCTOWay = () => {
                     ? 'bg-[#061BB0] text-white' 
                     : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
               >
-                <h3 className="text-xl font-bold mb-3">{section.title}</h3>
-                <p className={`text-sm transition-all duration-300 
+                <h3 className="text-xl font-bold mb-3 font-mono">{section.title}</h3>
+                <p className={`text-sm transition-all duration-300 font-mono
                   ${activeSection === index ? 'text-gray-200' : 'text-gray-600'}`}>
                   {section.description}
                 </p>
