@@ -4,9 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const WhatWeOffer = () => {
-  // Entrance animation variants
+  // Existing variants remain the same
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -139,11 +140,25 @@ const WhatWeOffer = () => {
                 <div className="mt-auto">
                   <Link 
                     href={service.link}
-                    className="block w-full bg-[#061BB0] text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 ease-in-out text-center"
+                    className="group relative block w-full"
                   >
-                    Learn More
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center justify-center bg-[#061BB0] text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 ease-in-out"
+                    >
+                      <span className="mr-2">Learn More</span>
+                      <motion.span
+                        initial={{ x: 0 }}
+                        animate={{ x: 0 }}
+                        whileHover={{ x: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                        className="inline-block"
+                      >
+                        <ArrowRight className="w-5 h-5" />
+                      </motion.span>
+                    </motion.div>
                   </Link>
-                  
                 </div>
               </div>
             </motion.div>
