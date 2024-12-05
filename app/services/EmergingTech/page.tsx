@@ -1,25 +1,27 @@
-import React from "react";
+import React from 'react';
 
-const DataManagement = () => {
+const  Page = () => {
   return (
     <div>
-      <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
+          <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
         <h1 className=" text-xl lg:text-4xl text-white mb-4">
-          Data Management{" "}
+          Emerging Tech Training{" "}
         </h1>
         <p className="text-white mb-5">
-          Remote CTO offers a wide array of data management services to help
-          businesses harness the full potential of their data. Some of our
-          Services include
+          Our Emerging Tech Training Services are designed to equip businesses
+          and professionals with the skills and knowledge needed to thrive in
+          the rapidly evolving tech landscape. We offer comprehensive training
+          in cutting-edge technologies helping participants understand and
+          implement these innovations in real- world scenarios
         </p>
         <ul className="list-none ">
           {[
-            "Data Processing",
-            "Data Storage Solutions",
-            "Data Analysis and Visualization",
-            "Data Compliance and Governance",
-            "Data Advisory Services",
-            "AI Model Training ",
+            "Hand-on Learning",
+            "Expert Led Sessions",
+            "Customized Programs",
+            "Future-Proofing Skills",
+            "Innovation and Digital Transformation Focus",
+            
           ].map((text, index) => (
             <li
               className="flex items-start transition-transform transform  hover:bg-black hover:shadow-md p-2 rounded-md"
@@ -46,8 +48,9 @@ const DataManagement = () => {
           ))}
         </ul>
       </div>
+      
     </div>
   );
-};
+}
 
-export default DataManagement;
+export default Page;

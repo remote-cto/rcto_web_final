@@ -1,26 +1,25 @@
-import React from "react";
+import React from 'react';
 
-const DeepTechResearch: React.FC = () => {
+const Page = () => {
   return (
     <div>
-      <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
+        <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
         <h1 className=" text-xl lg:text-4xl text-white mb-4">
-          Deep Tech Research, Consulting and Implementation{" "}
+          Cyber Security Solutions{" "}
         </h1>
         <p className="text-white mb-5">
-          At Remote CTO, we offer comprehensive deep tech research, consulting,
-          and implementation services to help businesses navigate and leverage
-          the most advanced technologies in today’s digital landscape.
+          Remote CTO offers comprehensive cybersecurity services designed to
+          protect businesses from evolving digital threats. Some of our Services
+          include
         </p>
         <ul className="list-none ">
           {[
-            "AI & Machine Learning Implementation",
-            "AI Chatbots and Virtual Assistants",
-            "Advanced Robotics and Automation",
-            "Real-Time Computing Solutions",
-            "Advanced Robotics and Automation",
-            "Smart Systems and IoT",
-            "Quantum Computing Solutions",
+            "Security Audits",
+            "Vulnerability Assessments",
+            "Robust end point protection against Malware and other threats",
+            "Data Encryption Services",
+            "Incident Response Advisory Services",
+            "Cyber Security Training to Business",
           ].map((text, index) => (
             <li
               className="flex items-start transition-transform transform  hover:bg-black hover:shadow-md p-2 rounded-md"
@@ -47,8 +46,9 @@ const DeepTechResearch: React.FC = () => {
           ))}
         </ul>
       </div>
+      
     </div>
   );
-};
+}
 
-export default DeepTechResearch;
+export default Page;

@@ -1,25 +1,25 @@
 import React from "react";
 
-const CyberSecurity = () => {
+const Page = () => {
   return (
     <div>
       <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
         <h1 className=" text-xl lg:text-4xl text-white mb-4">
-          Cyber Security Solutions{" "}
+          Data Management{" "}
         </h1>
         <p className="text-white mb-5">
-          Remote CTO offers comprehensive cybersecurity services designed to
-          protect businesses from evolving digital threats. Some of our Services
-          include
+          Remote CTO offers a wide array of data management services to help
+          businesses harness the full potential of their data. Some of our
+          Services include
         </p>
         <ul className="list-none ">
           {[
-            "Security Audits",
-            "Vulnerability Assessments",
-            "Robust end point protection against Malware and other threats",
-            "Data Encryption Services",
-            "Incident Response Advisory Services",
-            "Cyber Security Training to Business",
+            "Data Processing",
+            "Data Storage Solutions",
+            "Data Analysis and Visualization",
+            "Data Compliance and Governance",
+            "Data Advisory Services",
+            "AI Model Training ",
           ].map((text, index) => (
             <li
               className="flex items-start transition-transform transform  hover:bg-black hover:shadow-md p-2 rounded-md"
@@ -50,4 +50,4 @@ const CyberSecurity = () => {
   );
 };
 
-export default CyberSecurity;
+export default Page;

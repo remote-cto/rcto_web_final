@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -54,32 +55,38 @@ const WhatWeOffer = () => {
     {
       image: "/images/DeepTechResearch.jpg",
       title: "Deep Tech Research, Consulting and Implementation",
-      description: "Our deep tech research and consulting help businesses harness advanced technologies to drive innovation and growth. Our expertise in deep tech like AI, blockchain, IoT etc ensures that IT infrastructure is optimized for speed, security, and scalability."
+      description: "Our deep tech research and consulting help businesses harness advanced technologies to drive innovation and growth. Our expertise in deep tech like AI, blockchain, IoT etc ensures that IT infrastructure is optimized for speed, security, and scalability.",
+      link: "/services/DeepTechResearch"
     },
     {
       image: "/images/DataManagement.jpg",
       title: "Data Management",
-      description: "Our Data management services handle everything accurately from simple to complex data. Our expertise transforms raw data into valuable insights, driving informed decision-making and innovation."
+      description: "Our Data management services handle everything accurately from simple to complex data. Our expertise transforms raw data into valuable insights, driving informed decision-making and innovation.",
+      link: "/services/DataManagement"
     },
     {
       image: "/images/CyberSecurity.jpg",
       title: "Cyber Security Solutions",
-      description: "Our robust cybersecurity solutions protect businesses from evolving digital threats. Our services ensure the integrity and confidentiality of your data, safeguarding your digital assets against cyber attacks."
+      description: "Our robust cybersecurity solutions protect businesses from evolving digital threats. Our services ensure the integrity and confidentiality of your data, safeguarding your digital assets against cyber attacks.",
+      link: "/services/CyberSecurity"
     },
     {
       image: "/images/ManagedIT.jpg",
       title: "Managed IT Services",
-      description: "Our Managed IT Services are designed to provide comprehensive, proactive support for all your IT needs, allowing your business to thrive without the burden of managing complex technology in-house."
+      description: "Our Managed IT Services are designed to provide comprehensive, proactive support for all your IT needs, allowing your business to thrive without the burden of managing complex technology in-house.",
+      link: "/services/ManagedITServices"
     },
     {
       image: "/images/FractionalCTO.jpg",
       title: "Fractional CTO Services",
-      description: "We provide businesses with on-demand technology leadership without the full-time commitment. We offer strategic guidance in areas like technology roadmap, digital transformation, and scalable IT infrastructure."
+      description: "We provide businesses with on-demand technology leadership without the full-time commitment. We offer strategic guidance in areas like technology roadmap, digital transformation, and scalable IT infrastructure.",
+      link: "/services/FractionalCTO"
     },
     {
       image: "/images/Emerging.jpg",
       title: "Emerging Tech Training",
-      description: "We offer hands-on training in cutting-edge technologies. Our customized programs are designed to build deep technical expertise, helping teams leverage emerging technologies for business growth."
+      description: "We offer hands-on training in cutting-edge technologies. Our customized programs are designed to build deep technical expertise, helping teams leverage emerging technologies for business growth.",
+      link: "/services/EmergingTech"
     }
   ];
 
@@ -103,7 +110,7 @@ const WhatWeOffer = () => {
             <motion.div 
               key={index}
               variants={cardVariants}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 flex flex-col"
             >
               <div className="relative w-full h-56 overflow-hidden">
                 <motion.div
@@ -122,13 +129,22 @@ const WhatWeOffer = () => {
                   />
                 </motion.div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-grow flex flex-col">
                 <h2 className="text-xl font-bold text-[#061BB0] mb-3">
                   {service.title}
                 </h2>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-4 flex-grow">
                   {service.description}
                 </p>
+                <div className="mt-auto">
+                  <Link 
+                    href={service.link}
+                    className="block w-full bg-[#061BB0] text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 ease-in-out text-center"
+                  >
+                    Learn More
+                  </Link>
+                  
+                </div>
               </div>
             </motion.div>
           ))}

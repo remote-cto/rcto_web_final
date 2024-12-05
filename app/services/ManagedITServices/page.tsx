@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const ManagedIT = () => {
+const Page = () => {
   return (
     <div>
-      <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
+        <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
         <h1 className=" text-xl lg:text-4xl text-white mb-4">
           Managed IT Services{" "}
         </h1>
@@ -46,8 +46,9 @@ const ManagedIT = () => {
           ))}
         </ul>
       </div>
+      
     </div>
   );
-};
+}
 
-export default ManagedIT;
+export default Page;

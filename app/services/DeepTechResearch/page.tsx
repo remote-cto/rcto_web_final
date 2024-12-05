@@ -1,27 +1,26 @@
-import React from "react";
+import React from 'react';
 
-const EmergingTech = () => {
+const Page = () => {
   return (
     <div>
-      <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
+        <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
         <h1 className=" text-xl lg:text-4xl text-white mb-4">
-          Emerging Tech Training{" "}
+          Deep Tech Research, Consulting and Implementation{" "}
         </h1>
         <p className="text-white mb-5">
-          Our Emerging Tech Training Services are designed to equip businesses
-          and professionals with the skills and knowledge needed to thrive in
-          the rapidly evolving tech landscape. We offer comprehensive training
-          in cutting-edge technologies helping participants understand and
-          implement these innovations in real- world scenarios
+          At Remote CTO, we offer comprehensive deep tech research, consulting,
+          and implementation services to help businesses navigate and leverage
+          the most advanced technologies in today’s digital landscape.
         </p>
         <ul className="list-none ">
           {[
-            "Hand-on Learning",
-            "Expert Led Sessions",
-            "Customized Programs",
-            "Future-Proofing Skills",
-            "Innovation and Digital Transformation Focus",
-            
+            "AI & Machine Learning Implementation",
+            "AI Chatbots and Virtual Assistants",
+            "Advanced Robotics and Automation",
+            "Real-Time Computing Solutions",
+            "Advanced Robotics and Automation",
+            "Smart Systems and IoT",
+            "Quantum Computing Solutions",
           ].map((text, index) => (
             <li
               className="flex items-start transition-transform transform  hover:bg-black hover:shadow-md p-2 rounded-md"
@@ -48,8 +47,9 @@ const EmergingTech = () => {
           ))}
         </ul>
       </div>
+      
     </div>
   );
-};
+}
 
-export default EmergingTech;
+export default Page;
