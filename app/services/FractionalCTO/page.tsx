@@ -1,57 +1,134 @@
-import React from 'react';
+"use client";
+import React, { useState } from "react";
+import {
+  DollarSign,
+  Briefcase,
+  Users,
+  PieChart,
+  Code,
+  ArrowLeft,
+} from "lucide-react";
 
 const Page = () => {
+  const [activeService, setActiveService] = useState<number | null>(null);
+
+  const services = [
+    {
+      text: "On-Demand Tech Leadership",
+      icon: Briefcase,
+      description:
+        "Flexible, high-level technology leadership tailored to your business needs, providing strategic guidance without full-time commitment.",
+    },
+    {
+      text: "Digital Strategy Development",
+      icon: PieChart,
+      description:
+        "Comprehensive technology roadmap creation, helping businesses navigate digital transformation with targeted, actionable strategies.",
+    },
+    {
+      text: "Cost-Effective Tech Solutions",
+      icon: DollarSign,
+      description:
+        "Optimized technology investments that maximize value, reduce overhead, and align technical resources with business objectives.",
+    },
+    {
+      text: "Vendor and Project Management",
+      icon: Code,
+      description:
+        "Expert oversight of technology vendors and project lifecycles, ensuring efficient execution and alignment with business goals.",
+    },
+    {
+      text: "Team Hiring and Leadership",
+      icon: Users,
+      description:
+        "Strategic talent acquisition and team development, fostering a high-performance technology workforce aligned with your vision.",
+    },
+  ];
+
+  const handleBack = () => {
+    history.back()
+  };
+
   return (
-    <div>
-         <div className="max-w-5xl mx-auto mt-2 p-5 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg shadow-lg mb-10">
-        <h1 className=" text-xl lg:text-4xl text-white mb-4">
-        Fractional CTO Services{" "}
-        </h1>
-        <p className="text-white mb-5">
-        Remote CTO provide businesses with on-demand technology
-leadership without the full-time commitment. We offer strategic
-guidance in areas like technology roadmap, digital transformation,
-and scalable IT infrastructure. Our services are tailored to meet the
-needs of businesses at any stage, allowing you to access top-tier
-technical expertise for projects or part-time support
-        </p>
-        <ul className="list-none ">
-          {[
-            "On-Demand Top-tier and high-level Expertise Tech Solutions",
-            "Strategic Technology Guidance",
-            "Cost-Effective Solutions",
-            "Digital Strategy Development",
-            "Vendor and Project Management",
-            "Team Hiring, Leadership and Mentorship",
-          ].map((text, index) => (
-            <li
-              className="flex items-start transition-transform transform  hover:bg-black hover:shadow-md p-2 rounded-md"
-              key={index}
-            >
-              <svg
-                className="w-8 h-8 text-[#f3f8f8] font-bold flex-shrink-0 mr-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span className="text-[#f2f6f6] sm:text-lg md:text-xl font-semibold leading-relaxed">
-                {text}
-              </span>
-            </li>
-          ))}
-        </ul>
+    <div className="bg-gradient-to-r from-indigo-500 to-blue-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-mono">
+      <div className="max-w-6xl mx-auto bg-black rounded-2xl shadow-2xl overflow-hidden">
+        <div className="p-6 sm:p-10 relative">
+          <button 
+            onClick={handleBack}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-300"
+            aria-label="Go back"
+          >
+            <ArrowLeft size={32} />
+          </button>
+
+          <div className="flex flex-col md:flex-row items-center mb-10">
+            <div className="md:w-2/3 pr-8">
+              <h1 className="text-xl lg:text-4xl font-bold text-white mb-4 leading-tight">
+                Fractional CTO Services
+              </h1>
+              <p className="text-base lg:text-xl text-gray-200 mb-6">
+                Remote CTO provides businesses with on-demand technology leadership, strategic guidance, and scalable IT infrastructure solutions tailored to meet the unique needs of your organization.
+              </p>
+            </div>
+            <div className="md:w-1/3 hidden md:block">
+              <Briefcase size={200} className="text-blue-400 opacity-30" />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {services.map((service, index) => {
+              const ServiceIcon = service.icon;
+              return (
+                <div
+                  key={index}
+                  className={`
+                    p-6 rounded-xl transition-all duration-300 cursor-pointer
+                    ${
+                      activeService === index
+                        ? "bg-blue-600/30 ring-2 ring-blue-500"
+                        : "bg-white/10 hover:bg-white/20"
+                    }
+                  `}
+                  onClick={() =>
+                    setActiveService(activeService === index ? null : index)
+                  }
+                >
+                  <div className="flex items-center mb-4">
+                    <ServiceIcon
+                      className={`
+                        mr-4 flex-shrink-0
+                        ${
+                          activeService === index
+                            ? "text-blue-400"
+                            : "text-gray-400"
+                        }
+                      `}
+                      size={40}
+                    />
+                    <h3
+                      className={`
+                      text-base lg:text-xl font-semibold
+                      ${
+                        activeService === index ? "text-white" : "text-gray-200"
+                      }
+                    `}
+                    >
+                      {service.text}
+                    </h3>
+                  </div>
+                  {activeService === index && (
+                    <p className="text-gray-300 animate-fade-in">
+                      {service.description}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
-      
     </div>
   );
-}
+};
 
 export default Page;

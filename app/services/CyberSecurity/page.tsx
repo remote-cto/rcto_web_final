@@ -116,7 +116,7 @@ const Page = () => {
                     />
                     <h3
                       className={`
-                      text-xl font-semibold
+                      text-base lg:text-xl font-semibold
                       ${
                         activeService === index ? "text-white" : "text-gray-200"
                       }
