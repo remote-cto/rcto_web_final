@@ -2,8 +2,7 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-
-import WhatWeOffer from '../components/WhatWeOffer';
+import RemoteCTOWay from '../components/RemoteCTOWay';
 
 const Page = () => {
   const router = useRouter();
@@ -22,7 +21,7 @@ const Page = () => {
         <ArrowLeft size={24} className="text-gray-700" />
         <span>Go Back</span>
       </button>
-      <WhatWeOffer/>
+      <RemoteCTOWay/>
     </div>
   );
 }
