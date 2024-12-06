@@ -5,6 +5,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { CoolMode } from "../../components/ui/cool-mode";
 
 const WhatWeOffer = () => {
   // Existing variants remain the same
@@ -138,6 +139,7 @@ const WhatWeOffer = () => {
                   {service.description}
                 </p>
                 <div className="mt-auto">
+                <CoolMode>
                   <Link 
                     href={service.link}
                     className="group relative block w-full"
@@ -147,7 +149,9 @@ const WhatWeOffer = () => {
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center justify-center bg-[#061BB0] text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 ease-in-out"
                     >
+                      
                       <span className="mr-2">Learn More</span>
+                 
                       <motion.span
                         initial={{ x: 0 }}
                         animate={{ x: 0 }}
@@ -159,6 +163,7 @@ const WhatWeOffer = () => {
                       </motion.span>
                     </motion.div>
                   </Link>
+                  </CoolMode>
                 </div>
               </div>
             </motion.div>

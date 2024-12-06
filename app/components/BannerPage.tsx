@@ -2,6 +2,10 @@
 "use client"
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
+import Meteors from "../../components/ui/meteors";
+import { CoolMode } from "../../components/ui/cool-mode";
+
+
 
 const BannerPage = () => {
   const learnMoreRef = useRef<HTMLDivElement>(null);
@@ -85,6 +89,7 @@ const BannerPage = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
+               <CoolMode>
               <button
                 onClick={handleLearnMore}
                 type="button"
@@ -92,6 +97,7 @@ const BannerPage = () => {
               >
                 Learn More
               </button>
+              </CoolMode>
             </motion.div>
           </div>
         </div>
