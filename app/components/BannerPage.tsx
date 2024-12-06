@@ -8,20 +8,21 @@ import { CoolMode } from "../../components/ui/cool-mode";
 import Image from 'next/image';
 
 const BannerPage = () => {
+  // Create a ref for the learn more section
   const learnMoreSectionRef = useRef<HTMLDivElement>(null);
 
+  // Function to handle smooth scrolling
   const scrollToLearnMore = () => {
     learnMoreSectionRef.current?.scrollIntoView({ 
-      behavior: 'smooth',
-      block: 'start' 
+      behavior: 'smooth' 
     });
   };
 
   return (
-    <div className="relative">
-      <section className="bg-gradient-to-r from-indigo-500 to-blue-500 min-h-screen relative z-10">
+    <div className="mt-10 font-mono overflow-hidden relative">
+      <section className="bg-gradient-to-r from-indigo-500 to-blue-500 mb-10 relative z-10">
         <motion.h1 
-          className="text-2xl lg:text-5xl text-white font-extrabold px-10 pt-6 font-mono"
+          className="text-2xl lg:text-5xl text-white font-extrabold px-10"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -29,7 +30,7 @@ const BannerPage = () => {
           Remote CTO
         </motion.h1>
 
-        <div className="mx-auto lg:flex lg:min-h-screen lg:items-center">
+        <div className="mx-auto lg:flex lg:h-screen lg:items-center">
           <div className="mx-auto max-w-xl text-center">
             <div className="flex items-center justify-center space-x-8 mb-4">
               <motion.div
@@ -77,7 +78,7 @@ const BannerPage = () => {
                   onClick={scrollToLearnMore}
                   className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-xl rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
-                  Get Started
+                  Learn More
                 </button>
               </CoolMode>
             </motion.div>
@@ -85,9 +86,18 @@ const BannerPage = () => {
         </div>
         <GridPattern
           squares={[
-            [4, 4], [5, 1], [8, 2], [5, 3], [5, 5],
-            [10, 10], [12, 15], [15, 10], [10, 15],
-            [15, 10], [10, 15], [15, 10],
+            [4, 4],
+            [5, 1],
+            [8, 2],
+            [5, 3],
+            [5, 5],
+            [10, 10],
+            [12, 15],
+            [15, 10],
+            [10, 15],
+            [15, 10],
+            [10, 15],
+            [15, 10],
           ]}
           className={cn(
             "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
@@ -97,7 +107,15 @@ const BannerPage = () => {
       </section>
 
       {/* Learn More Section */}
-      
+      <div 
+        ref={learnMoreSectionRef} 
+        className="p-10 bg-gray-100"
+      >
+        <div>
+          <h2 className="text-2xl font-bold mb-4">About Remote CTO</h2>
+          <p>Your technology strategy, managed remotely with expertise and precision.</p>
+        </div>
+      </div>
     </div>
   );
 };

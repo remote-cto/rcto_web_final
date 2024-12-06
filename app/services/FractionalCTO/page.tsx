@@ -8,6 +8,8 @@ import {
   Code,
   ArrowLeft,
 } from "lucide-react";
+import { CoolMode } from "../../../components/ui/cool-mode";
+
 
 const Page = () => {
   const [activeService, setActiveService] = useState<number | null>(null);
@@ -53,6 +55,7 @@ const Page = () => {
     <div className="bg-gradient-to-r from-indigo-500 to-blue-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-mono">
       <div className="max-w-6xl mx-auto bg-black rounded-2xl shadow-2xl overflow-hidden">
         <div className="p-6 sm:p-10 relative">
+          <CoolMode>
           <button 
             onClick={handleBack}
             className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors duration-300"
@@ -60,6 +63,7 @@ const Page = () => {
           >
             <ArrowLeft size={32} />
           </button>
+          </CoolMode>
 
           <div className="flex flex-col md:flex-row items-center mb-10">
             <div className="md:w-2/3 pr-8">
