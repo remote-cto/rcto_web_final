@@ -48,21 +48,22 @@ const Navbar = () => {
       <header className="bg-gray-100 shadow-md mt-2">
         <div className="mx-auto max-w-screen-xl px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex h-30 lg:h-27 items-center justify-between">
-            <div className="flex-1 md:flex md:items-center md:gap-12">
+          <div className="flex-1 md:flex md:items-center md:gap-12">
               <motion.div
-                className="block text-teal-600"
+                className="block text-teal-600  items-center"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link href="/">
-                  {/* <Image
-                    src="/logoxworks.png"
-                    width={100}
-                    height={100}
+                <Link href="/" className="flex items-center">
+                  <Image
+                    src="/images/RCTO.jpg"
+                    width={30}
+                    height={30}
                     alt="logo image"
-                    className="mt-2 mb-2"
-                  /> */}
+                    className="mr-2"
+                  />
+                  <span className="font-bold text-[#27448D] text-lg">Remote CTO</span>
                 </Link>
               </motion.div>
             </div>
