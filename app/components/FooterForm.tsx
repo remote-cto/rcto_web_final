@@ -49,7 +49,7 @@ const FooterForm = () => {
                                 onClick={handleRedirect}
                             >
                                 Click to schedule &gt;
-                                <h2 className="text-lg lg:text-4xl text-white underline">
+                                <h2 className="text-lg lg:text-3xl text-white underline">
                                     a free 30 min call with our founder
                                 </h2>
                             </div>

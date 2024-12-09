@@ -8,47 +8,18 @@ import { CoolMode } from "../../components/ui/cool-mode";
 import Image from "next/image";
 import Navbar from "./Navbar";
 
-const BannerPage = () => {
-  const learnMoreSectionRef = useRef<HTMLDivElement>(null);
-
-  // State to track screen size
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Update the state based on screen size
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as needed
-    };
-
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+const BannerPage = ({ remoteCTOWayRef }: { remoteCTOWayRef: React.RefObject<HTMLDivElement> }) => {
   const scrollToLearnMore = () => {
-    if (isMobile) {
-      learnMoreSectionRef.current?.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
+    remoteCTOWayRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (
     <div className="font-mono overflow-hidden relative">
       <section className="bg-gradient-to-r from-indigo-500 to-blue-500 mb-10 relative z-10">
-      <Navbar/>
-        {/* <motion.h1
-          className="text-2xl lg:text-5xl text-white font-extrabold px-10"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Remote CTO
-        </motion.h1> */}
-
+        <Navbar/>
         <div className="mx-auto lg:flex lg:h-screen lg:items-center">
-        
           <div className="mx-auto max-w-xl text-center">
             <div className="flex items-center justify-center space-x-8 mb-4">
               <motion.div
@@ -127,8 +98,6 @@ const BannerPage = () => {
           }}
         />
       </section>
-
-      {/* Learn More Section */}
     </div>
   );
 };

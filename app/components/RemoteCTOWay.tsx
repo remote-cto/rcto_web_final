@@ -1,12 +1,9 @@
-
 "use client"
-import React, { useState } from 'react';
+import React, { forwardRef } from 'react';
 import Image from "next/image";
 import { motion } from 'framer-motion';
 
-const RemoteCTOWay = () => {
-  const [activeSection, setActiveSection] = useState<number | null>(null);
-
+const RemoteCTOWay = forwardRef<HTMLDivElement>((props, ref) => {
   const sectionVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -23,14 +20,8 @@ const RemoteCTOWay = () => {
     }
   };
 
-  
-
-  const handleSectionToggle = (index: number) => {
-    setActiveSection(prevActive => prevActive === index ? null : index);
-  };
-
   return (
-    <div className="bg-gray-50">
+    <div ref={ref} className="bg-gray-50">
       <motion.section 
         initial="hidden"
         animate="visible"
@@ -58,7 +49,8 @@ const RemoteCTOWay = () => {
             variants={sectionVariants}
             className="text-gray-600 leading-relaxed font-mono"
           >
-Remote CTO is a trailblazing deep-tech IT solutions provider specializing in Data Management, Cybersecurity, and AI. Our cutting-edge fractional CTO services empower businesses of all sizes with unmatched expertise in digital transformation, strategic technology advisory, and leadership. Headquartered in Ahmedabad, India’s first UNESCO Heritage City, we are redefining innovation through our commitment to excellence in deep technology solutions.          </motion.p>
+            Remote CTO is a trailblazing deep-tech IT solutions provider specializing in Data Management, Cybersecurity, and AI. Our cutting-edge fractional CTO services empower businesses of all sizes with unmatched expertise in digital transformation, strategic technology advisory, and leadership. Headquartered in Ahmedabad, India's first UNESCO Heritage City, we are redefining innovation through our commitment to excellence in deep technology solutions.
+          </motion.p>
         </div>
 
         <div className="lg:w-1/2 mt-6 lg:mt-0">
@@ -77,10 +69,10 @@ Remote CTO is a trailblazing deep-tech IT solutions provider specializing in Dat
           </motion.div>
         </div>
       </section>
-
-     
     </div>
   );
-};
+});
+
+RemoteCTOWay.displayName = 'RemoteCTOWay';
 
 export default RemoteCTOWay;

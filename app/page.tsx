@@ -1,4 +1,6 @@
-import Navbar from "./components/Navbar";
+
+"use client"
+import React, { useRef } from 'react';
 import BannerPage from "./components/BannerPage";
 import WhatWeOffer from "./components/WhatWeOffer";
 import RemoteCTOWay from "./components/RemoteCTOWay";
@@ -8,12 +10,14 @@ import FooterForm from "./components/FooterForm";
 import Revolutionize from "./components/Revolutionize";
 import ScrollToTopButton from "./components/ScrollToTopButton"; // Add this import
 
+
 export default function Home() {
+  const remoteCTOWayRef = useRef<HTMLDivElement>(null);
   return (
-    <div className="min-h-full">
+    <div className='min-h-full'>
       {/* <Navbar /> */}
-      <BannerPage />
-      <RemoteCTOWay />
+      <BannerPage remoteCTOWayRef={remoteCTOWayRef} />
+      <RemoteCTOWay ref={remoteCTOWayRef} />
       <WhatWeOffer />
       <Revolutionize />
       <WhatClientSay />
