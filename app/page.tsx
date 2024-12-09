@@ -11,7 +11,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton"; // Add this impo
 export default function Home() {
   return (
     <div className="min-h-full">
-      <Navbar />
+      {/* <Navbar /> */}
       <BannerPage />
       <RemoteCTOWay />
       <WhatWeOffer />

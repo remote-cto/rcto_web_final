@@ -34,7 +34,7 @@ const RemoteCTOWay = () => {
       <motion.section 
         initial="hidden"
         animate="visible"
-        className="pt-10 pb-16 "
+        className="pt-10 pb-6 "
       >
         <div className="mx-auto max-w-screen-xl px-4 lg:flex lg:items-center font-mono">
           <div className="mx-auto max-w-xl text-center">
@@ -42,7 +42,7 @@ const RemoteCTOWay = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl font-extrabold text-[#061BB0] sm:block font-mono"
+              className="text-center text-4xl md:text-5xl font-extrabold mb-2 text-[#061BB0] tracking-tight font-mono"
             >
               The REMOTE CTO Way
             </motion.h1>
@@ -58,8 +58,7 @@ const RemoteCTOWay = () => {
             variants={sectionVariants}
             className="text-gray-600 leading-relaxed font-mono"
           >
-            Remote CTO is a pioneering deep technology consulting and implementation company that offers fractional CTO services to businesses of all sizes. Based in Ahmedabad, India's first Heritage City, we pride ourselves on our deep tech advisory and digital transformation expertise.
-          </motion.p>
+Remote CTO is a trailblazing deep-tech IT solutions provider specializing in Data Management, Cybersecurity, and AI. Our cutting-edge fractional CTO services empower businesses of all sizes with unmatched expertise in digital transformation, strategic technology advisory, and leadership. Headquartered in Ahmedabad, India’s first UNESCO Heritage City, we are redefining innovation through our commitment to excellence in deep technology solutions.          </motion.p>
         </div>
 
         <div className="lg:w-1/2 mt-6 lg:mt-0">
