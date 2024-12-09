@@ -57,9 +57,9 @@ const Navbar = () => {
               >
                 <Link href="/" className="flex items-center">
                   <Image
-                    src="/images/RCTO.jpg"
-                    width={30}
-                    height={30}
+                    src="/images/RCTO.png"
+                    width={60}
+                    height={60}
                     alt="logo image"
                     className="mr-2"
                   />
