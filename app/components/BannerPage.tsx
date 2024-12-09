@@ -128,12 +128,7 @@ const BannerPage = () => {
       </section>
 
       {/* Learn More Section */}
-      <div ref={learnMoreSectionRef} className="p-10 bg-gray-100">
-        <div>
-          <h2 className="text-2xl font-bold mb-4">About Remote CTO</h2>
-          <p>Your technology strategy, managed remotely with expertise and precision.</p>
-        </div>
-      </div>
+    
     </div>
   );
 };

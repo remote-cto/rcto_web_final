@@ -23,20 +23,7 @@ const RemoteCTOWay = () => {
     }
   };
 
-  const sections = [
-    {
-      title: "Deep Technology Consulting",
-      description: "We provide cutting-edge advisory services in emerging technologies, helping businesses stay ahead of the digital curve."
-    },
-    {
-      title: "Digital Transformation",
-      description: "Our expertise enables seamless digital transformation, guiding companies through complex technological transitions."
-    },
-    {
-      title: "Fractional CTO Services",
-      description: "Get strategic technical leadership without the cost of a full-time CTO, tailored to your business needs."
-    }
-  ];
+  
 
   const handleSectionToggle = (index: number) => {
     setActiveSection(prevActive => prevActive === index ? null : index);
@@ -92,32 +79,7 @@ const RemoteCTOWay = () => {
         </div>
       </section>
 
-      <section className="mt-16 bg-white py-12">
-        <div className="mx-auto max-w-screen-xl px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            {sections.map((section, index) => (
-              <motion.div
-                key={index}
-                variants={sectionVariants}
-                initial="hidden"
-                whileInView="visible"
-                whileHover="hover"
-                onClick={() => handleSectionToggle(index)}
-                className={`p-6 rounded-lg shadow-md cursor-pointer transition-all duration-300 
-                  ${activeSection === index 
-                    ? 'bg-[#061BB0] text-white' 
-                    : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-              >
-                <h3 className="text-xl font-bold mb-3 font-mono">{section.title}</h3>
-                <p className={`text-sm transition-all duration-300 font-mono
-                  ${activeSection === index ? 'text-gray-200' : 'text-gray-600'}`}>
-                  {section.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 };
