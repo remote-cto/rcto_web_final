@@ -63,8 +63,8 @@ const Navbar = () => {
                     alt="logo image"
                     className="mr-2"
                   />
-                  <span className="font-bold text-[#eef0f4]  text-xl lg:text-5xl">
-                    Remote CTO
+                  <span className="font-bold text-[#eef0f4]  text-xl lg:text-4xl">
+                    REMOTE CTO
                   </span>
                 </Link>
               </motion.div>
