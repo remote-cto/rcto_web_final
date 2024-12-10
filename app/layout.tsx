@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Remote CTO - A New Age Degital Transformation Studio",
+  title: "Remote CTO - A New Age Digital Transformation Studio",
   
 };
 

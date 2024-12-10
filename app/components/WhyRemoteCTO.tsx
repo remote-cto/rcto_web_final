@@ -84,7 +84,7 @@ const WhyRemoteCTO = () => {
                     animate={{ opacity: 1 }}
                     className="absolute inset-0 bg-[#061BB0] bg-opacity-70 flex items-center justify-center"
                   >
-                    <Info className="text-white w-12 h-12" />
+                   
                   </motion.div>
                 )}
               </div>
