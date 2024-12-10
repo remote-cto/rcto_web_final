@@ -8,7 +8,11 @@ import { CoolMode } from "../../components/ui/cool-mode";
 import Image from "next/image";
 import Navbar from "./Navbar";
 
-const BannerPage = ({ remoteCTOWayRef }: { remoteCTOWayRef: React.RefObject<HTMLDivElement> }) => {
+const BannerPage = ({
+  remoteCTOWayRef,
+}: {
+  remoteCTOWayRef: React.RefObject<HTMLDivElement>;
+}) => {
   const scrollToLearnMore = () => {
     remoteCTOWayRef.current?.scrollIntoView({
       behavior: "smooth",
@@ -18,7 +22,7 @@ const BannerPage = ({ remoteCTOWayRef }: { remoteCTOWayRef: React.RefObject<HTML
   return (
     <div className="font-mono overflow-hidden relative">
       <section className="bg-gradient-to-r from-indigo-500 to-blue-500 mb-10 relative z-10">
-        <Navbar/>
+        <Navbar />
         <div className="mx-auto lg:flex lg:h-screen lg:items-center">
           <div className="mx-auto max-w-xl text-center">
             <div className="flex items-center justify-center space-x-8 mb-4">
@@ -37,15 +41,16 @@ const BannerPage = ({ remoteCTOWayRef }: { remoteCTOWayRef: React.RefObject<HTML
               </motion.div>
               <div>
                 <motion.h1
-                  className="text-3xl text-gray-700 font-extrabold sm:text-8xl font-mono"
+                  className="text-3xl text-gray-700 font-extrabold sm:text-8xl font-montserrat"
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   Leave the
                 </motion.h1>
+
                 <motion.h1
-                  className="text-3xl text-white font-extrabold sm:text-8xl"
+                  className="text-3xl text-white font-extrabold sm:text-8xl font-montserrat"
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
