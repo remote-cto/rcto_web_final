@@ -8,12 +8,14 @@ import {
   CheckCircle,
   TrendingUp,
   ArrowLeft,
+  Send,
 } from "lucide-react";
 import { CoolMode } from "../../../components/ui/cool-mode";
-
+import { useRouter } from 'next/navigation';
 
 const Page = () => {
   const [activeService, setActiveService] = useState<number | null>(null);
+  const router = useRouter();
 
   const services = [
     {
@@ -58,6 +60,10 @@ const Page = () => {
     history.back()
   };
 
+  const handleContactUs = () => {
+    router.push('/contact');
+  };
+
   return (
     <div className="bg-gradient-to-r from-indigo-500 to-blue-500 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-mono">
       <div className="max-w-6xl mx-auto bg-black rounded-2xl shadow-2xl overflow-hidden">
@@ -87,7 +93,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
             {services.map((service, index) => {
               const ServiceIcon = service.icon;
               return (
@@ -136,6 +142,19 @@ const Page = () => {
                 </div>
               );
             })}
+          </div>
+
+          {/* Contact Us Section */}
+          <div className="flex justify-center">
+            <CoolMode>
+              <button 
+                onClick={handleContactUs}
+                className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <Send size={24} />
+                Contact Us
+              </button>
+            </CoolMode>
           </div>
         </div>
       </div>
