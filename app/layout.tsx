@@ -29,7 +29,7 @@ export default function RootLayout({
         {/* Google Analytics async script */}
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-S71MY8W4F6"
+          src="https://www.googletagmanager.com/gtag/js?id=G-2BKHSE42MP"
         />
         
         {/* Inline script for configuring Google Analytics */}
