@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import FooterForm from '../components/FooterForm';
 import { CoolMode } from "../../components/ui/cool-mode";
 
-
 const Page = () => {
   const router = useRouter();
 
@@ -14,22 +13,23 @@ const Page = () => {
   };
 
   return (
-    <>
-    <div className='bg-gradient-to-r from-indigo-500 to-blue-500'>
-      <CoolMode>
-      <button 
-        onClick={handleGoBack} 
-        className=" top-4 left-4 z-10 p-2 text-white rounded-full transition-colors flex items-center gap-2"
-        aria-label="Go back"
-      >
-        <ArrowLeft size={24} className="text-white" />
-        <span>Go Back</span>
-      </button>
-      </CoolMode>
-      
+    <div className="min-h-screen flex flex-col">
+      <div className='bg-gradient-to-r from-indigo-500 to-blue-500 flex-1'>
+        <CoolMode>
+          <div className="p-4">
+            <button 
+              onClick={handleGoBack} 
+              className="inline-flex items-center gap-2 p-2 text-white rounded-full transition-colors hover:bg-white/10"
+              aria-label="Go back"
+            >
+              <ArrowLeft size={24} className="text-white" />
+              <span>Go Back</span>
+            </button>
+          </div>
+        </CoolMode>
+      </div>
+      <FooterForm />
     </div>
-    <FooterForm/>
-    </>
   );
 }
 
