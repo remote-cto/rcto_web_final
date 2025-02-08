@@ -19,25 +19,20 @@ const WhatClientSay: React.FC = () => {
 
   return (
     <section className="bg-[#f5f7ff] py-10 px-4 md:px-16 lg:px-24 font-mono">
-      {/* Heading */}
       <h2 className="text-xl lg:text-5xl font-bold text-center text-[#0026ff] mb-8 ">
         What Our Clients Say
       </h2>
 
-      {/* Image */}
       <div className="flex justify-center mb-3">
         <Image
-          src="/images/ClientSay.png" 
+          src="/images/ClientSay.png"
           alt="Client testimonial image"
           width={600}
           height={400}
-         className="rounded-lg shadow-lg object-cover w-full max-w-[1000px]  sx: h-[100px] lg:h-[300px]"
+          className="rounded-lg shadow-lg object-cover w-full max-w-[1000px]  sx: h-[100px] lg:h-[300px]"
         />
-        
       </div>
-     
 
-      {/* Testimonials */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((testimonial, index) => (
           <div

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Info } from "lucide-react";
 
 const WhyRemoteCTO = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -83,9 +82,7 @@ const WhyRemoteCTO = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="absolute inset-0 bg-[#061BB0] bg-opacity-70 flex items-center justify-center"
-                  >
-                   
-                  </motion.div>
+                  ></motion.div>
                 )}
               </div>
 

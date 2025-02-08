@@ -22,10 +22,8 @@ const FooterForm = () => {
     const year = now.getFullYear();
     const month = String(now.getMonth() + 1).padStart(2, "0");
 
-    // Construct the Calendly URL
     const calendlyUrl = `https://calendly.com/nitesh-remotecto/cc?month=${year}-${month}`;
 
-    // Open the Calendly URL in a new tab
     window.open(calendlyUrl, "_blank", "noopener,noreferrer");
   };
 
@@ -33,7 +31,7 @@ const FooterForm = () => {
     e.preventDefault();
 
     // Show loading toast
-    const loadingToast = toast.loading('Submitting your enquiry...');
+    const loadingToast = toast.loading("Submitting your enquiry...");
 
     try {
       const response = await fetch("/api/enquiry", {
@@ -45,30 +43,34 @@ const FooterForm = () => {
       });
 
       if (response.ok) {
-        // Dismiss loading toast and show success toast
         toast.dismiss(loadingToast);
-        toast.success('Thank you! Your enquiry has been submitted successfully.', {
-          duration: 5000,
-          position: 'top-center',
-        });
-        
+        toast.success(
+          "Thank you! Your enquiry has been submitted successfully.",
+          {
+            duration: 5000,
+            position: "top-center",
+          }
+        );
+
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        // Dismiss loading toast and show error toast
         toast.dismiss(loadingToast);
-        toast.error('Failed to submit enquiry. Please try again.', {
+        toast.error("Failed to submit enquiry. Please try again.", {
           duration: 5000,
-          position: 'top-center',
+          position: "top-center",
         });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      // Dismiss loading toast and show error toast
+
       toast.dismiss(loadingToast);
-      toast.error('An error occurred while submitting the form. Please try again.', {
-        duration: 5000,
-        position: 'top-center',
-      });
+      toast.error(
+        "An error occurred while submitting the form. Please try again.",
+        {
+          duration: 5000,
+          position: "top-center",
+        }
+      );
     }
   };
 

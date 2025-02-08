@@ -1,9 +1,6 @@
 "use client";
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { Loader2 } from "lucide-react";
-import { CircleDashed } from "lucide-react";
-
 import { RiContactsBookFill } from "react-icons/ri";
 import { FcAbout } from "react-icons/fc";
 import { motion } from "framer-motion";
@@ -11,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { GrWorkshop } from "react-icons/gr";
 import { IoHome } from "react-icons/io5";
+import LoadingAnimation from "./LoadingAnimation";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,18 +27,7 @@ const Navbar = () => {
     return () => clearTimeout(timer);
   }, []);
   if (isLoading) {
-    return (
-      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white bg-opacity-80 z-50 font-mono">
-        <motion.div
-          className="flex items-center justify-center"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <CircleDashed className="animate-spin text-[#27448D]" size={64} />
-        </motion.div>
-      </div>
-    );
+    return <LoadingAnimation />;
   }
 
   return (

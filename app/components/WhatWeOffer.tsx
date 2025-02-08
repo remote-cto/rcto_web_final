@@ -8,7 +8,6 @@ import { ArrowRight } from "lucide-react";
 import { CoolMode } from "../../components/ui/cool-mode";
 
 const WhatWeOffer = () => {
-  // Existing variants remain the same
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
