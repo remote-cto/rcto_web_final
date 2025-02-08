@@ -10,11 +10,20 @@ const FooterForm = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleRedirect = () => {
@@ -27,10 +36,48 @@ const FooterForm = () => {
     window.open(calendlyUrl, "_blank", "noopener,noreferrer");
   };
 
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { ...errors };
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email";
+      isValid = false;
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+      isValid = false;
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Show loading toast
+    if (!validateForm()) {
+      toast.error("Please fill in all required fields correctly", {
+        duration: 3000,
+        position: "top-center",
+      });
+      return;
+    }
+
     const loadingToast = toast.loading("Submitting your enquiry...");
 
     try {
@@ -124,17 +171,23 @@ const FooterForm = () => {
                     Name
                   </label>
                   <input
+                    required
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full rounded-lg border-2 border-gray-300 p-3 text-sm 
+                    className={`w-full rounded-lg border-2 ${
+                      errors.name ? 'border-red-500' : 'border-gray-300'
+                    } p-3 text-sm 
                       focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
                       transition duration-300 ease-in-out 
-                      placeholder-gray-500"
-                    placeholder="Name"
+                      placeholder-gray-500`}
+                    placeholder="Name *"
                     type="text"
                     id="name"
                   />
+                  {errors.name && (
+                    <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -143,17 +196,23 @@ const FooterForm = () => {
                       Email
                     </label>
                     <input
+                      required
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full rounded-lg border-2 border-gray-300 p-3 text-sm 
+                      className={`w-full rounded-lg border-2 ${
+                        errors.email ? 'border-red-500' : 'border-gray-300'
+                      } p-3 text-sm 
                         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
                         transition duration-300 ease-in-out 
-                        placeholder-gray-500"
-                      placeholder="Email address"
+                        placeholder-gray-500`}
+                      placeholder="Email address *"
                       type="email"
                       id="email"
                     />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                    )}
                   </div>
 
                   <div>
@@ -161,17 +220,23 @@ const FooterForm = () => {
                       Phone
                     </label>
                     <input
+                      required
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full rounded-lg border-2 border-gray-300 p-3 text-sm 
+                      className={`w-full rounded-lg border-2 ${
+                        errors.phone ? 'border-red-500' : 'border-gray-300'
+                      } p-3 text-sm 
                         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
                         transition duration-300 ease-in-out 
-                        placeholder-gray-500"
-                      placeholder="Phone Number"
+                        placeholder-gray-500`}
+                      placeholder="Phone Number *"
                       type="tel"
                       id="phone"
                     />
+                    {errors.phone && (
+                      <p className="mt-1 text-sm text-red-500">{errors.phone}</p>
+                    )}
                   </div>
                 </div>
 
@@ -181,16 +246,22 @@ const FooterForm = () => {
                   </label>
 
                   <textarea
+                    required
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full rounded-lg border-2 border-gray-300 p-3 text-sm 
+                    className={`w-full rounded-lg border-2 ${
+                      errors.message ? 'border-red-500' : 'border-gray-300'
+                    } p-3 text-sm 
                       focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
                       transition duration-300 ease-in-out 
-                      placeholder-gray-500"
-                    placeholder="Message"
+                      placeholder-gray-500`}
+                    placeholder="Message *"
                     id="message"
                   ></textarea>
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                  )}
                 </div>
 
                 <div className="mt-4">
