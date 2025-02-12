@@ -29,7 +29,7 @@ const WhatClientSay: React.FC = () => {
           alt="Client testimonial image"
           width={600}
           height={400}
-          className="rounded-lg shadow-lg object-cover w-full max-w-[1000px]  sx: h-[100px] lg:h-[300px]"
+          className="rounded-lg shadow-lg object-cover w-full max-w-[1000px] sx:h-[100px] lg:h-[300px]"
         />
       </div>
 
@@ -46,6 +46,9 @@ const WhatClientSay: React.FC = () => {
           </div>
         ))}
       </div>
+
+     
+      
     </section>
   );
 };
