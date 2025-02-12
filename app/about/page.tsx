@@ -2,14 +2,14 @@
 import React from "react";
 import { CoolMode } from "../../components/ui/cool-mode";
 import RemoteCTOWay from "../components/RemoteCTOWay";
-import { useState, useEffect } from "react";
-import { RiContactsBookFill } from "react-icons/ri";
-import { FcAbout } from "react-icons/fc";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { GrWorkshop } from "react-icons/gr";
-import { IoHome } from "react-icons/io5";
+
+import { HousePlus } from "lucide-react";
+import { ContactRound } from "lucide-react";
+import { UserCog } from "lucide-react";
 
 const Page = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -58,7 +58,6 @@ const Page = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <ul className="flex items-center gap-6 text-sm">
-                  
                   <li>
                     <Link
                       className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
@@ -67,11 +66,11 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                       href="/"
                     >
-                      <IoHome className="mr-2" />
+                      <HousePlus className="mr-2" />
                       HOME
                     </Link>
                   </li>
-                  
+
                   {/* <li>
                     <Link
                       className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
@@ -92,7 +91,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                       href="/services"
                     >
-                      <GrWorkshop className="mr-2" />
+                      <UserCog className="mr-2" />
                       SERVICES
                     </Link>
                   </li>
@@ -104,7 +103,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                       href="/contact"
                     >
-                      <RiContactsBookFill className="mr-2" />
+                      <ContactRound className="mr-2" />
                       CONTACT US
                     </Link>
                   </li>
@@ -159,7 +158,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                     href="/"
                   >
-                    <IoHome className="mr-2" />
+                    <HousePlus className="mr-2" />
                     HOME
                   </Link>
                 </li>
@@ -183,7 +182,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                     href="/services"
                   >
-                    <GrWorkshop className="mr-2" />
+                    <UserCog className="mr-2" />
                     SERVICES
                   </Link>
                 </li>
@@ -195,7 +194,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                     href="/contact"
                   >
-                    <RiContactsBookFill className="mr-2" />
+                    <ContactRound className="mr-2" />
                     CONTACT US
                   </Link>
                 </li>

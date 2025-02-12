@@ -3,12 +3,15 @@ import React from "react";
 import { CoolMode } from "../../components/ui/cool-mode";
 import { useState } from "react";
 import WhatWeOffer from "../components/WhatWeOffer";
-import { RiContactsBookFill } from "react-icons/ri";
-import { FcAbout } from "react-icons/fc";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { IoHome } from "react-icons/io5";
+
+import { HousePlus } from "lucide-react";
+import { ContactRound } from "lucide-react";
+
+import { BookOpenCheck } from "lucide-react";
 
 const Page = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -66,23 +69,23 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                         href="/"
                       >
-                        <IoHome className="mr-2" />
+                        <HousePlus className="mr-2" />
                         HOME
                       </Link>
                     </li>
 
                     <li>
-                    <Link
-                      className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
+                      <Link
+                        className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                      href="/about"
-                    >
-                      <FcAbout className="mr-2 " />
-                      ABOUT US
-                    </Link>
-                  </li>
+                        href="/about"
+                      >
+                        <BookOpenCheck className="mr-2 " />
+                        ABOUT US
+                      </Link>
+                    </li>
                     {/* <li>
                       <Link
                         className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
@@ -103,7 +106,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                         href="/contact"
                       >
-                        <RiContactsBookFill className="mr-2" />
+                        <ContactRound className="mr-2" />
                         CONTACT US
                       </Link>
                     </li>
@@ -158,22 +161,22 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                       href="/"
                     >
-                      <IoHome className="mr-2" />
+                      <HousePlus className="mr-2" />
                       HOME
                     </Link>
                   </li>
                   <li>
-                  <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
+                    <Link
+                      className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                    href="/about"
-                  >
-                    <FcAbout className="mr-2 " />
-                    ABOUT US
-                  </Link>
-                </li>
+                      href="/about"
+                    >
+                      <BookOpenCheck className="mr-2 " />
+                      ABOUT US
+                    </Link>
+                  </li>
                   {/* <li>
                     <Link
                       className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
@@ -194,7 +197,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                       href="/contact"
                     >
-                      <RiContactsBookFill className="mr-2" />
+                      <ContactRound className="mr-2" />
                       CONTACT US
                     </Link>
                   </li>

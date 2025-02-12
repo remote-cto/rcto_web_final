@@ -1,13 +1,16 @@
 "use client";
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { RiContactsBookFill } from "react-icons/ri";
-import { FcAbout } from "react-icons/fc";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { GrWorkshop } from "react-icons/gr";
-import { IoHome } from "react-icons/io5";
+
+import { HousePlus } from "lucide-react";
+import { ContactRound } from "lucide-react";
+import { UserCog } from "lucide-react";
+import { BookOpenCheck } from "lucide-react";
+
 import LoadingAnimation from "./LoadingAnimation";
 
 const Navbar = () => {
@@ -74,7 +77,7 @@ const Navbar = () => {
                 after:transition-transform after:duration-300"
                       href="/"
                     >
-                      <IoHome className="mr-2" />
+                      <HousePlus className="mr-2" />
                       HOME
                     </Link>
                   </li>
@@ -86,7 +89,7 @@ const Navbar = () => {
                 after:transition-transform after:duration-300"
                       href="/about"
                     >
-                      <FcAbout className="mr-2 " />
+                      <BookOpenCheck className="mr-2 " />
                       ABOUT US
                     </Link>
                   </li>
@@ -98,7 +101,7 @@ const Navbar = () => {
                 after:transition-transform after:duration-300"
                       href="/services"
                     >
-                      <GrWorkshop className="mr-2" />
+                      <UserCog className="mr-2" />
                       SERVICES
                     </Link>
                   </li>
@@ -110,7 +113,7 @@ const Navbar = () => {
                 after:transition-transform after:duration-300"
                       href="/contact"
                     >
-                      <RiContactsBookFill className="mr-2" />
+                      <ContactRound className="mr-2" />
                       CONTACT US
                     </Link>
                   </li>
@@ -165,7 +168,7 @@ const Navbar = () => {
                 after:transition-transform after:duration-300"
                     href="/"
                   >
-                    <IoHome className="mr-2" />
+                    <HousePlus className="mr-2" />
                     HOME
                   </Link>
                 </li>
@@ -177,7 +180,7 @@ const Navbar = () => {
                 after:transition-transform after:duration-300"
                     href="/about"
                   >
-                    <FcAbout className="mr-2 " />
+                    <BookOpenCheck className="mr-2 " />
                     ABOUT US
                   </Link>
                 </li>
@@ -189,7 +192,7 @@ const Navbar = () => {
                 after:transition-transform after:duration-300"
                     href="/services"
                   >
-                    <GrWorkshop className="mr-2" />
+                    <UserCog className="mr-2" />
                     SERVICES
                   </Link>
                 </li>
@@ -201,7 +204,7 @@ const Navbar = () => {
                 after:transition-transform after:duration-300"
                     href="/contact"
                   >
-                    <RiContactsBookFill className="mr-2" />
+                    <ContactRound className="mr-2" />
                     CONTACT US
                   </Link>
                 </li>

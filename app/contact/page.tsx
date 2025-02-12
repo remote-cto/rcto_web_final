@@ -3,12 +3,14 @@ import React from "react";
 import { useState } from "react";
 import FooterForm from "../components/FooterForm";
 import { CoolMode } from "../../components/ui/cool-mode";
-import { FcAbout } from "react-icons/fc";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { GrWorkshop } from "react-icons/gr";
-import { IoHome } from "react-icons/io5";
+
+import { HousePlus } from "lucide-react";
+import { UserCog } from "lucide-react";
+import { BookOpenCheck } from "lucide-react";
 
 const Page = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -66,7 +68,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                         href="/"
                       >
-                        <IoHome className="mr-2" />
+                        <HousePlus className="mr-2" />
                         HOME
                       </Link>
                     </li>
@@ -79,7 +81,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                         href="/about"
                       >
-                        <FcAbout className="mr-2 " />
+                        <BookOpenCheck className="mr-2 " />
                         ABOUT US
                       </Link>
                     </li>
@@ -91,7 +93,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                         href="/services"
                       >
-                        <GrWorkshop className="mr-2" />
+                        <UserCog className="mr-2" />
                         SERVICES
                       </Link>
                     </li>
@@ -158,7 +160,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                       href="/"
                     >
-                      <IoHome className="mr-2" />
+                      <HousePlus className="mr-2" />
                       HOME
                     </Link>
                   </li>
@@ -170,7 +172,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                       href="/about"
                     >
-                      <FcAbout className="mr-2 " />
+                      <BookOpenCheck className="mr-2 " />
                       ABOUT US
                     </Link>
                   </li>
@@ -182,7 +184,7 @@ const Page = () => {
                 after:transition-transform after:duration-300"
                       href="/services"
                     >
-                      <GrWorkshop className="mr-2" />
+                      <UserCog className="mr-2" />
                       SERVICES
                     </Link>
                   </li>
