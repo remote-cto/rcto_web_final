@@ -124,7 +124,7 @@ const FooterForm = () => {
   return (
     <div>
       <section className="bg-gradient-to-r from-indigo-500 to-blue-500 font-mono">
-        <h2 className="text-xl lg:text-7xl font-bold text-center text-[#eaecf2] font-mono underline">
+        <h2 className="text-xl lg:text-6xl font-bold text-center text-[#eaecf2] font-mono underline">
           TALK TO US
         </h2>
 
