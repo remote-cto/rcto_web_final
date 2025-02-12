@@ -26,15 +26,15 @@ const FooterForm = () => {
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
-  const handleRedirect = () => {
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, "0");
+  // const handleRedirect = () => {
+  //   const now = new Date();
+  //   const year = now.getFullYear();
+  //   const month = String(now.getMonth() + 1).padStart(2, "0");
 
-    const calendlyUrl = `https://calendly.com/nitesh-remotecto/cc?month=${year}-${month}`;
+  //   const calendlyUrl = `https://calendly.com/nitesh-remotecto/cc?month=${year}-${month}`;
 
-    window.open(calendlyUrl, "_blank", "noopener,noreferrer");
-  };
+  //   window.open(calendlyUrl, "_blank", "noopener,noreferrer");
+  // };
 
   const validateForm = () => {
     let isValid = true;
@@ -124,15 +124,10 @@ const FooterForm = () => {
   return (
     <div>
       <section className="bg-gradient-to-r from-indigo-500 to-blue-500 font-mono">
-        <h2 className="text-xl lg:text-5xl font-bold text-center text-[#eaecf2] font-mono">
-          Talk To Us
+        <h2 className="text-xl lg:text-7xl font-bold text-center text-[#eaecf2] font-mono underline">
+          TALK TO US
         </h2>
-        <p className="text-lg font-bold text-center text-[#f3f3f6] mt-2">
-          Feel free to reach out to us!
-        </p>
-        <p className="text-lg font-bold text-center text-[#f3f3f5] mt-1">
-          You can call, email, schedule a meeting, or simply fill out the form
-        </p>
+
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
             <div className="lg:col-span-2 lg:py-12">
@@ -153,7 +148,7 @@ const FooterForm = () => {
                 </a>
               </div>
 
-              <div
+              {/* <div
                 className="text-lg mt-10 lg:text-4xl text-white underline cursor-pointer"
                 onClick={handleRedirect}
               >
@@ -161,7 +156,7 @@ const FooterForm = () => {
                 <h2 className="text-lg lg:text-3xl text-white underline">
                   a free 30 min call with our founder
                 </h2>
-              </div>
+              </div> */}
             </div>
 
             <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
@@ -176,7 +171,7 @@ const FooterForm = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className={`w-full rounded-lg border-2 ${
-                      errors.name ? 'border-red-500' : 'border-gray-300'
+                      errors.name ? "border-red-500" : "border-gray-300"
                     } p-3 text-sm 
                       focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
                       transition duration-300 ease-in-out 
@@ -201,7 +196,7 @@ const FooterForm = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full rounded-lg border-2 ${
-                        errors.email ? 'border-red-500' : 'border-gray-300'
+                        errors.email ? "border-red-500" : "border-gray-300"
                       } p-3 text-sm 
                         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
                         transition duration-300 ease-in-out 
@@ -211,7 +206,9 @@ const FooterForm = () => {
                       id="email"
                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
 
@@ -225,7 +222,7 @@ const FooterForm = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className={`w-full rounded-lg border-2 ${
-                        errors.phone ? 'border-red-500' : 'border-gray-300'
+                        errors.phone ? "border-red-500" : "border-gray-300"
                       } p-3 text-sm 
                         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
                         transition duration-300 ease-in-out 
@@ -235,7 +232,9 @@ const FooterForm = () => {
                       id="phone"
                     />
                     {errors.phone && (
-                      <p className="mt-1 text-sm text-red-500">{errors.phone}</p>
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.phone}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -251,7 +250,7 @@ const FooterForm = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className={`w-full rounded-lg border-2 ${
-                      errors.message ? 'border-red-500' : 'border-gray-300'
+                      errors.message ? "border-red-500" : "border-gray-300"
                     } p-3 text-sm 
                       focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
                       transition duration-300 ease-in-out 
@@ -260,7 +259,9 @@ const FooterForm = () => {
                     id="message"
                   ></textarea>
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.message}
+                    </p>
                   )}
                 </div>
 
