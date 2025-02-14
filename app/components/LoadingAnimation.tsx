@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const LoadingAnimation = () => {
   const circleVariants = {
@@ -35,7 +36,7 @@ const LoadingAnimation = () => {
         <motion.div
           variants={pulseVariants}
           className="absolute inset-0 bg-white/20 rounded-full"
-          style={{ width: '120px', height: '120px' }}
+          style={{ width: '180px', height: '180px' }}
         />
         <motion.svg
           width="120"
@@ -44,7 +45,7 @@ const LoadingAnimation = () => {
           variants={circleVariants}
           className="relative z-10"
         >
-          <circle
+          {/* <circle
             cx="60"
             cy="60"
             r="54"
@@ -54,7 +55,7 @@ const LoadingAnimation = () => {
             strokeLinecap="round"
             strokeDasharray="339.292"
             strokeDashoffset="240"
-          />
+          /> */}
         </motion.svg>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -62,7 +63,7 @@ const LoadingAnimation = () => {
           transition={{ duration: 0.5 }}
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-medium"
         >
-          RCTO
+         <Image src="/images/RCTO.png" height={60} width={60} alt="Logo" />
         </motion.div>
       </motion.div>
     </div>
