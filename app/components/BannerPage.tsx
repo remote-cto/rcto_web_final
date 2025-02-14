@@ -34,14 +34,14 @@ const BannerPage = ({
                 <Image
                   src="/images/design.png"
                   alt="Remote CTO"
-                  width={300}
-                  height={300}
-                  className="rounded-lg w-128 h-128"
+                  width={400}
+                  height={400}
+                  className="rounded-lg w-128 h-138"
                 />
               </motion.div>
               <div>
                 <motion.h1
-                  className="text-3xl text-gray-700 font-extrabold sm:text-8xl font-montserrat"
+                  className="text-3xl text-gray-700 font-extrabold sm:text-7xl font-montserrat mb-6"
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -50,12 +50,12 @@ const BannerPage = ({
                 </motion.h1>
 
                 <motion.h1
-                  className="text-3xl text-white font-extrabold sm:text-8xl font-montserrat"
+                  className="text-3xl text-white font-extrabold sm:text-8xl "
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  tech to us
+                  <span className="font-['Orbitron']">TECH</span> to us
                 </motion.h1>
               </div>
             </div>
@@ -72,7 +72,7 @@ const BannerPage = ({
                   onClick={scrollToLearnMore}
                   className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-xl rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
-                   🚀 Discover How
+                  🚀 Discover How
                 </button>
               </CoolMode>
             </motion.div>

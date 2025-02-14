@@ -71,3 +71,11 @@
   min-height: 100vh; /* Or appropriate height */
   overflow: visible; /* Avoid clipping content */
 }
+
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/font/Orbitron-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
