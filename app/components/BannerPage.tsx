@@ -41,7 +41,7 @@ const BannerPage = ({
               </motion.div>
               <div>
                 <motion.h1
-                  className="text-3xl text-gray-700 font-extrabold sm:text-7xl font-montserrat mb-6"
+                  className="text-3xl text-gray-700 font-extrabold sm:text-7xl font-montserrat"
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
