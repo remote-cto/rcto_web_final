@@ -34,9 +34,9 @@ const BannerPage = ({
                 <Image
                   src="/images/design.png"
                   alt="Remote CTO"
-                  width={400}
-                  height={400}
-                  className="rounded-lg w-128 h-138"
+                  width={300}
+                  height={300}
+                  className="rounded-lg w-128 h-128"
                 />
               </motion.div>
               <div>
@@ -55,7 +55,10 @@ const BannerPage = ({
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  <span className="font-['Orbitron']">TECH</span> to us
+                  <span className="font-['Orbitron'] bg-gradient-to-r from-cyan-400 to-green-200 text-transparent bg-clip-text">
+                    TECH
+                  </span>{" "}
+                  to us
                 </motion.h1>
               </div>
             </div>
@@ -70,7 +73,7 @@ const BannerPage = ({
                 <button
                   type="button"
                   onClick={scrollToLearnMore}
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-xl rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-xl rounded-lg text-lg px-6 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
                   🚀 Discover How
                 </button>
