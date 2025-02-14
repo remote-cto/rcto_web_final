@@ -22,19 +22,8 @@ const FooterForm = () => {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
     setErrors((prev) => ({ ...prev, [name]: "" }));
   };
-
-  // const handleRedirect = () => {
-  //   const now = new Date();
-  //   const year = now.getFullYear();
-  //   const month = String(now.getMonth() + 1).padStart(2, "0");
-
-  //   const calendlyUrl = `https://calendly.com/nitesh-remotecto/cc?month=${year}-${month}`;
-
-  //   window.open(calendlyUrl, "_blank", "noopener,noreferrer");
-  // };
 
   const validateForm = () => {
     let isValid = true;
@@ -109,7 +98,6 @@ const FooterForm = () => {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-
       toast.dismiss(loadingToast);
       toast.error(
         "An error occurred while submitting the form. Please try again.",
@@ -121,171 +109,182 @@ const FooterForm = () => {
     }
   };
 
+  const inputClasses = (errorField: string) => `
+    w-full rounded-lg border-2 p-3 text-sm
+    ${errors[errorField as keyof typeof errors] ? "border-red-500" : "border-gray-300"}
+    focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+    transition-all duration-300 ease-in-out
+    shadow-[0_0_10px_rgba(99,102,241,0.1)]
+    hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]
+    focus:shadow-[0_0_20px_rgba(99,102,241,0.3)]
+    placeholder-gray-500
+  `;
+
   return (
     <div>
-  <section className="bg-gradient-to-r from-indigo-500 to-blue-500 font-mono py-16">
-    <h2 className="text-3xl lg:text-6xl font-bold text-center text-white underline mb-12 ">
-      TALK TO US
-    </h2>
+      <section className="bg-gradient-to-r from-indigo-500 to-blue-500 font-mono py-16 relative overflow-hidden">
+        {/* Enhanced heading with neon glow */}
+        <h2 className="text-3xl lg:text-6xl font-bold text-center text-white mb-12 
+          relative
+          before:content-[''] before:absolute before:inset-0
+          before:bg-white before:opacity-30 before:blur-lg before:-z-10
+          after:content-[''] after:absolute after:inset-0
+          after:bg-blue-400 after:opacity-20 after:blur-xl after:-z-20
+          animate-pulse">
+          TALK TO US
+        </h2>
 
-    <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-5">
-        {/* Contact Information Section */}
-        <div className="lg:col-span-2 lg:py-12 space-y-8">
-          <div>
-            <strong className="block text-white text-2xl lg:text-3xl mb-2">
-              Phone
-            </strong>
-            <a
-              href="https://wa.me/9662512899"
-              target="_blank"
-              className="text-white text-xl underline hover:text-gray-200 transition duration-300"
-            >
-              +91 966-251-2899
-            </a>
-          </div>
-
-          <div>
-            <strong className="block text-white text-2xl lg:text-3xl mb-2">
-              Email
-            </strong>
-            <a
-              href="mailto:connect@remotecto.in"
-              className="text-white text-xl underline hover:text-gray-200 transition duration-300"
-            >
-              connect@remotecto.in
-            </a>
-          </div>
-
-          {/* Optional: Schedule a Call Button */}
-          {/* <div
-            className="mt-10 text-lg lg:text-2xl text-white underline cursor-pointer hover:text-gray-200 transition duration-300"
-            onClick={handleRedirect}
-          >
-            Click to schedule a free 30 min call with our founder &gt;
-          </div> */}
-        </div>
-
-        {/* Contact Form Section */}
-        <div className="rounded-lg bg-white p-8 shadow-2xl lg:col-span-3 lg:p-12">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name Field */}
-            <div>
-              <label className="sr-only" htmlFor="name">
-                Name
-              </label>
-              <input
-                required
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className={`w-full rounded-lg border-2 ${
-                  errors.name ? "border-red-500" : "border-gray-300"
-                } p-3 text-sm 
-                  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
-                  transition duration-300 ease-in-out 
-                  placeholder-gray-500`}
-                placeholder="Name *"
-                type="text"
-                id="name"
-              />
-              {errors.name && (
-                <p className="mt-2 text-sm text-red-500">{errors.name}</p>
-              )}
-            </div>
-
-            {/* Email and Phone Fields */}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div>
-                <label className="sr-only" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  required
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`w-full rounded-lg border-2 ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                  } p-3 text-sm 
-                    focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
-                    transition duration-300 ease-in-out 
-                    placeholder-gray-500`}
-                  placeholder="Email address *"
-                  type="email"
-                  id="email"
-                />
-                {errors.email && (
-                  <p className="mt-2 text-sm text-red-500">{errors.email}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="sr-only" htmlFor="phone">
+        <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-5">
+            {/* Enhanced contact info section */}
+            <div className="lg:col-span-2 lg:py-12 space-y-8">
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <strong className="block text-white text-2xl lg:text-3xl mb-2">
                   Phone
-                </label>
-                <input
-                  required
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className={`w-full rounded-lg border-2 ${
-                    errors.phone ? "border-red-500" : "border-gray-300"
-                  } p-3 text-sm 
-                    focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
-                    transition duration-300 ease-in-out 
-                    placeholder-gray-500`}
-                  placeholder="Phone Number *"
-                  type="tel"
-                  id="phone"
-                />
-                {errors.phone && (
-                  <p className="mt-2 text-sm text-red-500">{errors.phone}</p>
-                )}
+                </strong>
+                <a
+                  href="https://wa.me/9662512899"
+                  target="_blank"
+                  className="text-white text-xl relative group
+                    after:content-[''] after:absolute after:bottom-0 after:left-0
+                    after:w-full after:h-0.5 after:bg-white
+                    after:transform after:scale-x-0 after:origin-left
+                    after:transition-transform after:duration-300
+                    group-hover:after:scale-x-100
+                    hover:text-opacity-90 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                >
+                  +91 966-251-2899
+                </a>
+              </div>
+
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <strong className="block text-white text-2xl lg:text-3xl mb-2">
+                  Email
+                </strong>
+                <a
+                  href="mailto:connect@remotecto.in"
+                  className="text-white text-xl relative group
+                    after:content-[''] after:absolute after:bottom-0 after:left-0
+                    after:w-full after:h-0.5 after:bg-white
+                    after:transform after:scale-x-0 after:origin-left
+                    after:transition-transform after:duration-300
+                    group-hover:after:scale-x-100
+                    hover:text-opacity-90 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                >
+                  connect@remotecto.in
+                </a>
               </div>
             </div>
 
-            {/* Message Field */}
-            <div>
-              <label className="sr-only" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                required
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className={`w-full rounded-lg border-2 ${
-                  errors.message ? "border-red-500" : "border-gray-300"
-                } p-3 text-sm 
-                  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent 
-                  transition duration-300 ease-in-out 
-                  placeholder-gray-500`}
-                placeholder="Message *"
-                rows={5}
-                id="message"
-              ></textarea>
-              {errors.message && (
-                <p className="mt-2 text-sm text-red-500">{errors.message}</p>
-              )}
-            </div>
+            {/* Enhanced form section */}
+            <div className="rounded-lg bg-white p-8 lg:p-12
+              shadow-[0_0_20px_rgba(59,130,246,0.3)]
+              hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]
+              transition-shadow duration-300 ease-in-out
+              lg:col-span-3">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name Field */}
+                <div>
+                  <label className="sr-only" htmlFor="name">
+                    Name
+                  </label>
+                  <input
+                    required
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={inputClasses("name")}
+                    placeholder="Name *"
+                    type="text"
+                    id="name"
+                  />
+                  {errors.name && (
+                    <p className="mt-2 text-sm text-red-500">{errors.name}</p>
+                  )}
+                </div>
 
-            {/* Submit Button */}
-            <div className="mt-6">
-              <button
-                type="submit"
-                className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white 
-                sm:w-auto hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105"
-              >
-                Send Enquiry
-              </button>
+                {/* Email and Phone Fields */}
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div>
+                    <label className="sr-only" htmlFor="email">
+                      Email
+                    </label>
+                    <input
+                      required
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={inputClasses("email")}
+                      placeholder="Email address *"
+                      type="email"
+                      id="email"
+                    />
+                    {errors.email && (
+                      <p className="mt-2 text-sm text-red-500">{errors.email}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label className="sr-only" htmlFor="phone">
+                      Phone
+                    </label>
+                    <input
+                      required
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className={inputClasses("phone")}
+                      placeholder="Phone Number *"
+                      type="tel"
+                      id="phone"
+                    />
+                    {errors.phone && (
+                      <p className="mt-2 text-sm text-red-500">{errors.phone}</p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Message Field */}
+                <div>
+                  <label className="sr-only" htmlFor="message">
+                    Message
+                  </label>
+                  <textarea
+                    required
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={inputClasses("message")}
+                    placeholder="Message *"
+                    rows={5}
+                    id="message"
+                  ></textarea>
+                  {errors.message && (
+                    <p className="mt-2 text-sm text-red-500">{errors.message}</p>
+                  )}
+                </div>
+
+                {/* Enhanced Submit Button */}
+                <div className="mt-6">
+                  <button
+                    type="submit"
+                    className="inline-block w-full sm:w-auto px-5 py-3 
+                      bg-black text-white font-medium rounded-lg
+                      transform transition-all duration-300 ease-in-out
+                      hover:scale-105 hover:bg-gray-800
+                      shadow-[0_0_15px_rgba(0,0,0,0.2)]
+                      hover:shadow-[0_0_25px_rgba(0,0,0,0.3)]
+                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                  >
+                    Send Enquiry
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-  </section>
-</div>
   );
 };
 
