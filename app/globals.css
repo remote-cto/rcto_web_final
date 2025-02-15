@@ -68,8 +68,8 @@
 }
 
 .section-class {
-  min-height: 100vh; /* Or appropriate height */
-  overflow: visible; /* Avoid clipping content */
+  min-height: 100vh; 
+  overflow: visible; 
 }
 
 

@@ -37,18 +37,19 @@ const WhatClientSay: React.FC = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-white p-6 shadow-md rounded-md text-[#333] space-y-4"
+            className="bg-white p-6 shadow-md rounded-md text-[#333] flex flex-col h-full"
           >
-            <p className="text-sm md:text-base">{testimonial.text}</p>
-            <h4 className="text-base md:text-lg font-bold text-[#0026ff]">
-              {testimonial.author}
-            </h4>
+            <div className="flex-grow mb-4">
+              <p className="text-sm md:text-base">{testimonial.text}</p>
+            </div>
+            <div className="mt-auto">
+              <h4 className="text-base md:text-lg font-bold text-[#0026ff]">
+                {testimonial.author}
+              </h4>
+            </div>
           </div>
         ))}
       </div>
-
-     
-      
     </section>
   );
 };
