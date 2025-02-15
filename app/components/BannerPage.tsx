@@ -113,11 +113,11 @@ const ParticleBackground = () => {
 
     // Create particles
     const particlesArray: Particle[] = [];
-    const numberOfParticles = Math.floor((canvas.width * canvas.height) / 10000);
+  const numberOfParticles = 200; // Fixed number of particles
 
-    for (let i = 0; i < numberOfParticles; i++) {
-      particlesArray.push(new Particle(canvas));
-    }
+  for (let i = 0; i < numberOfParticles; i++) {
+    particlesArray.push(new Particle(canvas));
+  }
 
     // Animation loop
     const animate = () => {
