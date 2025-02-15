@@ -217,12 +217,12 @@ const BannerPage = ({
               </motion.div>
               <div>
                 <motion.h1
-                  className="text-3xl text-gray-700 font-extrabold sm:text-7xl font-montserrat"
+                  className="text-4xl  font-extrabold sm:text-7xl font-montserrat"
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <span className="inline-block whitespace-nowrap font-['Merriweather'] mb-2 lg:mb-5 text-slate-800">
+                  <span className="inline-block whitespace-nowrap font-['Merriweather'] mb-2 lg:mb-5 text-white">
                     Leave the
                   </span>{" "}
                   <span className="font-['Orbitron'] bg-gradient-to-r from-cyan-400 to-green-200 text-transparent bg-clip-text mb-2 lg:mb-4">
