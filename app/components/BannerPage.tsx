@@ -34,9 +34,9 @@ const BannerPage = ({
                 <Image
                   src="/images/design.png"
                   alt="Remote CTO"
-                  width={300}
-                  height={300}
-                  className="rounded-lg w-128 h-128"
+                  width={400}
+                  height={400}
+                  className="rounded-lg w-158 h-158"
                 />
               </motion.div>
               <div>
@@ -46,19 +46,15 @@ const BannerPage = ({
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  Leave the
-                </motion.h1>
-
-                <motion.h1
-                  className="text-3xl text-white font-extrabold sm:text-8xl "
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
-                  <span className="font-['Orbitron'] bg-gradient-to-r from-cyan-400 to-green-200 text-transparent bg-clip-text">
+                  <span className="inline-block whitespace-nowrap font-['Merriweather'] mb-2 lg:mb-5 text-slate-800">
+                    Leave the
+                  </span>{" "}
+                  <span className="font-['Orbitron'] bg-gradient-to-r from-cyan-400 to-green-200 text-transparent bg-clip-text mb-2 lg:mb-4">
                     TECH
                   </span>{" "}
-                  to us
+                  <span className="inline-block whitespace-nowrap text-white font-['Merriweather'] mt-1 lg:mt-3">
+                    to us
+                  </span>
                 </motion.h1>
               </div>
             </div>

@@ -76,6 +76,13 @@
 @font-face {
   font-family: 'Orbitron';
   src: url('/font/Orbitron-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('/font/Merriweather-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
