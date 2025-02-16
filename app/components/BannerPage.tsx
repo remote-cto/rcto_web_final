@@ -285,28 +285,28 @@ const BannerPage = ({
                 >
                   <span
                     className="inline-block whitespace-nowrap font-['Merriweather'] mb-2 lg:mb-5 text-white"
-                    style={{
-                      textShadow:
-                        "0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3)",
-                    }}
+                    // style={{
+                    //   textShadow:
+                    //     "0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3)",
+                    // }}
                   >
                     Leave the
                   </span>{" "}
                   <span
                     className="font-['Orbitron'] bg-gradient-to-r from-cyan-300 to-green-200 text-transparent bg-clip-text mb-2 lg:mb-4"
-                    style={{
-                      textShadow:
-                        "0 0 5px rgba(6,182,212,0.8), 0 0 10px rgba(6,182,212,0.5), 0 0 15px rgba(167,243,208,0.5)",
-                    }}
+                    // style={{
+                    //   textShadow:
+                    //     "0 0 5px rgba(6,182,212,0.8), 0 0 10px rgba(6,182,212,0.5), 0 0 15px rgba(167,243,208,0.5)",
+                    // }}
                   >
                     TECH
                   </span>{" "}
                   <span
                     className="inline-block whitespace-nowrap text-white font-['Merriweather'] mt-1 lg:mt-3"
-                    style={{
-                      textShadow:
-                        "0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3)",
-                    }}
+                    // style={{
+                    //   textShadow:
+                    //     "0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3)",
+                    // }}
                   >
                     to us
                   </span>
