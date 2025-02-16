@@ -141,7 +141,7 @@ const WhatWeOffer = () => {
                 <h2 className="text-xl font-bold text-[#061BB0] mb-3">
                   {service.title}
                 </h2>
-                <p className="text-gray-700 leading-relaxed mb-4 flex-grow">
+                <p className="text-gray-700 leading-relaxed mb-4 flex-grow ">
                   {service.description}
                 </p>
                 <div className="mt-auto">

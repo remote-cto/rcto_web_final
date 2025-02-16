@@ -1,4 +1,5 @@
 "use client";
+import { CoolMode } from "@/components/ui/cool-mode";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -266,6 +267,7 @@ const FooterForm = () => {
 
                 {/* Enhanced Submit Button */}
                 <div className="mt-6">
+                  <CoolMode>
                   <button
                     type="submit"
                     className="inline-block w-full sm:w-auto px-5 py-3 
@@ -278,6 +280,7 @@ const FooterForm = () => {
                   >
                     Send Enquiry
                   </button>
+                  </CoolMode>
                 </div>
               </form>
             </div>
