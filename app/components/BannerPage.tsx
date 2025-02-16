@@ -113,11 +113,11 @@ const ParticleBackground = () => {
 
     // Create particles
     const particlesArray: Particle[] = [];
-  const numberOfParticles = 200; // Fixed number of particles
+    const numberOfParticles = 200; // Fixed number of particles
 
-  for (let i = 0; i < numberOfParticles; i++) {
-    particlesArray.push(new Particle(canvas));
-  }
+    for (let i = 0; i < numberOfParticles; i++) {
+      particlesArray.push(new Particle(canvas));
+    }
 
     // Animation loop
     const animate = () => {
@@ -141,10 +141,12 @@ const ParticleBackground = () => {
             const mouseX = mousePosition.current.x;
             const mouseY = mousePosition.current.y;
             const dist1 = Math.sqrt(
-              (particlesArray[i].x - mouseX) ** 2 + (particlesArray[i].y - mouseY) ** 2
+              (particlesArray[i].x - mouseX) ** 2 +
+                (particlesArray[i].y - mouseY) ** 2
             );
             const dist2 = Math.sqrt(
-              (particlesArray[j].x - mouseX) ** 2 + (particlesArray[j].y - mouseY) ** 2
+              (particlesArray[j].x - mouseX) ** 2 +
+                (particlesArray[j].y - mouseY) ** 2
             );
 
             if (dist1 < 100 || dist2 < 100) {
@@ -217,18 +219,36 @@ const BannerPage = ({
               </motion.div>
               <div>
                 <motion.h1
-                  className="text-4xl  font-extrabold sm:text-7xl font-montserrat"
+                  className="text-4xl font-extrabold sm:text-7xl font-montserrat"
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <span className="inline-block whitespace-nowrap font-['Merriweather'] mb-2 lg:mb-5 text-white">
+                  <span
+                    className="inline-block whitespace-nowrap font-['Merriweather'] mb-2 lg:mb-5 text-white"
+                    style={{
+                      textShadow:
+                        "0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3)",
+                    }}
+                  >
                     Leave the
                   </span>{" "}
-                  <span className="font-['Orbitron'] bg-gradient-to-r from-cyan-400 to-green-200 text-transparent bg-clip-text mb-2 lg:mb-4">
+                  <span
+                    className="font-['Orbitron'] bg-gradient-to-r from-cyan-300 to-green-200 text-transparent bg-clip-text mb-2 lg:mb-4"
+                    style={{
+                      textShadow:
+                        "0 0 5px rgba(6,182,212,0.8), 0 0 10px rgba(6,182,212,0.5), 0 0 15px rgba(167,243,208,0.5)",
+                    }}
+                  >
                     TECH
                   </span>{" "}
-                  <span className="inline-block whitespace-nowrap text-white font-['Merriweather'] mt-1 lg:mt-3">
+                  <span
+                    className="inline-block whitespace-nowrap text-white font-['Merriweather'] mt-1 lg:mt-3"
+                    style={{
+                      textShadow:
+                        "0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3)",
+                    }}
+                  >
                     to us
                   </span>
                 </motion.h1>
