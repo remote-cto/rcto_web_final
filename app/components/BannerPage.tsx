@@ -11,6 +11,31 @@ import Navbar from "./Navbar";
 const ParticleBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mousePosition = useRef({ x: 0, y: 0 });
+  const [windowSize, setWindowSize] = useState({
+    width: typeof window !== 'undefined' ? window.innerWidth : 0,
+    height: typeof window !== 'undefined' ? window.innerHeight : 0
+  });
+
+  useEffect(() => {
+    // Handle window resize and set initial size
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+    
+    if (typeof window !== 'undefined') {
+      handleResize();
+      window.addEventListener('resize', handleResize);
+    }
+    
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', handleResize);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -34,7 +59,16 @@ const ParticleBackground = () => {
       mousePosition.current = { x: e.clientX, y: e.clientY };
     };
 
+    // Also track touch for mobile devices
+    const updateTouchPosition = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        mousePosition.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      }
+    };
+
     window.addEventListener("mousemove", updateMousePosition);
+    window.addEventListener("touchmove", updateTouchPosition);
+    window.addEventListener("touchstart", updateTouchPosition);
 
     // Particle class
     class Particle {
@@ -52,11 +86,18 @@ const ParticleBackground = () => {
         this.canvas = canvas;
         this.x = Math.random() * this.canvas.width;
         this.y = Math.random() * this.canvas.height;
-        this.baseSize = Math.random() * 3 + 1;
+        
+        // Smaller base size for small screens
+        const scaleFactor = Math.min(1, canvas.width / 1000);
+        this.baseSize = (Math.random() * 2 + 0.5) * scaleFactor;
         this.size = this.baseSize;
-        this.speedX = Math.random() * 2 - 1;
-        this.speedY = Math.random() * 2 - 1;
-        this.baseColor = `rgba(255, 255, 255, ${Math.random() * 0.5})`;
+        
+        // Slower speed for small screens
+        const speedFactor = Math.min(1, canvas.width / 1000);
+        this.speedX = (Math.random() * 2 - 1) * speedFactor;
+        this.speedY = (Math.random() * 2 - 1) * speedFactor;
+        
+        this.baseColor = `rgba(255, 255, 255, ${Math.random() * 0.4})`;
         this.color = this.baseColor;
       }
 
@@ -74,27 +115,30 @@ const ParticleBackground = () => {
         if (this.y > this.canvas.height) this.y = 0;
         else if (this.y < 0) this.y = this.canvas.height;
 
-        // React to mouse
+        // React to mouse - adjust interaction distance based on screen size
+        const interactionRadius = Math.min(100, this.canvas.width / 8);
         const mouseX = mousePosition.current.x;
         const mouseY = mousePosition.current.y;
         const dx = this.x - mouseX;
         const dy = this.y - mouseY;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 100) {
-          // Particles grow and brighten as mouse approaches
-          const scale = 1 + (100 - distance) / 25;
+        if (distance < interactionRadius) {
+          // Particles grow and brighten as mouse approaches, but less on small screens
+          const growFactor = Math.min(1, this.canvas.width / 1000);
+          const scale = 1 + ((interactionRadius - distance) / interactionRadius) * growFactor;
           this.size = this.baseSize * scale;
 
-          // Push particles away from mouse slightly
+          // Push particles away from mouse slightly, less force on small screens
           const angle = Math.atan2(dy, dx);
-          const force = (100 - distance) / 500;
+          const forceFactor = Math.min(1, this.canvas.width / 1000);
+          const force = ((interactionRadius - distance) / interactionRadius) * 0.2 * forceFactor;
           this.x += Math.cos(angle) * force;
           this.y += Math.sin(angle) * force;
 
           // Change color to a light blue glow near mouse
-          const glow = Math.min(1, (100 - distance) / 100);
-          this.color = `rgba(120, 190, 255, ${0.3 + glow * 0.7})`;
+          const glow = Math.min(1, (interactionRadius - distance) / interactionRadius);
+          this.color = `rgba(120, 190, 255, ${0.2 + glow * 0.5})`;
         } else {
           // Return to base size and color when away from mouse
           this.size = this.baseSize;
@@ -111,9 +155,11 @@ const ParticleBackground = () => {
       }
     }
 
-    // Create particles
+    // Create particles - fewer for smaller screens
     const particlesArray: Particle[] = [];
-    const numberOfParticles = 200; // Fixed number of particles
+    const baseParticleCount = 300;
+    const screenSizeFactor = Math.min(1, canvas.width * canvas.height / (1920 * 1080));
+    const numberOfParticles = Math.max(50, Math.floor(baseParticleCount * screenSizeFactor));
 
     for (let i = 0; i < numberOfParticles; i++) {
       particlesArray.push(new Particle(canvas));
@@ -128,18 +174,28 @@ const ParticleBackground = () => {
         particlesArray[i].update();
         particlesArray[i].draw(ctx);
 
-        // Draw lines between nearby particles
+        // Draw lines between nearby particles - shorter max distance on small screens
+        const lineMaxDistance = Math.min(100, canvas.width / 10);
+        
+        // Limit number of connections on smaller screens for performance
+        const connectionLimit = canvas.width < 768 ? 3 : particlesArray.length;
+        let connections = 0;
+        
         for (let j = i; j < particlesArray.length; j++) {
+          if (connections >= connectionLimit) break;
+          
           const dx = particlesArray[i].x - particlesArray[j].x;
           const dy = particlesArray[i].y - particlesArray[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < lineMaxDistance) {
+            connections++;
             ctx.beginPath();
 
             // Check if either particle is near mouse for line color
             const mouseX = mousePosition.current.x;
             const mouseY = mousePosition.current.y;
+            const interactionRadius = Math.min(100, canvas.width / 8);
             const dist1 = Math.sqrt(
               (particlesArray[i].x - mouseX) ** 2 +
                 (particlesArray[i].y - mouseY) ** 2
@@ -149,14 +205,15 @@ const ParticleBackground = () => {
                 (particlesArray[j].y - mouseY) ** 2
             );
 
-            if (dist1 < 100 || dist2 < 100) {
+            if (dist1 < interactionRadius || dist2 < interactionRadius) {
               // Brighter blue lines near mouse
-              ctx.strokeStyle = `rgba(120, 190, 255, ${0.2 - distance / 500})`;
-              ctx.lineWidth = 0.8;
-            } else {
-              // Normal white lines elsewhere
-              ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 - distance / 1000})`;
+              ctx.strokeStyle = `rgba(120, 190, 255, ${0.15 - distance / (lineMaxDistance * 5)})`;
               ctx.lineWidth = 0.5;
+            } else {
+              // Normal white lines elsewhere, thinner on mobile
+              const lineOpacity = canvas.width < 768 ? 0.05 : 0.1;
+              ctx.strokeStyle = `rgba(255, 255, 255, ${lineOpacity - distance / (lineMaxDistance * 10)})`;
+              ctx.lineWidth = canvas.width < 768 ? 0.3 : 0.5;
             }
 
             ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
@@ -174,8 +231,10 @@ const ParticleBackground = () => {
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener("touchmove", updateTouchPosition);
+      window.removeEventListener("touchstart", updateTouchPosition);
     };
-  }, []);
+  }, [windowSize.width, windowSize.height]);
 
   return (
     <canvas
