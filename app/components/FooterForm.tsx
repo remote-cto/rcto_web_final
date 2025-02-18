@@ -125,7 +125,7 @@ const FooterForm = () => {
     <div>
       <section className="bg-gradient-to-r from-indigo-500 to-blue-500 font-mono py-16 relative overflow-hidden">
         {/* Enhanced heading with neon glow */}
-        <h2 className="text-3xl lg:text-6xl font-bold text-center text-white mb-12 
+        <h2 className="text-3xl lg:text-6xl font-bold text-center text-white mb-12 font-['Montserrat']
           relative
           before:content-[''] before:absolute before:inset-0
           before:bg-white before:opacity-30 before:blur-lg before:-z-10
