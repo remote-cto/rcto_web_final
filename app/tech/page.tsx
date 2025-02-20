@@ -44,7 +44,7 @@ interface SubmitStatus {
 }
 
 const TechChallengePage = () => {
-  const router = useRouter(); 
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     companyName: "",
@@ -68,7 +68,7 @@ const TechChallengePage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitStatus({ loading: true, error: null, success: false });
-  
+
     try {
       const response = await fetch("/api/techForm", {
         method: "POST",
@@ -77,21 +77,21 @@ const TechChallengePage = () => {
         },
         body: JSON.stringify(formData),
       });
-  
+
       const data = await response.json();
-  
+
       if (data.success) {
         setSubmitStatus({
           loading: false,
           error: null,
           success: true,
         });
-  
+
         // Show success toast
         toast.success(
           "Form submitted successfully! We will get back to you soon."
         );
-  
+
         // Reset form
         setFormData({
           fullName: "",
@@ -107,7 +107,7 @@ const TechChallengePage = () => {
           discoveryCall: false,
           additionalDetails: "",
         });
-  
+
         // Redirect to /thankyou page
         router.push("/tech/thankyou");
       } else {
@@ -116,13 +116,13 @@ const TechChallengePage = () => {
     } catch (error: unknown) {
       const errorMessage =
         error instanceof Error ? error.message : "An unexpected error occurred";
-  
+
       setSubmitStatus({
         loading: false,
         error: errorMessage,
         success: false,
       });
-  
+
       // Show error toast
       toast.error(errorMessage);
     }
@@ -400,8 +400,17 @@ const TechChallengePage = () => {
               </Alert>
 
               <div className="flex items-center justify-center">
-                <button className="px-6 py-2 font-medium bg-green-500 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
-                  Submit
+                <button
+                  type="submit"
+                  disabled={submitStatus.loading}
+                  className={`px-6 py-2 font-medium w-fit transition-all shadow-[3px_3px_0px_black] 
+      ${
+        submitStatus.loading
+          ? "bg-gray-400 cursor-not-allowed"
+          : "bg-green-500 hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] text-white"
+      }`}
+                >
+                  {submitStatus.loading ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>
