@@ -163,7 +163,7 @@ const TechChallengePage = () => {
             <Box textAlign="center" mb={4}>
               <Typography
                 variant="h4"
-                color="primary"
+                color="black"
                 gutterBottom
                 className="font-['Monteserrat'] text-2xl lg:text-4xl font-bold"
               >
