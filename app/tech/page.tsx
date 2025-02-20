@@ -127,20 +127,46 @@ const TechChallengePage = () => {
       toast.error(errorMessage);
     }
   };
+
+  const style = {
+    "& label.Mui-focused": {
+      color: "green"
+    },
+    "& .MuiOutlinedInput-root": {
+      "&.Mui-focused fieldset": {
+        borderColor: "black"
+      }
+    }
+  }
   return (
-    <Box
+    <Box 
       sx={{
         minHeight: "100vh",
-        bgcolor: "grey.50",
+        bgcolor: "grey.100",
         py: 8,
         px: { xs: 2, sm: 3, lg: 4 },
       }}
+      
     >
       <Container maxWidth="md">
-        <Card>
+        <Card
+          sx={{
+            background: "rgba(255, 255, 255, 0.25)",
+            boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+            backdropFilter: "blur(7.5px)",
+            WebkitBackdropFilter: "blur(7.5px)",
+            borderRadius: "10px",
+            border: "1px solid rgba(255, 255, 255, 0.18)",
+          }}
+        >
           <CardContent>
             <Box textAlign="center" mb={4}>
-              <Typography variant="h4" color="primary" gutterBottom>
+              <Typography
+                variant="h4"
+                color="primary"
+                gutterBottom
+                className="font-['Monteserrat'] text-2xl lg:text-4xl font-bold"
+              >
                 Remote CTO - Tech Challenge Submission Form
               </Typography>
               <Typography variant="subtitle1" color="text.secondary">
@@ -157,7 +183,7 @@ const TechChallengePage = () => {
                 </Typography>
 
                 <Box display="flex" flexDirection="column" gap={3}>
-                  <TextField
+                  <TextField sx={style}
                     label="Full Name"
                     required
                     fullWidth
@@ -167,7 +193,7 @@ const TechChallengePage = () => {
                     }
                   />
 
-                  <TextField
+                  <TextField sx={style}
                     label="Company Name"
                     required
                     fullWidth
@@ -177,7 +203,7 @@ const TechChallengePage = () => {
                     }
                   />
 
-                  <TextField
+                  <TextField sx={style}
                     label="Email Address"
                     type="email"
                     required
@@ -188,7 +214,7 @@ const TechChallengePage = () => {
                     }
                   />
 
-                  <TextField
+                  <TextField sx={style}
                     label="Phone Number"
                     type="tel"
                     fullWidth
@@ -240,7 +266,7 @@ const TechChallengePage = () => {
                   </FormControl>
 
                   {formData.challengeArea === "Other" && (
-                    <TextField
+                    <TextField sx={style}
                       label="Please specify"
                       fullWidth
                       value={formData.otherChallengeArea}
@@ -253,7 +279,7 @@ const TechChallengePage = () => {
                     />
                   )}
 
-                  <TextField
+                  <TextField sx={style}
                     label="Briefly describe your tech challenge"
                     required
                     fullWidth
@@ -374,7 +400,7 @@ const TechChallengePage = () => {
                     </RadioGroup>
                   </FormControl>
 
-                  <TextField
+                  <TextField sx={style}
                     label="Any other details you'd like to share?"
                     fullWidth
                     multiline
