@@ -21,6 +21,8 @@ import {
 } from "@mui/material";
 
 import { toast } from "react-hot-toast";
+import Navbar from "../components/Navbar";
+import FormHeader from "../components/FormHeader";
 
 interface FormData {
   fullName: string;
@@ -138,6 +140,10 @@ const TechChallengePage = () => {
     },
   };
   return (
+    <>
+
+
+  <FormHeader/>
     <Box
       sx={{
         minHeight: "100vh",
@@ -146,6 +152,7 @@ const TechChallengePage = () => {
         px: { xs: 2, sm: 3, lg: 4 },
       }}
     >
+    
       <Container maxWidth="md">
         <Card
           sx={{
@@ -165,7 +172,7 @@ const TechChallengePage = () => {
                 gutterBottom
                 className="font-['Monteserrat'] text-2xl lg:text-4xl font-bold"
               >
-                Remote CTO - Tech Challenge Submission Form
+                Tech Challenge Submission Form
               </Typography>
               <Typography variant="subtitle1" color="text.secondary">
                 Struggling with a tech issue? Share your challenge, and our
@@ -449,6 +456,7 @@ const TechChallengePage = () => {
         </Card>
       </Container>
     </Box>
+    </>
   );
 };
 
