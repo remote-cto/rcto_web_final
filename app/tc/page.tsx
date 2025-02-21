@@ -170,7 +170,7 @@ const TechChallengePage = () => {
                 variant="h4"
                 color="black"
                 gutterBottom
-                className="font-['Monteserrat'] text-2xl lg:text-4xl font-bold"
+                className="font-['Monteserrat'] text-xl lg:text-4xl font-bold"
               >
                 Tech Challenge Submission Form
               </Typography>
