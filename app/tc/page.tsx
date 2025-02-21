@@ -33,7 +33,7 @@ interface FormData {
   duration: string;
   impact: string;
   previousAttempts: string;
-  discoveryCall: boolean;
+  discoveryCall: string; 
   additionalDetails: string;
 }
 
@@ -56,7 +56,7 @@ const TechChallengePage = () => {
     duration: "",
     impact: "",
     previousAttempts: "",
-    discoveryCall: true,
+    discoveryCall: "yes", 
     additionalDetails: "",
   });
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>({
@@ -75,7 +75,10 @@ const TechChallengePage = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          discoveryCall: formData.discoveryCall === "yes", 
+        }),
       });
 
       const data = await response.json();
@@ -87,12 +90,10 @@ const TechChallengePage = () => {
           success: true,
         });
 
-        // Show success toast
         toast.success(
           "Form submitted successfully! We will get back to you soon."
         );
 
-        // Reset form
         setFormData({
           fullName: "",
           companyName: "",
@@ -104,12 +105,11 @@ const TechChallengePage = () => {
           duration: "",
           impact: "",
           previousAttempts: "",
-          discoveryCall: false,
+          discoveryCall: "yes",
           additionalDetails: "",
         });
 
-        // Redirect to /thankyou page
-        router.push("/tech/thankyou");
+        router.push("/tc/thankyou");
       } else {
         throw new Error(data.error || "Failed to submit form");
       }
@@ -123,30 +123,28 @@ const TechChallengePage = () => {
         success: false,
       });
 
-      // Show error toast
       toast.error(errorMessage);
     }
   };
 
   const style = {
     "& label.Mui-focused": {
-      color: "green"
+      color: "green",
     },
     "& .MuiOutlinedInput-root": {
       "&.Mui-focused fieldset": {
-        borderColor: "black"
-      }
-    }
-  }
+        borderColor: "black",
+      },
+    },
+  };
   return (
-    <Box 
+    <Box
       sx={{
         minHeight: "100vh",
         bgcolor: "grey.100",
         py: 8,
         px: { xs: 2, sm: 3, lg: 4 },
       }}
-      
     >
       <Container maxWidth="md">
         <Card
@@ -183,7 +181,8 @@ const TechChallengePage = () => {
                 </Typography>
 
                 <Box display="flex" flexDirection="column" gap={3}>
-                  <TextField sx={style}
+                  <TextField
+                    sx={style}
                     label="Full Name"
                     required
                     fullWidth
@@ -193,7 +192,8 @@ const TechChallengePage = () => {
                     }
                   />
 
-                  <TextField sx={style}
+                  <TextField
+                    sx={style}
                     label="Company Name"
                     required
                     fullWidth
@@ -203,7 +203,8 @@ const TechChallengePage = () => {
                     }
                   />
 
-                  <TextField sx={style}
+                  <TextField
+                    sx={style}
                     label="Email Address"
                     type="email"
                     required
@@ -214,7 +215,8 @@ const TechChallengePage = () => {
                     }
                   />
 
-                  <TextField sx={style}
+                  <TextField
+                    sx={style}
                     label="Phone Number"
                     type="tel"
                     fullWidth
@@ -266,7 +268,8 @@ const TechChallengePage = () => {
                   </FormControl>
 
                   {formData.challengeArea === "Other" && (
-                    <TextField sx={style}
+                    <TextField
+                      sx={style}
                       label="Please specify"
                       fullWidth
                       value={formData.otherChallengeArea}
@@ -279,7 +282,8 @@ const TechChallengePage = () => {
                     />
                   )}
 
-                  <TextField sx={style}
+                  <TextField
+                    sx={style}
                     label="Briefly describe your tech challenge"
                     required
                     fullWidth
@@ -374,16 +378,16 @@ const TechChallengePage = () => {
                 </Typography>
 
                 <Box display="flex" flexDirection="column" gap={4}>
-                  <FormControl>
+                  <FormControl required>
                     <FormLabel>
-                      Would you like a free 15-minute discovery call?
+                      Would you like a free 15-minute discovery call? *
                     </FormLabel>
                     <RadioGroup
-                      value={formData.discoveryCall ? "yes" : "no"}
+                      value={formData.discoveryCall}
                       onChange={(e) =>
                         setFormData({
                           ...formData,
-                          discoveryCall: e.target.value === "yes",
+                          discoveryCall: e.target.value,
                         })
                       }
                     >
@@ -400,7 +404,8 @@ const TechChallengePage = () => {
                     </RadioGroup>
                   </FormControl>
 
-                  <TextField sx={style}
+                  <TextField
+                    sx={style}
                     label="Any other details you'd like to share?"
                     fullWidth
                     multiline
