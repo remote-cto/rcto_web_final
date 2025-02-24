@@ -53,17 +53,20 @@ export async function sendTechChallengeEmail(
   `;
 
   const userConfirmationContent = `
-    Dear ${formData.fullName},
+  <p>Dear ${formData.fullName},</p>
 
-    Thank you for submitting your Tech Challenge Form to Remote-CTO. We appreciate you taking the time to share your technical challenges with us.
+  <p>Thank you for submitting your Tech Challenge Form to Remote-CTO. We appreciate you taking the time to share your technical challenges with us.</p>
 
-    Our team will carefully review your submission and get back to you within 24-48 hours.
+  <p>Our team will carefully review your submission and get back to you within 24-48 hours.</p>
 
-    If you have any immediate questions, please don't hesitate to reach out to us.
+  <p>If you have any immediate questions, please don't hesitate to reach out to us at 
+    <span style="color: blue;">+91 966-251-2899</span>.
+  </p>
 
-    Best regards,
-    The Remote-CTO Team
-  `;
+  <p>Best regards,<br/>
+  The Remote-CTO Team</p>
+`;
+
 
   try {
     // Send email to admin
