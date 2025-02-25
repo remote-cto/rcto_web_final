@@ -56,7 +56,7 @@ export async function sendTechChallengeEmail(
   <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
     <p style="margin-bottom: 16px;">Dear ${formData.fullName},</p>
 
-    <p style="margin-bottom: 16px;">Thank you for submitting your Tech Challenge Form to <strong>Remote-CTO</strong>. We appreciate you taking the time to share your technical challenges with us.</p>
+    <p style="margin-bottom: 16px;">Thank you for submitting your Tech Challenge Form to <strong>Remote CTO</strong>. We appreciate you taking the time to share your technical challenges with us.</p>
 
     <p style="margin-bottom: 16px;">Our team will carefully review your submission and get back to you within <strong>24-48 hours</strong>.</p>
 
@@ -82,7 +82,7 @@ export async function sendTechChallengeEmail(
     </p>
 
     <p>Best regards,<br/>
-    <strong>The Remote-CTO Team</strong></p>
+    <strong>The Remote CTO Team</strong></p>
   </div>
 `;
 
