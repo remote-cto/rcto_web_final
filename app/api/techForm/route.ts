@@ -13,10 +13,9 @@ export async function POST(req: NextRequest) {
       'fullName',
       'companyName',
       'email',
-      'phone',
+      'businessDescription',
       'challengeArea',
       'description',
-      'duration',
       'impact',
       'previousAttempts',
       'discoveryCall'
