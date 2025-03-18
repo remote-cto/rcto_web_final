@@ -11,12 +11,9 @@ import {
   FormControlLabel,
   FormControl,
   FormLabel,
-  MenuItem,
   Button,
   Box,
   Container,
-  Select,
-  TextareaAutosize,
   Alert,
 } from "@mui/material";
 
@@ -36,7 +33,7 @@ interface FormData {
   duration: string;
   impact: string;
   previousAttempts: string;
-  discoveryCall: string; 
+  discoveryCall: string;
   additionalDetails: string;
 }
 
@@ -60,7 +57,7 @@ const TechChallengePage = () => {
     duration: "",
     impact: "",
     previousAttempts: "",
-    discoveryCall: "yes", 
+    discoveryCall: "yes",
     additionalDetails: "",
   });
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>({
@@ -81,7 +78,7 @@ const TechChallengePage = () => {
         },
         body: JSON.stringify({
           ...formData,
-          discoveryCall: formData.discoveryCall === "yes", 
+          discoveryCall: formData.discoveryCall === "yes",
         }),
       });
 
@@ -132,24 +129,31 @@ const TechChallengePage = () => {
     }
   };
 
-  const style = {
+  // Blue and white themed styles
+  const blueThemeStyles = {
     "& label.Mui-focused": {
-      color: "green",
+      color: "#1a73e8", // Google blue
     },
     "& .MuiOutlinedInput-root": {
       "&.Mui-focused fieldset": {
-        borderColor: "black",
+        borderColor: "#1a73e8",
+      },
+      "&:hover fieldset": {
+        borderColor: "#4285f4", // Lighter blue on hover
       },
     },
+    "& .MuiFormLabel-root": {
+      color: "#5f6368", // Dark gray for labels
+    },
   };
+
   return (
     <>
-      <FormHeader/>
-      {/* <Navbar/> */}
+      <FormHeader />
       <Box
         sx={{
           minHeight: "100vh",
-          bgcolor: "grey.100",
+          bgcolor: "#f8faff", // Very light blue background
           py: 8,
           px: { xs: 2, sm: 3, lg: 4 },
         }}
@@ -157,40 +161,55 @@ const TechChallengePage = () => {
         <Container maxWidth="md">
           <Card
             sx={{
-              background: "rgba(255, 255, 255, 0.25)",
-              boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-              backdropFilter: "blur(7.5px)",
-              WebkitBackdropFilter: "blur(7.5px)",
-              borderRadius: "10px",
-              border: "1px solid rgba(255, 255, 255, 0.18)",
+              background: "#ffffff",
+              boxShadow: "0 8px 24px rgba(26, 115, 232, 0.12)",
+              borderRadius: "12px",
+              border: "1px solid rgba(26, 115, 232, 0.1)",
+              overflow: "hidden",
             }}
           >
-            <CardContent>
-              <Box textAlign="center" mb={4}>
-                <Typography
-                  variant="h4"
-                  color="black"
-                  gutterBottom
-                  className="font-['Monteserrat'] text-xl lg:text-4xl font-bold"
-                >
-                  Remote CTO - Tech Challenge Submission Form
-                </Typography>
-                <Typography variant="subtitle1" color="text.secondary">
-                  Struggling with a tech issue? Share your challenge, and our
-                  experts will help you find the right solution!
-                </Typography>
-              </Box>
+            <Box 
+              sx={{ 
+                bgcolor: "#1a73e8", 
+                py: 3, 
+                px: 4 
+              }}
+            >
+              <Typography
+                // variant="h4"
+                color="white"
+                gutterBottom
+                className="font-['Switzer'] text-xl lg:text-4xl font-bold"
+              >
+                Remote CTO - Tech Challenge Submission
+              </Typography>
+              <Typography variant="subtitle1" color="rgba(255, 255, 255, 0.85)">
+                Struggling with a tech issue? Share your challenge, and our
+                experts will help you find the right solution!
+              </Typography>
+            </Box>
 
+            <CardContent sx={{ p: 4 }}>
               <form onSubmit={handleSubmit}>
                 {/* Basic Information Section */}
                 <Box mb={6}>
-                  <Typography variant="h6" gutterBottom>
+                  <Typography 
+                    variant="h6" 
+                    gutterBottom 
+                    sx={{ 
+                      color: "#1a73e8", 
+                      fontWeight: 600,
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1
+                    }}
+                  >
                     📝 Basic Information
                   </Typography>
 
                   <Box display="flex" flexDirection="column" gap={3}>
                     <TextField
-                      sx={style}
+                      sx={blueThemeStyles}
                       label="Full Name"
                       required
                       fullWidth
@@ -201,18 +220,21 @@ const TechChallengePage = () => {
                     />
 
                     <TextField
-                      sx={style}
+                      sx={blueThemeStyles}
                       label="Company Name"
                       required
                       fullWidth
                       value={formData.companyName}
                       onChange={(e) =>
-                        setFormData({ ...formData, companyName: e.target.value })
+                        setFormData({
+                          ...formData,
+                          companyName: e.target.value,
+                        })
                       }
                     />
 
                     <TextField
-                      sx={style}
+                      sx={blueThemeStyles}
                       label="Email Address"
                       type="email"
                       required
@@ -224,7 +246,7 @@ const TechChallengePage = () => {
                     />
 
                     <TextField
-                      sx={style}
+                      sx={blueThemeStyles}
                       label="Phone Number"
                       type="tel"
                       fullWidth
@@ -238,13 +260,23 @@ const TechChallengePage = () => {
 
                 {/* Tech Challenge Section */}
                 <Box mb={6}>
-                  <Typography variant="h6" gutterBottom>
+                  <Typography 
+                    variant="h6" 
+                    gutterBottom
+                    sx={{ 
+                      color: "#1a73e8", 
+                      fontWeight: 600,
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1
+                    }}
+                  >
                     💡 About Your Tech Challenge
                   </Typography>
 
                   <Box display="flex" flexDirection="column" gap={4}>
                     <TextField
-                      sx={style}
+                      sx={blueThemeStyles}
                       label="Describe Your Business in Simple Words"
                       required
                       fullWidth
@@ -252,13 +284,16 @@ const TechChallengePage = () => {
                       rows={3}
                       value={formData.businessDescription}
                       onChange={(e) =>
-                        setFormData({ ...formData, businessDescription: e.target.value })
+                        setFormData({
+                          ...formData,
+                          businessDescription: e.target.value,
+                        })
                       }
                       helperText="Example: We run an online tutoring platform and need better management for our classes."
                     />
 
                     <TextField
-                      sx={style}
+                      sx={blueThemeStyles}
                       label="Briefly describe your tech challenge"
                       required
                       fullWidth
@@ -266,13 +301,16 @@ const TechChallengePage = () => {
                       rows={4}
                       value={formData.description}
                       onChange={(e) =>
-                        setFormData({ ...formData, description: e.target.value })
+                        setFormData({
+                          ...formData,
+                          description: e.target.value,
+                        })
                       }
                       helperText="Example: Our website is slow, and students complain about login issues."
                     />
 
                     <FormControl required>
-                      <FormLabel>
+                      <FormLabel sx={{ color: "#5f6368" }}>
                         What Are Some Features You Think Would Help?
                       </FormLabel>
                       <RadioGroup
@@ -283,6 +321,14 @@ const TechChallengePage = () => {
                             challengeArea: e.target.value,
                           })
                         }
+                        sx={{
+                          "& .MuiRadio-root": {
+                            color: "#4285f4",
+                            "&.Mui-checked": {
+                              color: "#1a73e8",
+                            },
+                          },
+                        }}
                       >
                         {[
                           "AI & Automation",
@@ -305,7 +351,7 @@ const TechChallengePage = () => {
 
                     {formData.challengeArea === "Other" && (
                       <TextField
-                        sx={style}
+                        sx={blueThemeStyles}
                         label="Please specify"
                         fullWidth
                         value={formData.otherChallengeArea}
@@ -319,7 +365,7 @@ const TechChallengePage = () => {
                     )}
 
                     <FormControl>
-                      <FormLabel>
+                      <FormLabel sx={{ color: "#5f6368" }}>
                         What's the impact of this challenge on your business?
                       </FormLabel>
                       <RadioGroup
@@ -327,6 +373,14 @@ const TechChallengePage = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, impact: e.target.value })
                         }
+                        sx={{
+                          "& .MuiRadio-root": {
+                            color: "#4285f4",
+                            "&.Mui-checked": {
+                              color: "#1a73e8",
+                            },
+                          },
+                        }}
                       >
                         {[
                           "Minor inconvenience",
@@ -345,7 +399,7 @@ const TechChallengePage = () => {
                     </FormControl>
 
                     <FormControl>
-                      <FormLabel>
+                      <FormLabel sx={{ color: "#5f6368" }}>
                         Have you previously tried to resolve this issue?
                       </FormLabel>
                       <RadioGroup
@@ -356,6 +410,14 @@ const TechChallengePage = () => {
                             previousAttempts: e.target.value,
                           })
                         }
+                        sx={{
+                          "& .MuiRadio-root": {
+                            color: "#4285f4",
+                            "&.Mui-checked": {
+                              color: "#1a73e8",
+                            },
+                          },
+                        }}
                       >
                         {[
                           "Yes, internally",
@@ -376,14 +438,25 @@ const TechChallengePage = () => {
 
                 {/* Next Steps Section */}
                 <Box mb={6}>
-                  <Typography variant="h6" gutterBottom>
+                  <Typography 
+                    variant="h6" 
+                    gutterBottom
+                    sx={{ 
+                      color: "#1a73e8", 
+                      fontWeight: 600,
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1
+                    }}
+                  >
                     🚀 Next Steps
                   </Typography>
 
                   <Box display="flex" flexDirection="column" gap={4}>
                     <FormControl required>
-                      <FormLabel>
-                        Would you like a free 15-minute discovery call to discuss this further?
+                      <FormLabel sx={{ color: "#5f6368" }}>
+                        Would you like a free 15-minute discovery call to
+                        discuss this further?
                       </FormLabel>
                       <RadioGroup
                         value={formData.discoveryCall}
@@ -393,6 +466,14 @@ const TechChallengePage = () => {
                             discoveryCall: e.target.value,
                           })
                         }
+                        sx={{
+                          "& .MuiRadio-root": {
+                            color: "#4285f4",
+                            "&.Mui-checked": {
+                              color: "#1a73e8",
+                            },
+                          },
+                        }}
                       >
                         <FormControlLabel
                           value="yes"
@@ -408,7 +489,7 @@ const TechChallengePage = () => {
                     </FormControl>
 
                     <TextField
-                      sx={style}
+                      sx={blueThemeStyles}
                       label="Any other details you'd like to share?"
                       fullWidth
                       multiline
@@ -425,28 +506,46 @@ const TechChallengePage = () => {
                 </Box>
 
                 {/* Privacy Notice */}
-                <Alert severity="info" sx={{ mb: 4 }}>
+                <Alert 
+                  severity="info" 
+                  sx={{ 
+                    mb: 4,
+                    bgcolor: "rgba(26, 115, 232, 0.1)",
+                    "& .MuiAlert-icon": {
+                      color: "#1a73e8"
+                    }
+                  }}
+                >
                   <Typography variant="body2">
-                    <strong>Privacy Notice:</strong> We respect your privacy. All
-                    information shared will be kept confidential and used solely
-                    to assess and address your tech challenge.
+                    <strong>Privacy Notice:</strong> We respect your privacy.
+                    All information shared will be kept confidential and used
+                    solely to assess and address your tech challenge.
                   </Typography>
                 </Alert>
 
-                <div className="flex items-center justify-center">
-                  <button
+                <Box display="flex" justifyContent="center">
+                  <Button
                     type="submit"
                     disabled={submitStatus.loading}
-                    className={`px-6 py-2 font-medium w-fit transition-all shadow-[3px_3px_0px_black] 
-        ${
-          submitStatus.loading
-            ? "bg-gray-400 cursor-not-allowed"
-            : "bg-green-500 hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] text-white"
-        }`}
+                    variant="contained"
+                    sx={{
+                      px: 4,
+                      py: 1.5,
+                      backgroundColor: "#1a73e8",
+                      borderRadius: "6px",
+                      boxShadow: "0 2px 8px rgba(26, 115, 232, 0.3)",
+                      "&:hover": {
+                        backgroundColor: "#0d65db",
+                      },
+                      "&:disabled": {
+                        backgroundColor: "#ccc",
+                      },
+                      fontWeight: "medium",
+                    }}
                   >
                     {submitStatus.loading ? "Submitting..." : "Submit"}
-                  </button>
-                </div>
+                  </Button>
+                </Box>
               </form>
             </CardContent>
           </Card>

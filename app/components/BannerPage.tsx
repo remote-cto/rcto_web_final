@@ -291,10 +291,10 @@ const BannerPage = ({
                     //     "0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3)",
                     // }}
                   >
-                    Leave the
+                    Leave The
                   </span>{" "}
                   <span
-                    className="font-['Orbitron'] bg-gradient-to-r from-cyan-300 to-green-200 text-transparent bg-clip-text mb-2 lg:mb-4"
+                    className="font-['Switzer'] bg-gradient-to-r from-cyan-300 to-green-200 text-transparent bg-clip-text mb-2 lg:mb-4"
                     // style={{
                     //   textShadow:
                     //     "0 0 5px rgba(6,182,212,0.8), 0 0 10px rgba(6,182,212,0.5), 0 0 15px rgba(167,243,208,0.5)",
@@ -309,7 +309,7 @@ const BannerPage = ({
                     //     "0 0 5px rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3)",
                     // }}
                   >
-                    to us
+                    To Us
                   </span>
                 </motion.h1>
               </div>
