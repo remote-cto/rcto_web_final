@@ -315,13 +315,13 @@ const BannerPage = ({
               </div>
             </div>
 
-            <motion.div
+            {/* <motion.div
               className="mt-8 flex flex-wrap justify-center gap-4"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <CoolMode>
+            > */}
+              {/* <CoolMode> */}
                 <Link href="/tc">
                 <button
                   type="button"
@@ -331,8 +331,8 @@ const BannerPage = ({
                   🚀 Discover How
                 </button>
                 </Link>
-              </CoolMode>
-            </motion.div>
+              {/* </CoolMode> */}
+            {/* </motion.div> */}
           </div>
         </div>
         <GridPattern
