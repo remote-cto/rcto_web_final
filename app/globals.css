@@ -101,3 +101,17 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'Switzer-Light';
+  src: url('/font/Switzer-Light.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agrandir-GrandLight';
+  src: url('/font/Agrandir-GrandLight.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
