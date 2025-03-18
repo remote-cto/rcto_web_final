@@ -93,3 +93,11 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('/font/Switzer-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+

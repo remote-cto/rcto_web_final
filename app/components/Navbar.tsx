@@ -53,7 +53,7 @@ const Navbar = () => {
                     alt="logo image"
                     className="mr-2"
                   />
-                  <span className="font-bold text-[#eef0f4]  text-xl lg:text-4xl font-montserrat">
+                  <span className="font-bold text-[#eef0f4]  text-xl lg:text-4xl font-['Switzer']">
                     REMOTE CTO
                   </span>
                 </Link>
