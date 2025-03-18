@@ -144,7 +144,8 @@ const TechChallengePage = () => {
   };
   return (
     <>
-      <FormHeader/>
+      {/* <FormHeader/> */}
+      <Navbar/>
       <Box
         sx={{
           minHeight: "100vh",
