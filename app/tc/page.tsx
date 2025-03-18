@@ -175,14 +175,14 @@ const TechChallengePage = () => {
                 px: 4 
               }}
             >
-              <Typography
+              <div
                 // variant="h4"
                 color="white"
-                gutterBottom
-                className="font-['Switzer'] text-xl lg:text-4xl font-bold"
+                // gutterBottom
+                className="font-['Switzer'] text-xl lg:text-4xl font-bold text-white"
               >
                 Remote CTO - Tech Challenge Submission
-              </Typography>
+              </div>
               <Typography variant="subtitle1" color="rgba(255, 255, 255, 0.85)">
                 Struggling with a tech issue? Share your challenge, and our
                 experts will help you find the right solution!
