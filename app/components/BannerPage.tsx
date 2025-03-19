@@ -315,9 +315,11 @@ const BannerPage = ({
                     Leave the
                   </span>{" "}
                   <br />
-                  <span className="whitespace-nowrap font-['Agrandir-GrandLight'] text-white bg-clip-text tracking-wider">
-                    tech to us
-                  </span>
+                  <span className="relative whitespace-nowrap font-['Agrandir-GrandLight'] text-white bg-clip-text tracking-wider">
+                    tech
+                    <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-yellow-400"></span>
+                  </span>{" "}
+                  <span className="text-white font-['Agrandir-GrandLight']">to us</span>
                 </motion.h1>
               </div>
             </div>
