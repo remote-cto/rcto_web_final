@@ -115,3 +115,11 @@
   font-weight: bold;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'Agrandir-GrandHeavy';
+  src: url('/font/Agrandir-GrandHeavy.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

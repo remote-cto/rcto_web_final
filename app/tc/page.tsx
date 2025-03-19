@@ -168,11 +168,11 @@ const TechChallengePage = () => {
               overflow: "hidden",
             }}
           >
-            <Box 
-              sx={{ 
-                bgcolor: "#1a73e8", 
-                py: 3, 
-                px: 4 
+            <Box
+              sx={{
+                backgroundImage: "linear-gradient(to right, #6366F1, #3B82F6)",
+                py: 3,
+                px: 4,
               }}
             >
               <div
@@ -193,15 +193,15 @@ const TechChallengePage = () => {
               <form onSubmit={handleSubmit}>
                 {/* Basic Information Section */}
                 <Box mb={6}>
-                  <Typography 
-                    variant="h6" 
-                    gutterBottom 
-                    sx={{ 
-                      color: "#1a73e8", 
+                  <Typography
+                    variant="h6"
+                    gutterBottom
+                    sx={{
+                      color: "#1a73e8",
                       fontWeight: 600,
                       display: "flex",
                       alignItems: "center",
-                      gap: 1
+                      gap: 1,
                     }}
                   >
                     📝 Basic Information
@@ -260,15 +260,15 @@ const TechChallengePage = () => {
 
                 {/* Tech Challenge Section */}
                 <Box mb={6}>
-                  <Typography 
-                    variant="h6" 
+                  <Typography
+                    variant="h6"
                     gutterBottom
-                    sx={{ 
-                      color: "#1a73e8", 
+                    sx={{
+                      color: "#1a73e8",
                       fontWeight: 600,
                       display: "flex",
                       alignItems: "center",
-                      gap: 1
+                      gap: 1,
                     }}
                   >
                     💡 About Your Tech Challenge
@@ -438,15 +438,15 @@ const TechChallengePage = () => {
 
                 {/* Next Steps Section */}
                 <Box mb={6}>
-                  <Typography 
-                    variant="h6" 
+                  <Typography
+                    variant="h6"
                     gutterBottom
-                    sx={{ 
-                      color: "#1a73e8", 
+                    sx={{
+                      color: "#1a73e8",
                       fontWeight: 600,
                       display: "flex",
                       alignItems: "center",
-                      gap: 1
+                      gap: 1,
                     }}
                   >
                     🚀 Next Steps
@@ -506,14 +506,14 @@ const TechChallengePage = () => {
                 </Box>
 
                 {/* Privacy Notice */}
-                <Alert 
-                  severity="info" 
-                  sx={{ 
+                <Alert
+                  severity="info"
+                  sx={{
                     mb: 4,
                     bgcolor: "rgba(26, 115, 232, 0.1)",
                     "& .MuiAlert-icon": {
-                      color: "#1a73e8"
-                    }
+                      color: "#1a73e8",
+                    },
                   }}
                 >
                   <Typography variant="body2">
