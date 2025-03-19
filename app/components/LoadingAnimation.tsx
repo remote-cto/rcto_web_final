@@ -27,45 +27,59 @@ const LoadingAnimation = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-indigo-500/90 to-blue-500/90 backdrop-blur-sm z-50">
-      <motion.div 
-        className="relative"
-        initial="initial"
-        animate="animate"
-      >
-        <motion.div
-          variants={pulseVariants}
-          className="absolute inset-0 bg-white/20 rounded-full"
-          style={{ width: '180px', height: '180px' }}
-        />
-        <motion.svg
-          width="120"
-          height="120"
-          viewBox="0 0 120 120"
-          variants={circleVariants}
-          className="relative z-10"
+    <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-indigo-500/90 to-blue-500/90 backdrop-blur-sm z-50">
+      <div className="relative flex items-center justify-center">
+        <motion.div 
+          className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 flex items-center justify-center"
+          initial="initial"
+          animate="animate"
         >
-          {/* <circle
-            cx="60"
-            cy="60"
-            r="54"
-            fill="none"
-            stroke="white"
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeDasharray="339.292"
-            strokeDashoffset="240"
-          /> */}
-        </motion.svg>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-medium"
-        >
-         <Image src="/images/RCTO.png" height={60} width={60} alt="Logo" />
+          {/* Pulsing background circle */}
+          <motion.div
+            variants={pulseVariants}
+            className="absolute inset-0 bg-white/20 rounded-full"
+          />
+          
+          {/* Rotating circle */}
+          <motion.svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 120 120"
+            variants={circleVariants}
+            className="absolute inset-0 z-10"
+          >
+            {/* <circle
+              cx="60"
+              cy="60"
+              r="54"
+              fill="none"
+              stroke="white"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeDasharray="339.292"
+              strokeDashoffset="240"
+            /> */}
+          </motion.svg>
+          
+          {/* Logo container - positioned absolutely in the center */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-16 h-16">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="w-full h-full relative"
+            >
+              <Image 
+                src="/images/RCTO.png" 
+                alt="Logo" 
+                layout="fill"
+                objectFit="contain"
+                priority
+              />
+            </motion.div>
+          </div>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   );
 };
