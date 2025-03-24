@@ -55,46 +55,24 @@ const WhatWeOffer = () => {
   const services = [
     {
       image: "/images/DeepTechResearch.jpg",
-      title: "Deep Tech Research, Consulting and Implementation",
+      title: "Deep Tech Solutions",
       description:
-        "Our deep tech research and consulting help businesses harness advanced technologies to drive innovation and growth. Our expertise in deep tech like AI, blockchain, IoT etc ensures that IT infrastructure is optimized for speed, security, and scalability.",
-      link: "/services/DeepTechResearch",
+        "At Remote CTO, we bring deep technology expertise across cybersecurity, data management, and AI solutions to help businesses thrive in a digital-first world. Our specialized divisions ensure you get expert guidance and solutions tailored to your unique challenges.",
+      link: "/services/DeepTechSolution",
     },
     {
       image: "/images/FractionalCTO.jpg",
-      title: "Fractional CTO Services",
+      title: "Advisory and Strategic Technology Leadership",
       description:
-        "We provide businesses with on-demand technology leadership without the full-time commitment. We offer strategic guidance in areas like technology roadmap, digital transformation, and scalable IT infrastructure.",
+        "Our Advisory & Strategic Technology Leadership services provide expert guidance on technology adoption, digital transformation, and enterprise architecture. We help organizations align technology with business goals, optimize IT investments, and stay ahead of the competition. Whether you need Fractional CTO services, AI strategy consulting, or digital roadmap planning, we bring deep technical expertise and strategic foresight to fuel your success.",
       link: "/services/FractionalCTO",
     },
     {
       image: "/images/ManagedIT.jpg",
       title: "Managed IT Services",
       description:
-        "Our Managed IT Services are designed to provide comprehensive, proactive support for all your IT needs, allowing your business to thrive without the burden of managing complex technology in-house.",
+        "Our Managed IT Services provide end-to-end support, ensuring your infrastructure, applications, and networks run efficiently with minimal downtime. From proactive monitoring and cybersecurity to cloud management and IT support, we take care of your technology so you can focus on growing your business. Whether you need fully managed solutions or co-managed IT support, our expert team ensures reliability, security, and performance at every level.",
       link: "/services/ManagedITServices",
-    },
-    {
-      image: "/images/DataManagement.jpg",
-      title: "Data Management",
-      description:
-        "Our Data management services handle everything accurately from simple to complex data. Our expertise transforms raw data into valuable insights, driving informed decision-making and innovation.",
-      link: "/services/DataManagement",
-    },
-    {
-      image: "/images/CyberSecurity.jpg",
-      title: "Cyber Security Solutions",
-      description:
-        "Our robust cybersecurity solutions protect businesses from evolving digital threats. Our services ensure the integrity and confidentiality of your data, safeguarding your digital assets against cyber attacks.",
-      link: "/services/CyberSecurity",
-    },
-
-    {
-      image: "/images/Emerging.jpg",
-      title: "Emerging Tech Training",
-      description:
-        "We offer hands-on training in cutting-edge technologies. Our customized programs are designed to build deep technical expertise, helping teams leverage emerging technologies for business growth.",
-      link: "/services/EmergingTech",
     },
   ];
 

@@ -1,3 +1,5 @@
+//lib/email/sendEnquiryNotification.ts
+
 import { transporter } from './config';
 
 interface EnquiryData {
@@ -12,7 +14,7 @@ export async function sendEnquiryNotification(enquiryData: EnquiryData) {
   
   const mailOptions = {
     from: process.env.SMTP_USER,
-    to: process.env.HOST_EMAIL, // The email where you want to receive notifications
+    to: process.env.HOST_EMAIL, 
     subject: 'New Customer Enquiry Received',
     html: `
       <h2>New Customer Enquiry Details</h2>
