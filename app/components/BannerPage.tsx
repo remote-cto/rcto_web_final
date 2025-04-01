@@ -293,7 +293,7 @@ const BannerPage = ({
               >
                 <div className="relative">
                   <Image
-                    src="/images/Logo.png"
+                    src="/images/design.png"
                     alt="Remote CTO"
                     width={500}
                     height={500}

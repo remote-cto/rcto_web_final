@@ -9,7 +9,7 @@ const Revolutionize = () => {
         {/* Image Section */}
         <div className="flex justify-center">
           <Image
-            src="/images/Logo.png"
+            src="/images/design.png"
             alt="Illustration"
             width={600}
             height={400}
