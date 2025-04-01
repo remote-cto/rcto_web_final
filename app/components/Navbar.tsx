@@ -51,7 +51,7 @@ const Navbar = () => {
                     width={220}
                     height={220}
                     alt="logo image"
-                    className="mr-2m max-w-[130px] lg:max-w-[220px] text-white"
+                    className="mr-2m max-w-[130px] lg:max-w-[220px]"
                   />
                   
                   
@@ -141,7 +141,7 @@ const Navbar = () => {
                       <div className="w-7 h-0.5 bg-black"></div>
                     </div>
                     <div
-                      className={`w-7 h-0.5 bg-white transform -rotate-45 transition-transform duration-300 ${
+                      className={`w-7 h-0.5 bg-black transform -rotate-45 transition-transform duration-300 ${
                         isMobileMenuIconCross ? "block" : "hidden"
                       }`}
                     ></div>
@@ -161,8 +161,8 @@ const Navbar = () => {
               <ul className="flex  flex-col items-center gap-2 mt-5 text-sm ">
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                     href="/"
@@ -173,8 +173,8 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                     href="/about"
@@ -185,8 +185,8 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                     href="/services"
