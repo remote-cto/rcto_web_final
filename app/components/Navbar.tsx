@@ -48,14 +48,13 @@ const Navbar = () => {
                 <Link href="/" className="flex items-center">
                   <Image
                     src="/images/RCTO.png"
-                    width={60}
-                    height={60}
+                    width={220}
+                    height={220}
                     alt="logo image"
-                    className="mr-2"
+                    className="mr-2m max-w-[130px] lg:max-w-[220px] text-white"
                   />
-                  <span className="text-[#eef0f4]  text-xl lg:text-4xl font-['Montserrat']">
-                    REMOTE CTO
-                  </span>
+                  
+                  
                 </Link>
               </motion.div>
             </div>

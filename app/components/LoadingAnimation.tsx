@@ -70,7 +70,7 @@ const LoadingAnimation = () => {
               className="w-full h-full relative"
             >
               <Image 
-                src="/images/RCTO.png" 
+                src="/images/Logo.png" 
                 alt="Logo" 
                 layout="fill"
                 objectFit="contain"
