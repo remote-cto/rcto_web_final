@@ -40,7 +40,7 @@ const WhyRemoteCTO = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16">
+    <div className="bg-gray-150 py-16">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ const WhyRemoteCTO = () => {
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="absolute inset-0 bg-[#061BB0] bg-opacity-70 flex items-center justify-center"
+                    className="absolute inset-0 bg-gray-100 bg-opacity-40 flex items-center justify-center"
                   ></motion.div>
                 )}
               </div>
