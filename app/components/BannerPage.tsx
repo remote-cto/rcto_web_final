@@ -319,18 +319,27 @@ const BannerPage = ({
                     tech
                     <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-yellow-400"></span>
                   </span>{" "}
-                  <span className="text-white font-['Agrandir-GrandLight']">to us</span>
+                  <span className="text-white font-['Agrandir-GrandLight']">
+                    to us
+                  </span>
                 </motion.h1>
               </div>
             </div>
             <CoolMode>
-              <div className="mt-10 mb-5 text-center">
+              <div className="mt-10 mb-5 flex justify-center">
                 <Link href="/tc">
                   <button
                     type="button"
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-xl rounded-lg text-lg px-6 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-xl rounded-lg text-lg px-6 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
                   >
-                    🚀 Discover How
+                    <Image
+                      src="/images/Logo.png"
+                      alt="icon"
+                      width={24}
+                      height={24}
+                      className="mr-2"
+                    />
+                    Discover How
                   </button>
                 </Link>
               </div>
