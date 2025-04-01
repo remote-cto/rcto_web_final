@@ -33,7 +33,7 @@ const FormHeader = () => {
   //   return <LoadingAnimation />;
   // }
   return (
-    <header className="bg-gradient-to-r from-indigo-500 to-blue-500 ">
+    <header className="bg-gray-100 ">
       <div className="mx-auto max-w-screen-xl px-4 py-3 sm:px-6 lg:px-8">
         <div className="flex h-30 lg:h-27 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -66,8 +66,8 @@ const FormHeader = () => {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-            after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+            after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 "
                     href="/"
@@ -78,10 +78,10 @@ const FormHeader = () => {
                 </li>
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-            after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+            after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300"
+            after:transition-transform after:duration-300 "
                     href="/about"
                   >
                     <BookOpenCheck className="mr-2 " />
@@ -90,10 +90,10 @@ const FormHeader = () => {
                 </li>
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-            after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+            after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300"
+            after:transition-transform after:duration-300 "
                     href="/services"
                   >
                     <UserCog className="mr-2" />
@@ -102,10 +102,10 @@ const FormHeader = () => {
                 </li>
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-            after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+            after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300"
+            after:transition-transform after:duration-300 "
                     href="/contact"
                   >
                     <ContactRound className="mr-2" />
@@ -132,12 +132,12 @@ const FormHeader = () => {
                       isMobileMenuIconCross ? "hidden" : "block"
                     }`}
                   >
-                    <div className="w-3 h-0.5 bg-white"></div>
-                    <div className="w-5 h-0.5 bg-white"></div>
-                    <div className="w-7 h-0.5 bg-white"></div>
+                    <div className="w-3 h-0.5 bg-black"></div>
+                    <div className="w-5 h-0.5 bg-black"></div>
+                    <div className="w-7 h-0.5 bg-black"></div>
                   </div>
                   <div
-                    className={`w-7 h-0.5 bg-white transform -rotate-45 transition-transform duration-300 ${
+                    className={`w-7 h-0.5 bg-black transform -rotate-45 transition-transform duration-300 ${
                       isMobileMenuIconCross ? "block" : "hidden"
                     }`}
                   ></div>
@@ -157,8 +157,8 @@ const FormHeader = () => {
             <ul className="flex  flex-col items-center gap-2 mt-5 text-sm ">
               <li>
                 <Link
-                  className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-            after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                  className="text-black transition relative hover:text-black pb-1 flex items-center
+            after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300"
                   href="/"
@@ -169,8 +169,8 @@ const FormHeader = () => {
               </li>
               <li>
                 <Link
-                  className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-            after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                  className="text-black transition relative hover:text-black pb-1 flex items-center
+            after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300"
                   href="/about"
@@ -181,8 +181,8 @@ const FormHeader = () => {
               </li>
               <li>
                 <Link
-                  className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-            after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                  className="text-black transition relative hover:text-black pb-1 flex items-center
+            after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300"
                   href="/services"
@@ -193,8 +193,8 @@ const FormHeader = () => {
               </li>
               <li>
                 <Link
-                  className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-            after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                  className="text-black transition relative hover:text-black pb-1 flex items-center
+            after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300"
                   href="/contact"
