@@ -44,13 +44,13 @@ const FormHeader = () => {
               transition={{ duration: 0.5 }}
             >
               <Link href="/" className="flex items-center">
-              <Image
-  src="/images/RCTO.png"
-  width={180}
-  height={180}
-  alt="logo image"
-  className="max-w-[120px] lg:max-w-[180px] mr-2"
-/>
+                <Image
+                  src="/images/RCTO.png"
+                  width={180}
+                  height={180}
+                  alt="logo image"
+                  className="max-w-[120px] lg:max-w-[180px] mr-2"
+                />
               </Link>
             </motion.div>
           </div>

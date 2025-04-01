@@ -279,7 +279,7 @@ const BannerPage = ({
 
   return (
     <div className="font-mono overflow-hidden relative">
-      <section className="bg-gradient-to-r from-indigo-500 to-blue-500 mb-10 relative z-10">
+      <section className="bg-gray-100 mb-10 relative z-10">
         <ParticleBackground />
         <Navbar />
         <div className="mx-auto  lg:min-h-screen flex items-center">
@@ -311,15 +311,15 @@ const BannerPage = ({
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <span className="whitespace-nowrap font-['Agrandir-GrandLight'] text-white tracking-wider">
+                  <span className="whitespace-nowrap font-['Agrandir-GrandLight'] text-black tracking-wider">
                     Leave the
                   </span>{" "}
                   <br />
-                  <span className="relative whitespace-nowrap font-['Agrandir-GrandLight'] text-white bg-clip-text tracking-wider">
+                  <span className="relative whitespace-nowrap font-['Agrandir-GrandLight'] text-black bg-clip-text tracking-wider">
                     tech
-                    <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-yellow-400"></span>
+                    <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-yellow-500"></span>
                   </span>{" "}
-                  <span className="text-white font-['Agrandir-GrandLight']">
+                  <span className="text-black font-['Agrandir-GrandLight']">
                     to us
                   </span>
                 </motion.h1>

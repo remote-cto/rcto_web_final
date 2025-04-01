@@ -123,15 +123,11 @@ const FooterForm = () => {
 
   return (
     <div>
-      <section className="bg-gradient-to-r from-indigo-500 to-blue-500 font-mono py-16 relative overflow-hidden">
+      <section className="bg-gray-100 font-mono py-16 relative overflow-hidden">
         {/* Enhanced heading with neon glow */}
-        <h2 className="text-3xl lg:text-6xl font-bold text-center text-white mb-12 font-['Montserrat']
+        <h2 className="text-3xl lg:text-6xl font-bold text-center text-black mb-12 font-['Montserrat']
           relative
-          before:content-[''] before:absolute before:inset-0
-          before:bg-white before:opacity-30 before:blur-lg before:-z-10
-          after:content-[''] after:absolute after:inset-0
-          after:bg-blue-400 after:opacity-20 after:blur-xl after:-z-20
-          animate-pulse">
+         ">
           TALK TO US
         </h2>
 
@@ -140,15 +136,15 @@ const FooterForm = () => {
             {/* Enhanced contact info section */}
             <div className="lg:col-span-2 lg:py-12 space-y-8">
               <div className="transform transition-all duration-300 hover:scale-105">
-                <strong className="block text-white text-2xl lg:text-3xl mb-2">
+                <strong className="block text-black text-2xl lg:text-3xl mb-2">
                   Phone
                 </strong>
                 <a
                   href="https://wa.me/9662512899"
                   target="_blank"
-                  className="text-white text-xl relative group
+                  className="text-black text-xl relative group
                     after:content-[''] after:absolute after:bottom-0 after:left-0
-                    after:w-full after:h-0.5 after:bg-white
+                    after:w-full after:h-0.5 after:bg-black
                     after:transform after:scale-x-0 after:origin-left
                     after:transition-transform after:duration-300
                     group-hover:after:scale-x-100
@@ -159,14 +155,14 @@ const FooterForm = () => {
               </div>
 
               <div className="transform transition-all duration-300 hover:scale-105">
-                <strong className="block text-white text-2xl lg:text-3xl mb-2">
+                <strong className="block text-black text-2xl lg:text-3xl mb-2">
                   Email
                 </strong>
                 <a
                   href="mailto:connect@remotecto.in"
-                  className="text-white text-xl relative group
+                  className="text-black text-xl relative group
                     after:content-[''] after:absolute after:bottom-0 after:left-0
-                    after:w-full after:h-0.5 after:bg-white
+                    after:w-full after:h-0.5 after:bg-black
                     after:transform after:scale-x-0 after:origin-left
                     after:transition-transform after:duration-300
                     group-hover:after:scale-x-100
@@ -178,7 +174,7 @@ const FooterForm = () => {
             </div>
 
             {/* Enhanced form section */}
-            <div className="rounded-lg bg-white p-8 lg:p-12
+            <div className="rounded-lg bg-black p-8 lg:p-12
               shadow-[0_0_20px_rgba(59,130,246,0.3)]
               hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]
               transition-shadow duration-300 ease-in-out
@@ -271,9 +267,9 @@ const FooterForm = () => {
                   <button
                     type="submit"
                     className="inline-block w-full sm:w-auto px-5 py-3 
-                      bg-black text-white font-medium rounded-lg
+                      bg-white text-black font-medium rounded-lg
                       transform transition-all duration-300 ease-in-out
-                      hover:scale-105 hover:bg-gray-800
+                      hover:scale-105 hover:bg-gray-100
                       shadow-[0_0_15px_rgba(0,0,0,0.2)]
                       hover:shadow-[0_0_25px_rgba(0,0,0,0.3)]
                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"

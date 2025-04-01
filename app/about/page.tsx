@@ -22,7 +22,7 @@ const Page = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-gradient-to-r from-indigo-500 to-blue-500 ">
+      <header className="bg-gray-100">
         <div className="mx-auto max-w-screen-xl px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex h-30 lg:h-27 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -36,14 +36,11 @@ const Page = () => {
                   <Link href="/" className="flex items-center">
                     <Image
                       src="/images/RCTO.png"
-                      width={60}
-                      height={60}
+                      width={180}
+                      height={180}
                       alt="logo image"
-                      className="mr-2"
+                      className="max-w-[120px] lg:max-w-[180px] mr-2"
                     />
-                    <span className="font-bold text-[#eef0f4]  text-xl lg:text-4xl ">
-                      REMOTE CTO
-                    </span>
                   </Link>
                 </motion.div>
               </CoolMode>
@@ -60,8 +57,8 @@ const Page = () => {
                 <ul className="flex items-center gap-6 text-sm">
                   <li>
                     <Link
-                      className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                      className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                       href="/"
@@ -85,8 +82,8 @@ const Page = () => {
                   </li> */}
                   <li>
                     <Link
-                      className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                      className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                       href="/services"
@@ -97,8 +94,8 @@ const Page = () => {
                   </li>
                   <li>
                     <Link
-                      className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                      className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                       href="/contact"
@@ -127,12 +124,12 @@ const Page = () => {
                         isMobileMenuIconCross ? "hidden" : "block"
                       }`}
                     >
-                      <div className="w-3 h-0.5 bg-white"></div>
-                      <div className="w-5 h-0.5 bg-white"></div>
-                      <div className="w-7 h-0.5 bg-white"></div>
+                      <div className="w-3 h-0.5 bg-black"></div>
+                      <div className="w-5 h-0.5 bg-black"></div>
+                      <div className="w-7 h-0.5 bg-black"></div>
                     </div>
                     <div
-                      className={`w-7 h-0.5 bg-white transform -rotate-45 transition-transform duration-300 ${
+                      className={`w-7 h-0.5 bg-black transform -rotate-45 transition-transform duration-300 ${
                         isMobileMenuIconCross ? "block" : "hidden"
                       }`}
                     ></div>
@@ -152,8 +149,8 @@ const Page = () => {
               <ul className="flex  flex-col items-center gap-2 mt-5 text-sm ">
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                     href="/"
@@ -176,8 +173,8 @@ const Page = () => {
                 </li> */}
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                     href="/services"
@@ -188,8 +185,8 @@ const Page = () => {
                 </li>
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                     href="/contact"
@@ -203,7 +200,7 @@ const Page = () => {
           )}
         </div>
       </header>
-      <div className="bg-gradient-to-r from-indigo-500 to-blue-500"></div>
+      {/* <div className="bg-gradient-to-r from-indigo-500 to-blue-500"></div> */}
       <div className="flex-1">
         <RemoteCTOWay />
       </div>
