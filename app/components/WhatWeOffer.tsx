@@ -54,7 +54,7 @@ const WhatWeOffer = () => {
 
   const services = [
     {
-      image: "/images/DeepTechResearch.jpg",
+      image: "/images/DeepTech.jpg",
       title: "Deep Tech Solutions",
       description:
         "At Remote CTO, we bring deep technology expertise across cybersecurity, data management, and AI solutions to help businesses thrive in a digital-first world. Our specialized divisions ensure you get expert guidance and solutions tailored to your unique challenges.",
