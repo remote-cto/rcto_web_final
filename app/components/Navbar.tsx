@@ -197,8 +197,8 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    className="text-white transition relative hover:text-[#e8eaf0] pb-1 flex items-center
-                after:absolute after:content-[''] after:w-full after:h-1 after:bg-[#cfd1d4] 
+                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
                     href="/contact"
