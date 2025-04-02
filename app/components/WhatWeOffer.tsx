@@ -86,7 +86,7 @@ const WhatWeOffer = () => {
       <div className="container mx-auto px-4">
         <motion.h1
           variants={titleVariants}
-          className="text-center text-4xl md:text-5xl font-extrabold mb-12 text-[#061BB0] tracking-tight font-mono"
+          className="text-center text-4xl md:text-5xl font-extrabold mb-12 text-orange-500 tracking-tight font-mono"
         >
           What We Offer
         </motion.h1>
@@ -131,7 +131,7 @@ const WhatWeOffer = () => {
                       <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center justify-center bg-[#061BB0] text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 ease-in-out"
+                        className="flex items-center justify-center bg-orange-500 text-black py-2 rounded-lg hover:orange-400 transition-colors duration-300 ease-in-out"
                       >
                         <span className="mr-2">Learn More</span>
 

@@ -33,7 +33,7 @@ const RemoteCTOWay = forwardRef<HTMLDivElement>((props, ref) => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="text-center text-4xl md:text-5xl font-extrabold mb-2 text-[#061BB0] tracking-tight font-mono"
+              className="text-center text-4xl md:text-5xl font-extrabold mb-2 text-orange-500 tracking-tight font-mono"
             >
               The REMOTE CTO Way
             </motion.h1>
