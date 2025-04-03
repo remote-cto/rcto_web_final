@@ -52,7 +52,7 @@ const WhyRemoteCTO = () => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-xl lg:text-5xl font-bold text-center text-orange-500  mb-8 font-mono"
+            className="text-xl lg:text-5xl font-bold text-center text-[#061BB0]  mb-8 font-mono"
           >
             Why Remote CTO?
           </motion.h1>

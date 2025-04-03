@@ -330,7 +330,7 @@ const BannerPage = ({
                 <Link href="/tc">
                   <button
                     type="button"
-                    className="flex items-center text-black bg-orange-500 hover:bg-orange-400 focus:ring-4  font-xl rounded-lg text-lg px-6 py-3 me-2 mb-2  focus:outline-none  shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-xl rounded-lg text-lg px-6 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
                   >
                     <Image
                       src="/images/Logo.png"
