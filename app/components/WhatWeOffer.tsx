@@ -67,13 +67,6 @@ const WhatWeOffer = () => {
         "Our Advisory & Strategic Technology Leadership services provide expert guidance on technology adoption, digital transformation, and enterprise architecture. We help organizations align technology with business goals, optimize IT investments, and stay ahead of the competition. Whether you need Fractional CTO services, AI strategy consulting, or digital roadmap planning, we bring deep technical expertise and strategic foresight to fuel your success.",
       link: "/services/FractionalCTO",
     },
-    {
-      image: "/images/ManagedIT.jpg",
-      title: "Managed IT Services",
-      description:
-        "Our Managed IT Services provide end-to-end support, ensuring your infrastructure, applications, and networks run efficiently with minimal downtime. From proactive monitoring and cybersecurity to cloud management and IT support, we take care of your technology so you can focus on growing your business. Whether you need fully managed solutions or co-managed IT support, our expert team ensures reliability, security, and performance at every level.",
-      link: "/services/ManagedITServices",
-    },
   ];
 
   return (
@@ -91,7 +84,7 @@ const WhatWeOffer = () => {
           What We Offer
         </motion.h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {services.map((service, index) => (
             <motion.div
               key={index}
