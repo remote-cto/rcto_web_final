@@ -41,12 +41,12 @@ const Page = () => {
             </p>
           </div>
 
-          {/* TRCE Labs Section */}
+          {/* TRCELabs Section */}
           <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-gray-700 shadow-xl hover:shadow-2xl transition-all hover:border-blue-400">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
                 <h2 className="text-3xl font-bold text-white mb-4">
-                  TRCE Labs – Cybersecurity & Digital Forensics
+                  TRCELABS – Cybersecurity & Digital Forensics
                 </h2>
                 <p className="text-gray-300 mb-6">
                   Protect your business from cyber threats with{" "}
@@ -103,12 +103,12 @@ const Page = () => {
             </div>
           </div>
 
-          {/* Nirvana.AI Section */}
+          {/* AIofy Section */}
           <div className="bg-black backdrop-blur-sm rounded-2xl p-8 border border-gray-700 shadow-xl hover:shadow-2xl transition-all hover:border-blue-400">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
                 <h2 className="text-3xl font-bold text-white mb-4">
-                  Nirvana.AI – Cutting Edge AI Solutions
+                  AIofy – Cutting Edge AI Solutions
                 </h2>
                 <p className="text-gray-300">
                   Harness the future of AI with our cutting-edge AI consulting
@@ -118,8 +118,15 @@ const Page = () => {
                   transformation.
                 </p>
               </div>
-              <div className="md:w-48 flex-shrink-0 flex items-center justify-center">
-                <span className="text-sm text-gray-400">Coming Soon</span>
+              <div className="md:w-48 flex-shrink-0 flex items-start justify-center">
+                <a
+                  href="https://www.aiofy.co/"
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Site
+                </a>
               </div>
             </div>
           </div>
