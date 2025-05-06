@@ -55,14 +55,14 @@ const WhatWeOffer = () => {
   const services = [
     {
       image: "/images/DeepTech.jpg",
-      title: "Deep Tech Solutions",
+      title: "DEEP TECH SOLUTIONS",
       description:
         "At Remote CTO, we bring deep technology expertise across cybersecurity, data management, and AI solutions to help businesses thrive in a digital-first world. Our specialized divisions ensure you get expert guidance and solutions tailored to your unique challenges.",
       link: "/services/DeepTechSolution",
     },
     {
       image: "/images/FractionalCTO.jpg",
-      title: "Advisory and Strategic Technology Leadership",
+      title: "ADVISORY AND STRATEGIC TECHNOLOGY LEADERSHIP",
       description:
         "Our Advisory & Strategic Technology Leadership services provide expert guidance on technology adoption, digital transformation, and enterprise architecture. We help organizations align technology with business goals, optimize IT investments, and stay ahead of the competition. Whether you need Fractional CTO services, AI strategy consulting, or digital roadmap planning, we bring deep technical expertise and strategic foresight to fuel your success.",
       link: "/services/FractionalCTO",
