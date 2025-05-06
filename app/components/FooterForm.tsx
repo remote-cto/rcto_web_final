@@ -112,22 +112,28 @@ const FooterForm = () => {
 
   const inputClasses = (errorField: string) => `
     w-full rounded-lg border-2 p-3 text-sm
-    ${errors[errorField as keyof typeof errors] ? "border-red-500" : "border-gray-300"}
-    focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+    ${
+      errors[errorField as keyof typeof errors]
+        ? "border-red-500"
+        : "border-blue-200"
+    }
+    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
     transition-all duration-300 ease-in-out
-    shadow-[0_0_10px_rgba(99,102,241,0.1)]
-    hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]
-    focus:shadow-[0_0_20px_rgba(99,102,241,0.3)]
+    shadow-[0_0_10px_rgba(59,130,246,0.1)]
+    hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]
+    focus:shadow-[0_0_20px_rgba(59,130,246,0.3)]
     placeholder-gray-500
   `;
 
   return (
     <div>
-      <section className="bg-gray-100 font-mono py-16 relative overflow-hidden">
-        {/* Enhanced heading with neon glow */}
-        <h2 className="text-3xl lg:text-6xl font-bold text-center text-black mb-12 font-['Montserrat']
+      <section className="bg-white font-mono py-16 relative overflow-hidden">
+       
+        <h2
+          className="text-3xl lg:text-6xl font-bold text-center text-[#061BB0] mb-12 font-['Montserrat']
           relative
-         ">
+         "
+        >
           TALK TO US
         </h2>
 
@@ -136,49 +142,52 @@ const FooterForm = () => {
             {/* Enhanced contact info section */}
             <div className="lg:col-span-2 lg:py-12 space-y-8">
               <div className="transform transition-all duration-300 hover:scale-105">
-                <strong className="block text-black text-2xl lg:text-3xl mb-2">
+                <strong className="block text-blue-700 text-2xl lg:text-3xl mb-2">
                   Phone
                 </strong>
                 <a
                   href="https://wa.me/9662512899"
                   target="_blank"
-                  className="text-black text-xl relative group
+                  className="text-[#061BB0] text-xl relative group
                     after:content-[''] after:absolute after:bottom-0 after:left-0
-                    after:w-full after:h-0.5 after:bg-black
+                    after:w-full after:h-0.5 after:bg-blue-400
                     after:transform after:scale-x-0 after:origin-left
                     after:transition-transform after:duration-300
                     group-hover:after:scale-x-100
-                    hover:text-opacity-90 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
                 >
                   +91 966-251-2899
                 </a>
               </div>
 
               <div className="transform transition-all duration-300 hover:scale-105">
-                <strong className="block text-black text-2xl lg:text-3xl mb-2">
+                <strong className="block text-[#061BB0] text-2xl lg:text-3xl mb-2">
                   Email
                 </strong>
                 <a
                   href="mailto:connect@remotecto.in"
-                  className="text-black text-xl relative group
+                  className="text-blue-600 text-xl relative group
                     after:content-[''] after:absolute after:bottom-0 after:left-0
-                    after:w-full after:h-0.5 after:bg-black
+                    after:w-full after:h-0.5 after:bg-blue-400
                     after:transform after:scale-x-0 after:origin-left
                     after:transition-transform after:duration-300
                     group-hover:after:scale-x-100
-                    hover:text-opacity-90 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                    hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
                 >
                   connect@remotecto.in
                 </a>
               </div>
             </div>
 
-            {/* Enhanced form section */}
-            <div className="rounded-lg bg-black p-8 lg:p-12
-              shadow-[0_0_20px_rgba(59,130,246,0.3)]
-              hover:shadow-[0_0_30px_rgba(59,130,246,0.4)]
+            {/* Enhanced form section - white with blue accents */}
+            <div
+              className="rounded-lg bg-white p-8 lg:p-12
+              shadow-[0_0_20px_rgba(59,130,246,0.2)]
+              hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]
               transition-shadow duration-300 ease-in-out
-              lg:col-span-3">
+              border-2 border-blue-100
+              lg:col-span-3"
+            >
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name Field */}
                 <div>
@@ -217,7 +226,9 @@ const FooterForm = () => {
                       id="email"
                     />
                     {errors.email && (
-                      <p className="mt-2 text-sm text-red-500">{errors.email}</p>
+                      <p className="mt-2 text-sm text-red-500">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
 
@@ -236,7 +247,9 @@ const FooterForm = () => {
                       id="phone"
                     />
                     {errors.phone && (
-                      <p className="mt-2 text-sm text-red-500">{errors.phone}</p>
+                      <p className="mt-2 text-sm text-red-500">
+                        {errors.phone}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -257,25 +270,27 @@ const FooterForm = () => {
                     id="message"
                   ></textarea>
                   {errors.message && (
-                    <p className="mt-2 text-sm text-red-500">{errors.message}</p>
+                    <p className="mt-2 text-sm text-red-500">
+                      {errors.message}
+                    </p>
                   )}
                 </div>
 
                 {/* Enhanced Submit Button */}
                 <div className="mt-6">
                   <CoolMode>
-                  <button
-                    type="submit"
-                    className="inline-block w-full sm:w-auto px-5 py-3 
-                      bg-white text-black font-medium rounded-lg
+                    <button
+                      type="submit"
+                      className="inline-block w-full sm:w-auto px-5 py-3 
+                      bg-[#061BB0] text-white font-medium rounded-lg
                       transform transition-all duration-300 ease-in-out
-                      hover:scale-105 hover:bg-gray-100
-                      shadow-[0_0_15px_rgba(0,0,0,0.2)]
-                      hover:shadow-[0_0_25px_rgba(0,0,0,0.3)]
-                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
-                  >
-                    Send Enquiry
-                  </button>
+                      hover:scale-105 hover:bg-blue-700
+                      shadow-[0_0_15px_rgba(59,130,246,0.2)]
+                      hover:shadow-[0_0_25px_rgba(59,130,246,0.4)]
+                      focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    >
+                      Send Enquiry
+                    </button>
                   </CoolMode>
                 </div>
               </form>
