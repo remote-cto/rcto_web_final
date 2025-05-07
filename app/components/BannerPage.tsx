@@ -358,7 +358,7 @@ const BannerPage = ({
                   >
                     <div className="relative">
                       <Image
-                        src="/images/ideathon.png"
+                        src="/images/Ideathon.png"
                         alt="Global Ideathon"
                         width={600}
                         height={600}
