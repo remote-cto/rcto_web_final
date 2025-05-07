@@ -8,6 +8,7 @@ import { CoolMode } from "../../components/ui/cool-mode";
 import Image from "next/image";
 import Navbar from "./Navbar";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ParticleBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -18,7 +19,6 @@ const ParticleBackground = () => {
   });
 
   useEffect(() => {
-    // Handle window resize and set initial size
     const handleResize = () => {
       setWindowSize({
         width: window.innerWidth,
@@ -267,6 +267,67 @@ const ParticleBackground = () => {
   );
 };
 
+const Carousel = ({ children }: { children: React.ReactNode[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalSlides = React.Children.count(children);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === totalSlides - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? totalSlides - 1 : prevIndex - 1
+    );
+  };
+
+  return (
+    <div className="relative w-full">
+      <div className="overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {React.Children.map(children, (child) => (
+            <div className="w-full flex-shrink-0">{child}</div>
+          ))}
+        </div>
+      </div>
+
+      <button
+        onClick={prevSlide}
+        className="absolute left-8 sm:left-12 md:left-16 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2 sm:p-3 backdrop-blur-sm z-10 shadow-md transition-all duration-300"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-8 sm:right-12 md:right-16 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2 sm:p-3 backdrop-blur-sm z-10 shadow-md transition-all duration-300"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+      </button>
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3 z-10">
+        {Array.from({ length: totalSlides }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+              index === currentIndex ? "bg-blue-500 scale-125" : "bg-gray-300"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const BannerPage = ({
   remoteCTOWayRef,
 }: {
@@ -280,73 +341,144 @@ const BannerPage = ({
 
   return (
     <div className="font-mono overflow-hidden relative">
-      <section className="bg-gray-100 mb-10 relative z-10">
+      <section className="bg-gray-100 relative z-10">
         <ParticleBackground />
         <Navbar />
-        <div className="mx-auto  lg:min-h-screen flex items-center">
-          <div className="mx-auto max-w-5xl w-full px-4">
-            <div className="flex flex-row items-center justify-center space-x-4 sm:space-x-8 mb-4">
-              <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-1/2 sm:w-2/5"
-              >
-                <div className="relative">
-                  <Image
-                    src="/images/design.png"
-                    alt="Remote CTO"
-                    width={500}
-                    height={500}
-                    className="rounded-lg object-contain"
-                    style={{ maxWidth: "100%", height: "auto" }}
-                    priority
-                  />
-                </div>
-              </motion.div>
 
-              <div className="w-1/2 sm:w-3/5">
-                <motion.h1
-                  className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-thin"
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  <span className="whitespace-nowrap font-['Agrandir-GrandLight'] text-black tracking-wider">
-                    Leave the
-                  </span>{" "}
-                  <br />
-                  <span className="relative whitespace-nowrap font-['Agrandir-GrandLight'] text-black bg-clip-text tracking-wider">
-                    tech
-                    <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-yellow-500"></span>
-                  </span>{" "}
-                  <span className="text-black font-['Agrandir-GrandLight']">
-                    to us
-                  </span>
-                </motion.h1>
-              </div>
-            </div>
-            <CoolMode>
-              <div className="mt-10 mb-5 flex justify-center">
-                <Link href="/ideathon">
-                  <button
-                    type="button"
-                    className="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-xl rounded-lg text-lg px-6 py-3 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
+        <div className="mx-auto lg:min-h-screen flex items-center">
+          <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
+            <Carousel>
+              <div className="py-8 sm:py-12 md:py-16">
+                <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 md:space-x-12 mb-4">
+                  <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-4/5 sm:w-2/5 mx-auto sm:mx-0"
                   >
-                    <Image
-                      src="/images/Logo.png"
-                      alt="icon"
-                      width={24}
-                      height={24}
-                      className="mr-2"
-                    />
-                    Discover How
-                  </button>
-                </Link>
+                    <div className="relative">
+                      <Image
+                        src="/images/ideathon.png"
+                        alt="Global Ideathon"
+                        width={600}
+                        height={600}
+                        className="rounded-lg object-contain"
+                        style={{ maxWidth: "100%", height: "auto" }}
+                        priority
+                      />
+                    </div>
+                  </motion.div>
+
+                  <div className="w-full sm:w-3/5 text-center sm:text-left px-4 sm:px-0">
+                    <motion.h1
+                      className="text-xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin"
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                      <span className="whitespace-nowrap font-['Agrandir-GrandLight'] text-black tracking-wider fon-bold">
+                        The Remote CTO
+                      </span>{" "}
+                      <br />
+                      <span className="relative whitespace-nowrap font-['Agrandir-GrandLight'] text-black bg-clip-text tracking-wider">
+                        Global Ideathon
+                        <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-yellow-500"></span>
+                      </span>
+                    </motion.h1>
+                    <motion.p
+                      className="text-sm sm:text-base md:text-lg mt-4 text-gray-700 max-w-lg mx-auto sm:mx-0"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                      A Global call for early-stage startups and anyone with big
+                      ideas but no team to build them.
+                    </motion.p>
+                    <div className="mt-6 sm:mt-8 flex justify-center sm:justify-start">
+                      <Link href="/ideathon">
+                        <button
+                          type="button"
+                          className="flex items-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base sm:text-lg px-5 sm:px-6 py-2 sm:py-3 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none shadow-lg hover:shadow-xl transition-all duration-300"
+                        >
+                          <Image
+                            src="/images/Ideathon.png"
+                            alt="icon"
+                            width={24}
+                            height={24}
+                            className="mr-2"
+                          />
+                          Know More
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </CoolMode>
+
+              <div className="py-8 sm:py-12 md:py-16">
+                <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 md:space-x-12 mb-4">
+                  <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-4/5 sm:w-2/5 mx-auto sm:mx-0"
+                  >
+                    <div className="relative">
+                      <Image
+                        src="/images/design.png"
+                        alt="Remote CTO"
+                        width={500}
+                        height={500}
+                        className="rounded-lg object-contain"
+                        style={{ maxWidth: "100%", height: "auto" }}
+                        priority
+                      />
+                    </div>
+                  </motion.div>
+
+                  <div className="w-full sm:w-3/5 text-center sm:text-left px-4 sm:px-0">
+                    <motion.h1
+                      className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-thin"
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                      <span className="whitespace-nowrap font-['Agrandir-GrandLight'] text-black tracking-wider">
+                        Leave the
+                      </span>{" "}
+                      <br />
+                      <span className="relative whitespace-nowrap font-['Agrandir-GrandLight'] text-black bg-clip-text tracking-wider">
+                        tech
+                        <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-yellow-500"></span>
+                      </span>{" "}
+                      <span className="text-black font-['Agrandir-GrandLight']">
+                        to us
+                      </span>
+                    </motion.h1>
+                    <div className="mt-6 sm:mt-8 flex justify-center sm:justify-start">
+                      <Link href="/tc">
+                        <button
+                          type="button"
+                          className="flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base sm:text-lg px-5 sm:px-6 py-2 sm:py-3 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none shadow-lg hover:shadow-xl transition-all duration-300"
+                        >
+                          <Image
+                            src="/images/Logo.png"
+                            alt="icon"
+                            width={24}
+                            height={24}
+                            className="mr-2"
+                          />
+                          Discover How
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Carousel>
           </div>
         </div>
+
         <GridPattern
           squares={[
             [4, 4],
