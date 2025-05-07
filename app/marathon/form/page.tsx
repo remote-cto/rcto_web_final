@@ -159,7 +159,7 @@ const Page: React.FC = () => {
             📝 Idea Submission Form
           </h1>
           <h2 className="text-xl font-semibold text-center mt-2">
-            Remote CTO Ideathon
+            Remote CTO Global Ideathon
           </h2>
         </div>
 

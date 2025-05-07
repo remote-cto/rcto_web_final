@@ -72,7 +72,7 @@ const Page: React.FC = () => {
     <div className="min-h-screen bg-white text-blue-800">
       <header className="py-24 px-4 text-center max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
-          Remote CTO Ideathon
+          Remote CTO Global Ideathon
         </h1>
         <p className="text-2xl md:text-3xl mb-8 font-light text-blue-700">
           Have a bold startup idea but no tech team? We'll build it. For free.
