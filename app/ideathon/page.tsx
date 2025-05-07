@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import FormHeader from "../components/FormHeader";
 
 const Page: React.FC = () => {
   const [countdown, setCountdown] = useState<{
@@ -66,10 +67,17 @@ const Page: React.FC = () => {
       description:
         "UI/UX design, development, deployment, and process - all bundled together.",
     },
+    {
+      icon: "🔄",
+      title: "Seamless Integrations",
+      description:
+        "Seamless integrations, APIs, and scalable backend architecture.",
+    },
   ];
 
   return (
     <div className="min-h-screen bg-white text-blue-800">
+      <FormHeader />
       <header className="py-24 px-4 text-center max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
           Remote CTO Global Ideathon
@@ -106,7 +114,7 @@ const Page: React.FC = () => {
           </div>
         </div>
         <Link
-          href="/marathon/form"
+          href="/ideathon/form"
           className="inline-block bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform transition hover:scale-105"
         >
           Submit Your Idea Now
@@ -297,7 +305,7 @@ const Page: React.FC = () => {
 
         <div className="flex justify-center mt-10 mb-10">
           <Link
-            href="/marathon/form"
+            href="/ideathon/form"
             className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform transition hover:scale-105"
           >
             Submit Your Idea Now
@@ -308,7 +316,7 @@ const Page: React.FC = () => {
       <footer className="bg-blue-100 py-12 mt-12">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h3 className="text-2xl font-bold mb-6 text-blue-800">
-            🔗 Questions? Want to Partner?
+            🔗 Any Questions?
           </h3>
           <p className="mb-6 text-blue-700">
             Email us:{" "}
@@ -319,26 +327,7 @@ const Page: React.FC = () => {
               connect@remotecto.in
             </a>
           </p>
-          <div className="mb-6 flex justify-center gap-6">
-            <a
-              href="#"
-              className="text-blue-600 hover:text-blue-800 transition"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="#"
-              className="text-blue-600 hover:text-blue-800 transition"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://www.remotecto.in"
-              className="text-blue-600 hover:text-blue-800 transition"
-            >
-              www.remotecto.in
-            </a>
-          </div>
+
           <p className="text-blue-700 mt-10 text-sm">
             This is not an accelerator. It's not a dev shop pitch. It's a{" "}
             <strong>hands-on CTO-led startup buildout</strong> — with heart,
