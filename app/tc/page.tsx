@@ -258,7 +258,7 @@ const TechChallengePage = () => {
                   </Box>
                 </Box>
 
-                {/* Tech Challenge Section */}
+              
                 <Box mb={6}>
                   <Typography
                     variant="h6"

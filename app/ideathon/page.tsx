@@ -88,13 +88,13 @@ const Page: React.FC = () => {
         <div className="bg-blue-50 p-6 rounded-xl border border-blue-200 mb-12 shadow-md">
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-xl">
             <div className="flex items-center gap-2">
-              <span className="text-2xl">🛠️</span>
+              <span className="text-base lg:text-2xl">🛠️</span>
               <p>
                 We'll <strong>build your product</strong>
               </p>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-2xl">🎯</span>
+              <span className="text-xs  lg:text-2xl">🎯</span>
               <p>
                 Solve your <strong>Go-To-Market bottlenecks</strong>
               </p>
