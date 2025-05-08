@@ -86,33 +86,33 @@ const Page: React.FC = () => {
           Have a bold startup idea but no tech team? We'll build it. For free.
         </p>
         <div className="bg-blue-50 p-4 sm:p-6 rounded-xl border border-blue-200 mb-12 shadow-md font-['Montserrat-Light']">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-              <span className="text-2xl flex-shrink-0">🛠️</span>
-              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-                We'll build your product
-              </p>
-            </div>
-            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-              <span className="text-2xl flex-shrink-0">🎯</span>
-              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-                Solve your Go-To-Market bottlenecks
-              </p>
-            </div>
-            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-              <span className="text-2xl flex-shrink-0">💡</span>
-              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-                Guide you from idea to production
-              </p>
-            </div>
-            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-              <span className="text-2xl flex-shrink-0">💰</span>
-              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-                 with zero cost
-              </p>
-            </div>
-          </div>
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+          <span className="text-2xl flex-shrink-0">🛠️</span>
+          <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+            We'll build your product
+          </p>
         </div>
+        <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+          <span className="text-2xl flex-shrink-0">🎯</span>
+          <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+            Solve your Go-To-Market bottlenecks
+          </p>
+        </div>
+        <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+          <span className="text-2xl flex-shrink-0">💡</span>
+          <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+            Guide you from idea to production
+          </p>
+        </div>
+        <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+          <span className="text-2xl flex-shrink-0">💰</span>
+          <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+            with zero cost
+          </p>
+        </div>
+      </div>
+    </div>
         <Link
           href="/ideathon/form"
           className="inline-block bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform transition hover:scale-105 font-['Montserrat-Light']"
