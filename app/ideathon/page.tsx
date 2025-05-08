@@ -89,26 +89,26 @@ const Page: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
               <span className="text-2xl flex-shrink-0">🛠️</span>
-              <p className="text-sm sm:text-base">
-                We'll <strong>build your product</strong>
+              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+                We'll build your product
               </p>
             </div>
             <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
               <span className="text-2xl flex-shrink-0">🎯</span>
-              <p className="text-sm sm:text-base">
-                Solve your <strong>Go-To-Market bottlenecks</strong>
+              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+                Solve your Go-To-Market bottlenecks
               </p>
             </div>
             <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
               <span className="text-2xl flex-shrink-0">💡</span>
-              <p className="text-sm sm:text-base">
-                <strong>Guide you from idea to production</strong>
+              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+                Guide you from idea to production
               </p>
             </div>
             <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
               <span className="text-2xl flex-shrink-0">💰</span>
-              <p className="text-sm sm:text-base">
-                We can make with <strong>zero cost</strong>
+              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+                We can make with zero cost
               </p>
             </div>
           </div>
