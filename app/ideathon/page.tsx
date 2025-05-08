@@ -108,7 +108,7 @@ const Page: React.FC = () => {
             <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
               <span className="text-2xl flex-shrink-0">💰</span>
               <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-                We can make with zero cost
+                 with zero cost
               </p>
             </div>
           </div>

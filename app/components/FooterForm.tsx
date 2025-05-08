@@ -181,7 +181,7 @@ const FooterForm = () => {
                   Our Location
                 </strong>
                 <p
-                  className="text-blue-600 text-xl relative group
+                  className="text-blue-600 text-xl relative group flex items-center gap-2
         after:content-[''] after:absolute after:bottom-0 after:left-0
         after:w-full after:h-0.5 after:bg-blue-400
         after:transform after:scale-x-0 after:origin-left
@@ -189,7 +189,16 @@ const FooterForm = () => {
         group-hover:after:scale-x-100
         hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
                 >
-                  Ahmedabad, India 🇮🇳
+                  <span>Ahmedabad, </span>
+                  <span className="flex items-center">
+                    India
+                    <img
+                      src="https://flagcdn.com/w40/in.png"
+                      alt="India flag"
+                      className="w-5 h-auto ml-2 mr-1"
+                    />
+                  
+                  </span>
                 </p>
               </div>
             </div>
