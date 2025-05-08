@@ -128,7 +128,6 @@ const FooterForm = () => {
   return (
     <div>
       <section className="bg-white font-mono py-16 relative overflow-hidden">
-       
         <h2
           className="text-3xl lg:text-6xl font-bold text-center text-[#061BB0] mb-12 font-['Montserrat']
           relative
@@ -139,7 +138,6 @@ const FooterForm = () => {
 
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-5">
-            {/* Enhanced contact info section */}
             <div className="lg:col-span-2 lg:py-12 space-y-8">
               <div className="transform transition-all duration-300 hover:scale-105">
                 <strong className="block text-blue-700 text-2xl lg:text-3xl mb-2">
@@ -149,12 +147,12 @@ const FooterForm = () => {
                   href="https://wa.me/9662512899"
                   target="_blank"
                   className="text-[#061BB0] text-xl relative group
-                    after:content-[''] after:absolute after:bottom-0 after:left-0
-                    after:w-full after:h-0.5 after:bg-blue-400
-                    after:transform after:scale-x-0 after:origin-left
-                    after:transition-transform after:duration-300
-                    group-hover:after:scale-x-100
-                    hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+        after:content-[''] after:absolute after:bottom-0 after:left-0
+        after:w-full after:h-0.5 after:bg-blue-400
+        after:transform after:scale-x-0 after:origin-left
+        after:transition-transform after:duration-300
+        group-hover:after:scale-x-100
+        hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
                 >
                   +91 966-251-2899
                 </a>
@@ -167,19 +165,35 @@ const FooterForm = () => {
                 <a
                   href="mailto:connect@remotecto.in"
                   className="text-blue-600 text-xl relative group
-                    after:content-[''] after:absolute after:bottom-0 after:left-0
-                    after:w-full after:h-0.5 after:bg-blue-400
-                    after:transform after:scale-x-0 after:origin-left
-                    after:transition-transform after:duration-300
-                    group-hover:after:scale-x-100
-                    hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+        after:content-[''] after:absolute after:bottom-0 after:left-0
+        after:w-full after:h-0.5 after:bg-blue-400
+        after:transform after:scale-x-0 after:origin-left
+        after:transition-transform after:duration-300
+        group-hover:after:scale-x-100
+        hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
                 >
                   connect@remotecto.in
                 </a>
               </div>
+
+              <div className="transform transition-all duration-300 hover:scale-105">
+                <strong className="block text-[#061BB0] text-2xl lg:text-3xl mb-2">
+                  Our Location
+                </strong>
+                <p
+                  className="text-blue-600 text-xl relative group
+        after:content-[''] after:absolute after:bottom-0 after:left-0
+        after:w-full after:h-0.5 after:bg-blue-400
+        after:transform after:scale-x-0 after:origin-left
+        after:transition-transform after:duration-300
+        group-hover:after:scale-x-100
+        hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+                >
+                  Ahmedabad, India 🇮🇳
+                </p>
+              </div>
             </div>
 
-            {/* Enhanced form section - white with blue accents */}
             <div
               className="rounded-lg bg-white p-8 lg:p-12
               shadow-[0_0_20px_rgba(59,130,246,0.2)]
@@ -189,7 +203,6 @@ const FooterForm = () => {
               lg:col-span-3"
             >
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name Field */}
                 <div>
                   <label className="sr-only" htmlFor="name">
                     Name
@@ -254,7 +267,6 @@ const FooterForm = () => {
                   </div>
                 </div>
 
-                {/* Message Field */}
                 <div>
                   <label className="sr-only" htmlFor="message">
                     Message
@@ -276,7 +288,6 @@ const FooterForm = () => {
                   )}
                 </div>
 
-                {/* Enhanced Submit Button */}
                 <div className="mt-6">
                   <CoolMode>
                     <button
