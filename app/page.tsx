@@ -8,6 +8,7 @@ import WhatClientSay from "./components/WhatClientSay";
 import FooterForm from "./components/FooterForm";
 import Revolutionize from "./components/Revolutionize";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import SuccessStories from "./components/SucessStory";
 
 
 
@@ -23,6 +24,7 @@ export default function Home() {
       <Revolutionize />
       <WhatClientSay />
       <WhyRemoteCTO />
+      <SuccessStories/>
       <FooterForm />
 
       <ScrollToTopButton />
