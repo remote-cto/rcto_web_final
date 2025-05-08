@@ -85,34 +85,36 @@ const Page: React.FC = () => {
         <p className="text-2xl md:text-3xl mb-8 font-light text-blue-700 font-['Montserrat-Light'] ">
           Have a bold startup idea but no tech team? We'll build it. For free.
         </p>
+
         <div className="bg-blue-50 p-4 sm:p-6 rounded-xl border border-blue-200 mb-12 shadow-md font-['Montserrat-Light']">
-      <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-          <span className="text-2xl flex-shrink-0">🛠️</span>
-          <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-            We'll build your product
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+              <span className="text-2xl flex-shrink-0">🛠️</span>
+              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+                We'll build your product
+              </p>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+              <span className="text-2xl flex-shrink-0">🎯</span>
+              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+                Solve your Go-To-Market bottlenecks
+              </p>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+              <span className="text-2xl flex-shrink-0">💡</span>
+              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+                Guide you from idea to production
+              </p>
+            </div>
+            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+              <span className="text-2xl flex-shrink-0">💰</span>
+              <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
+                with zero cost
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-          <span className="text-2xl flex-shrink-0">🎯</span>
-          <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-            Solve your Go-To-Market bottlenecks
-          </p>
-        </div>
-        <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-          <span className="text-2xl flex-shrink-0">💡</span>
-          <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-            Guide you from idea to production
-          </p>
-        </div>
-        <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
-          <span className="text-2xl flex-shrink-0">💰</span>
-          <p className="text-sm sm:text-base font-['Montserrat-Light'] font-bold">
-            with zero cost
-          </p>
-        </div>
-      </div>
-    </div>
+
         <Link
           href="/ideathon/form"
           className="inline-block bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-lg text-xl shadow-lg transform transition hover:scale-105 font-['Montserrat-Light']"
@@ -242,7 +244,7 @@ const Page: React.FC = () => {
                 <span className="text-2xl flex-shrink-0">💡</span>
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-blue-800 font-['Montserrat-Light']">
-                    Ideas with validation, pain clarity, or market pull
+                    Ideas with validation, which solves problem, or has market pull
                   </h3>
                   <p className="text-blue-700 font-['Montserrat-Light']">
                     Show us you understand the problem and have evidence there's
