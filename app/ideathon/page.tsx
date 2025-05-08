@@ -85,29 +85,29 @@ const Page: React.FC = () => {
         <p className="text-2xl md:text-3xl mb-8 font-light text-blue-700">
           Have a bold startup idea but no tech team? We'll build it. For free.
         </p>
-        <div className="bg-blue-50 p-6 rounded-xl border border-blue-200 mb-12 shadow-md">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-xl">
-            <div className="flex items-center gap-2">
-              <span className="text-base lg:text-2xl">🛠️</span>
-              <p>
+        <div className="bg-blue-50 p-4 sm:p-6 rounded-xl border border-blue-200 mb-12 shadow-md">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+              <span className="text-2xl flex-shrink-0">🛠️</span>
+              <p className="text-sm sm:text-base">
                 We'll <strong>build your product</strong>
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-xs  lg:text-2xl">🎯</span>
-              <p>
+            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+              <span className="text-2xl flex-shrink-0">🎯</span>
+              <p className="text-sm sm:text-base">
                 Solve your <strong>Go-To-Market bottlenecks</strong>
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💡</span>
-              <p>
+            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+              <span className="text-2xl flex-shrink-0">💡</span>
+              <p className="text-sm sm:text-base">
                 <strong>Guide you from idea to production</strong>
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">💰</span>
-              <p>
+            <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+              <span className="text-2xl flex-shrink-0">💰</span>
+              <p className="text-sm sm:text-base">
                 We can make with <strong>zero cost</strong>
               </p>
             </div>
