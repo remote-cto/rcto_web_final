@@ -157,27 +157,27 @@ const Page: React.FC = () => {
 
   return (
     <>
-    <FormHeader/>
+      <FormHeader />
       <div className="min-h-screen bg-white text-blue-700 p-8">
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="bg-blue-600 text-white p-6">
-            <h1 className="text-3xl font-bold text-center">
+            <h1 className="text-3xl font-bold text-center font-['Montserrat']">
               📝 Idea Submission Form
             </h1>
-            <h2 className="text-xl font-semibold text-center mt-2">
+            <h2 className="text-xl font-semibold text-center mt-2 font-['Montserrat-Light']">
               Remote CTO Global Ideathon
             </h2>
           </div>
 
           <div className="p-6 space-y-8">
             <section>
-              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4">
+              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4 font-['Montserrat']">
                 👤 Founder Info
               </h3>
               <div className="space-y-4">
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="name"
                   >
                     1. Name <span className="text-red-500">*</span>
@@ -199,7 +199,7 @@ const Page: React.FC = () => {
 
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="email"
                   >
                     2. Email <span className="text-red-500">*</span>
@@ -221,7 +221,7 @@ const Page: React.FC = () => {
 
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="website"
                   >
                     3. Website
@@ -238,15 +238,14 @@ const Page: React.FC = () => {
               </div>
             </section>
 
-            {/* The Idea */}
             <section>
-              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4">
+              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4 font-['Montserrat']">
                 💡 The Idea
               </h3>
               <div className="space-y-4">
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="ideaSentence"
                   >
                     4. What's your startup idea in one sentence?{" "}
@@ -271,7 +270,7 @@ const Page: React.FC = () => {
 
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="problem"
                   >
                     5. What problem does it solve, and for whom?{" "}
@@ -295,7 +294,7 @@ const Page: React.FC = () => {
 
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="solution"
                   >
                     6. What makes your solution different or better?{" "}
@@ -319,15 +318,14 @@ const Page: React.FC = () => {
               </div>
             </section>
 
-            {/* Execution Status */}
             <section>
-              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4">
+              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4 font-['Montserrat']">
                 🔨 Execution Status
               </h3>
               <div className="space-y-4">
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="buildStatus"
                   >
                     7. Do you have anything built — a deck, prototype, or MVP?
@@ -342,7 +340,7 @@ const Page: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-blue-700 font-medium mb-2">
+                  <label className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']">
                     8. Have you validated the idea with users or market signals?
                   </label>
                   <div className="space-y-2">
@@ -354,7 +352,7 @@ const Page: React.FC = () => {
                     ].map((option) => (
                       <label
                         key={option}
-                        className="flex items-center space-x-2"
+                        className="flex items-center space-x-2 font-['Montserrat-Light']"
                       >
                         <input
                           type="radio"
@@ -362,7 +360,7 @@ const Page: React.FC = () => {
                           value={option}
                           checked={formData.validationStatus === option}
                           onChange={handleInputChange}
-                          className="text-blue-600 focus:ring-blue-500 h-4 w-4"
+                          className="text-blue-600 focus:ring-blue-500 h-4 w-4 "
                         />
                         <span>{option}</span>
                       </label>
@@ -371,7 +369,7 @@ const Page: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-blue-700 font-medium mb-2">
+                  <label className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']">
                     9. What kind of help do you need most right now?
                   </label>
                   <div className="space-y-2">
@@ -383,7 +381,7 @@ const Page: React.FC = () => {
                     ].map((option) => (
                       <label
                         key={option}
-                        className="flex items-center space-x-2"
+                        className="flex items-center space-x-2 font-['Montserrat-Light']"
                       >
                         <input
                           type="checkbox"
@@ -423,17 +421,16 @@ const Page: React.FC = () => {
               </div>
             </section>
 
-            {/* Financial Readiness */}
             <section>
-              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4">
+              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4 font-['Montserrat']">
                 💰 Financial Readiness
               </h3>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-blue-700 font-medium mb-2">
+                  <label className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']">
                     10. Have you raised any funding yet?
                   </label>
-                  <div className="space-y-2">
+                  <div className="space-y-2 font-['Montserrat-Light']">
                     {[
                       "No, bootstrapped",
                       "Yes, friends & family",
@@ -459,7 +456,7 @@ const Page: React.FC = () => {
 
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="fundingAmount"
                   >
                     11. If yes, how much have you raised so far (in ₹ or $)?
@@ -476,7 +473,7 @@ const Page: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-blue-700 font-medium mb-2">
+                  <label className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']">
                     12. What's your current runway or burn rate like?
                   </label>
                   <div className="space-y-2">
@@ -489,7 +486,7 @@ const Page: React.FC = () => {
                     ].map((option) => (
                       <label
                         key={option}
-                        className="flex items-center space-x-2"
+                        className="flex items-center space-x-2 font-['Montserrat-Light']"
                       >
                         <input
                           type="radio"
@@ -506,11 +503,11 @@ const Page: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-blue-700 font-medium mb-2">
+                  <label className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']">
                     13. Would you be open to co-building, revenue-share, or
                     equity-based partnerships?
                   </label>
-                  <div className="space-y-2">
+                  <div className="space-y-2 font-['Montserrat-Light']">
                     {["Yes", "No", "Depends on terms"].map((option) => (
                       <label
                         key={option}
@@ -532,15 +529,14 @@ const Page: React.FC = () => {
               </div>
             </section>
 
-            {/* Vision & Fit */}
             <section>
-              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4">
+              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4 font-['Montserrat']">
                 🚀 Vision & Fit
               </h3>
               <div className="space-y-4">
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="gtm"
                   >
                     14. How do you plan to take this to market (GTM)?
@@ -556,7 +552,7 @@ const Page: React.FC = () => {
 
                 <div>
                   <label
-                    className="block text-blue-700 font-medium mb-2"
+                    className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
                     htmlFor="whySelect"
                   >
                     15. Why should we select your idea to build for free?
@@ -583,7 +579,7 @@ const Page: React.FC = () => {
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className={`w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105 ${
+                className={`w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105 font-['Montserrat-Light']${
                   isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                 }`}
               >

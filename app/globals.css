@@ -123,3 +123,11 @@
   font-weight: bold;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('/font/Montserrat-Light.ttf') format('truetype');
+  font-weight: light;
+  font-style: normal;
+}
