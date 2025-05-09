@@ -662,7 +662,7 @@ const Page: React.FC = () => {
                 <div className="bg-white rounded-lg p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="text-xl font-bold text-blue-700 font-['Montserrat']">
-                      🔐 Privacy Policy — Remote CTO Global Ideathon
+                      Privacy Policy — Remote CTO Global Ideathon
                     </h3>
                     <button
                       onClick={closePrivacyPopup}
@@ -704,7 +704,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        📌 1. Scope of this Policy
+                        1. Scope of this Policy
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         This policy applies to all personal information
@@ -730,7 +730,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        📋 2. Types of Information Collected
+                        2. Types of Information Collected
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         We may collect and process the following categories of
@@ -785,7 +785,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        🎯 3. Purpose and Use of Data
+                        3. Purpose and Use of Data
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         We collect your data for the following purposes:
@@ -828,7 +828,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        🌍 4. Legal Basis for Processing
+                        4. Legal Basis for Processing
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         Under applicable data protection laws, we rely on one or
@@ -859,7 +859,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        🕒 5. Data Retention
+                        5. Data Retention
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         We will retain your personal and submission data only
@@ -885,7 +885,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        🔒 6. Data Storage and Security
+                        6. Data Storage and Security
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         We implement appropriate technical and organizational
@@ -920,7 +920,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        ⚙️ 7. Use of Third-Party Tools and Services
+                        7. Use of Third-Party Tools and Services
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         We may engage reputable third-party service providers to
@@ -955,7 +955,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        🔄 8. Data Sharing and Disclosure
+                        8. Data Sharing and Disclosure
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         We do <strong>not</strong> sell, rent, or trade your
@@ -984,7 +984,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        🧑‍⚖️ 9. Your Rights
+                        9. Your Rights
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         Depending on your jurisdiction, you may have the
@@ -1025,7 +1025,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        👶 10. Children's Data
+                        10. Children's Data
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         This program is not intended for participants under the
@@ -1038,7 +1038,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        📝 11. Changes to this Privacy Policy
+                        11. Changes to this Privacy Policy
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         We reserve the right to update or modify this Privacy
@@ -1051,7 +1051,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light']">
-                        📞 12. Contact Us
+                        12. Contact Us
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         For any questions, clarifications, or concerns regarding
@@ -1142,7 +1142,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        1.  Eligibility
+                        1. Eligibility
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         The Ideathon is open to individuals aged 18 years or
@@ -1175,7 +1175,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        2.  Submission Requirements
+                        2. Submission Requirements
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         All entries must be submitted via the official
@@ -1216,7 +1216,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        3.  Selection Criteria
+                        3. Selection Criteria
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         Submissions will be evaluated by a panel comprising
@@ -1247,7 +1247,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        4.  Program Benefits for Selected Participants
+                        4. Program Benefits for Selected Participants
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         Participants whose submissions are selected will receive
@@ -1278,7 +1278,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        5.  Exclusions and Limitations
+                        5. Exclusions and Limitations
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         Participation in the Ideathon does{" "}
@@ -1305,7 +1305,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        6.  Third-Party Costs and Licensing
+                        6. Third-Party Costs and Licensing
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         Remote CTO will cover the complete design and
@@ -1341,7 +1341,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        7.  Intellectual Property (IP), Confidentiality, and
+                        7. Intellectual Property (IP), Confidentiality, and
                         Non-Disclosure
                       </h5>
                       <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
@@ -1375,7 +1375,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        8.  Data Privacy and Compliance
+                        8. Data Privacy and Compliance
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         By submitting your application, you consent to the
@@ -1408,7 +1408,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        9.  Selection and Final Decision
+                        9. Selection and Final Decision
                       </h5>
                       <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
                         <li>
@@ -1436,7 +1436,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        10.  Timeline
+                        10. Timeline
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         The official timeline for the Ideathon is as follows:
@@ -1466,7 +1466,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        11.  Disclaimers and Liability Limitation
+                        11. Disclaimers and Liability Limitation
                       </h5>
                       <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
                         <li>
@@ -1493,7 +1493,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        12.  Contact and Communication
+                        12. Contact and Communication
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         All inquiries regarding the Ideathon, these Terms, or
