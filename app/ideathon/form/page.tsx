@@ -1142,7 +1142,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        1. ✅ Eligibility
+                        1.  Eligibility
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         The Ideathon is open to individuals aged 18 years or
@@ -1175,7 +1175,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        2. 📝 Submission Requirements
+                        2.  Submission Requirements
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         All entries must be submitted via the official
@@ -1216,7 +1216,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        3. 🧠 Selection Criteria
+                        3.  Selection Criteria
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         Submissions will be evaluated by a panel comprising
@@ -1247,7 +1247,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        4. 🛠️ Program Benefits for Selected Participants
+                        4.  Program Benefits for Selected Participants
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         Participants whose submissions are selected will receive
@@ -1278,7 +1278,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        5. ⚠️ Exclusions and Limitations
+                        5.  Exclusions and Limitations
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         Participation in the Ideathon does{" "}
@@ -1305,7 +1305,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        6. 💸 Third-Party Costs and Licensing
+                        6.  Third-Party Costs and Licensing
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         Remote CTO will cover the complete design and
@@ -1341,7 +1341,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        7. 🔐 Intellectual Property (IP), Confidentiality, and
+                        7.  Intellectual Property (IP), Confidentiality, and
                         Non-Disclosure
                       </h5>
                       <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
@@ -1375,7 +1375,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        8. 📖 Data Privacy and Compliance
+                        8.  Data Privacy and Compliance
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         By submitting your application, you consent to the
@@ -1408,7 +1408,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        9. 📌 Selection and Final Decision
+                        9.  Selection and Final Decision
                       </h5>
                       <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
                         <li>
@@ -1436,7 +1436,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        10. 📆 Timeline
+                        10.  Timeline
                       </h5>
                       <p className="mb-2 font-['Montserrat-Light']">
                         The official timeline for the Ideathon is as follows:
@@ -1466,7 +1466,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        11. ⚖️ Disclaimers and Liability Limitation
+                        11.  Disclaimers and Liability Limitation
                       </h5>
                       <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
                         <li>
@@ -1493,7 +1493,7 @@ const Page: React.FC = () => {
 
                     <div>
                       <h5 className="font-bold font-['Montserrat-Light'] text-blue-700">
-                        12. 📞 Contact and Communication
+                        12.  Contact and Communication
                       </h5>
                       <p className="font-['Montserrat-Light']">
                         All inquiries regarding the Ideathon, these Terms, or
