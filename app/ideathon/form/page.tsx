@@ -1238,6 +1238,10 @@ const Page: React.FC = () => {
                           Vision, commitment, and adaptability of the founder or
                           team
                         </li>
+                        <li>
+                          Alignment with Remote CTO’s core capability to build
+                          IT/software-based solutions
+                        </li>
                       </ul>
                       <p className="mt-2 font-['Montserrat-Light']">
                         Shortlisted participants may be contacted for further
