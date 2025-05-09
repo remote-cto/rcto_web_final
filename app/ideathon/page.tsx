@@ -283,8 +283,7 @@ const Page: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-blue-800 font-['Montserrat-Light']">
                     Your idea can be from any sector — as long as the solution
-                    is tech-driven and can be built as a software or digital
-                    product
+                    is tech-driven and can be built as a software.
                   </h3>
                   <p className="text-blue-700 font-['Montserrat-Light']">
                     Whether it's health, education, finance, or sustainability —
