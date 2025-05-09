@@ -58,6 +58,7 @@ const Page: React.FC = () => {
   const [showThankYouPopup, setShowThankYouPopup] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string>("");
   const [showTermsPopup, setShowTermsPopup] = useState<boolean>(false);
+  const [showPrivacyPopup, setShowPrivacyPopup] = useState<boolean>(false);
 
   const Router = useRouter();
 
@@ -90,6 +91,13 @@ const Page: React.FC = () => {
 
   const closeTermsPopup = (): void => {
     setShowTermsPopup(false);
+  };
+  const openPrivacyPopup = (): void => {
+    setShowPrivacyPopup(true);
+  };
+
+  const closePrivacyPopup = (): void => {
+    setShowPrivacyPopup(false);
   };
 
   const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -627,9 +635,17 @@ const Page: React.FC = () => {
                       onClick={openTermsPopup}
                       className="text-blue-600 underline hover:text-blue-800"
                     >
-                      Terms & Conditions
+                      Terms and Conditions
                     </button>{" "}
-                    and Privacy Policy of the Remote CTO Global Ideathon.
+                    and{" "}
+                    <button
+                      type="button"
+                      onClick={openPrivacyPopup}
+                      className="text-blue-600 underline hover:text-blue-800"
+                    >
+                      Privacy Policy
+                    </button>{" "}
+                    of the Remote CTO Global Ideathon.
                     <span className="text-red-500"> *</span>
                   </label>
                 </div>
@@ -640,6 +656,186 @@ const Page: React.FC = () => {
                 </p>
               )}
             </section>
+
+            {showPrivacyPopup && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className="bg-white rounded-lg p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-bold text-blue-700 font-['Montserrat']">
+                      🔐 Privacy Policy — Remote CTO Global Ideathon
+                    </h3>
+                    <button
+                      onClick={closePrivacyPopup}
+                      className="text-gray-500 hover:text-gray-700"
+                    >
+                      <svg
+                        className="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div className="space-y-4 text-sm">
+                    <p className="font-semibold text-gray-700 font-['Montserrat-Light']">
+                      <strong>Effective Date:</strong> May 1, 2025
+                    </p>
+                    <p className="font-['Montserrat-Light']">
+                      At Remote CTO, we respect your privacy. This policy
+                      explains how we collect, use, and protect your information
+                      when you participate in the
+                      <strong> Remote CTO Global Ideathon</strong>.
+                    </p>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        📌 1. What We Collect
+                      </h5>
+                      <p className="font-['Montserrat-Light']">
+                        When you submit your idea through our application form,
+                        we collect:
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          Your name, email, location, and professional
+                          background
+                        </li>
+                        <li>Details about your idea/startup</li>
+                        <li>
+                          Optional links or documents (e.g., pitch deck,
+                          mockups)
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        🎯 2. How We Use Your Information
+                      </h5>
+                      <p className="font-['Montserrat-Light']">
+                        We use this information to:
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>Evaluate your submission</li>
+                        <li>
+                          Communicate with you about your application status
+                        </li>
+                        <li>
+                          Provide updates or support related to the Ideathon
+                        </li>
+                        <li>
+                          Showcase select submissions (only with your
+                          permission)
+                        </li>
+                      </ul>
+                      <p className="font-['Montserrat-Light'] mt-2">
+                        We <strong>do not</strong> sell or rent your information
+                        to any third parties.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        🌍 3. Legal Basis for Processing (GDPR)
+                      </h5>
+                      <p className="font-['Montserrat-Light']">
+                        If you are located in the EU/EEA, our legal basis for
+                        collecting and using your personal data is:
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          Your <strong>consent</strong> (given at the time of
+                          form submission)
+                        </li>
+                        <li>
+                          Our <strong>legitimate interest</strong> in organizing
+                          and managing the Ideathon
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        🌐 4. Data Storage & Retention
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          Your data is stored securely on encrypted servers.
+                        </li>
+                        <li>
+                          We retain submission data for up to{" "}
+                          <strong>3 months</strong> after the conclusion of the
+                          Ideathon for reporting and auditing purposes.
+                        </li>
+                        <li>
+                          You may request deletion of your data at any time (see
+                          Section 6).
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        ⚙️ 5. Third-Party Services
+                      </h5>
+                      <p className="font-['Montserrat-Light']">
+                        We may use third-party services (e.g., Google Forms,
+                        email services) to collect and manage data. These
+                        platforms comply with global security standards and may
+                        store data in jurisdictions outside your home country.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        🧑‍⚖️ 6. Your Rights
+                      </h5>
+                      <p className="font-['Montserrat-Light']">
+                        You may request to:
+                      </p>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>Access the data we've stored about you</li>
+                        <li>Correct or update your data</li>
+                        <li>Withdraw your consent</li>
+                        <li>Request permanent deletion of your submission</li>
+                      </ul>
+                      <p className="font-['Montserrat-Light'] mt-2">
+                        Just email us at <strong>connect@remotecto.in</strong>.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        ✅ 7. Consent
+                      </h5>
+                      <p className="font-['Montserrat-Light']">
+                        By submitting your idea to the Remote CTO Global
+                        Ideathon, you agree to this Privacy Policy and consent
+                        to the storage and use of your information as described
+                        above.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex justify-end">
+                    <button
+                      onClick={closePrivacyPopup}
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded font-['Montserrat-Light']"
+                    >
+                      I Understand
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Terms & Conditions Popup */}
             {showTermsPopup && (
@@ -836,7 +1032,7 @@ const Page: React.FC = () => {
                         <li>
                           If at any point you wish to withdraw your submission
                           or request data deletion, you may contact us at
-                          [connect@remotecto.in].
+                          [connect@remotecto.in]
                         </li>
                       </ul>
                     </div>
