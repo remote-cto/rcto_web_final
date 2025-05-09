@@ -244,7 +244,9 @@ const Page: React.FC = () => {
                 <span className="text-2xl flex-shrink-0">💡</span>
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-blue-800 font-['Montserrat-Light']">
-                    Ideas with validation, which solves problem, or has market pull
+                    Ideas with validation, which solves problem, or has market
+                    pull — as long as it's grounded in software or IT based
+                    solutions
                   </h3>
                   <p className="text-blue-700 font-['Montserrat-Light']">
                     Show us you understand the problem and have evidence there's
@@ -273,6 +275,20 @@ const Page: React.FC = () => {
                   <p className="text-blue-700 font-['Montserrat-Light']">
                     Great ideas know no borders. We welcome applications from
                     all corners of the globe.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="text-2xl flex-shrink-0">🎯</span>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-blue-800 font-['Montserrat-Light']">
+                    Your idea can be from any sector — as long as the solution
+                    is tech-driven and can be built as a software or digital
+                    product
+                  </h3>
+                  <p className="text-blue-700 font-['Montserrat-Light']">
+                    Whether it's health, education, finance, or sustainability —
+                    we support digital innovation across domains.
                   </p>
                 </div>
               </li>
