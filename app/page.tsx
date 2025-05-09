@@ -9,6 +9,7 @@ import FooterForm from "./components/FooterForm";
 import Revolutionize from "./components/Revolutionize";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import SuccessStories from "./components/SucessStory";
+import FounderPage from "./components/FounderPage";
 
 
 
@@ -21,6 +22,7 @@ export default function Home() {
       <BannerPage remoteCTOWayRef={remoteCTOWayRef} />
       <RemoteCTOWay ref={remoteCTOWayRef} />
       <WhatWeOffer />
+      <FounderPage/>
       <Revolutionize />
       <WhatClientSay />
       <WhyRemoteCTO />
