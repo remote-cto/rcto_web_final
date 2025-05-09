@@ -57,6 +57,8 @@ const Page: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [showThankYouPopup, setShowThankYouPopup] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string>("");
+  const [showTermsPopup, setShowTermsPopup] = useState<boolean>(false);
+
   const Router = useRouter();
 
   const validateEmail = (email: string): boolean => {
@@ -80,6 +82,14 @@ const Page: React.FC = () => {
         [name]: undefined,
       });
     }
+  };
+
+  const openTermsPopup = (): void => {
+    setShowTermsPopup(true);
+  };
+
+  const closeTermsPopup = (): void => {
+    setShowTermsPopup(false);
   };
 
   const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -591,223 +601,6 @@ const Page: React.FC = () => {
 
             {/* Terms & Conditions Section */}
             <section className="mt-6">
-              <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4 font-['Montserrat']">
-                📋 Rules & Terms
-              </h3>
-
-              <div className="bg-gray-50 p-4 rounded-lg border border-blue-200 mb-4 max-h-64 overflow-y-auto">
-                <div className="space-y-4 text-sm">
-                  <h4 className="font-bold text-blue-700 font-['Montserrat-Light']">
-                    🧾 Rules & Terms — Remote CTO Global Ideathon
-                  </h4>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      ✅ Eligibility
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>
-                        Open to individuals, student innovators, and early-stage
-                        startup founders from <strong>any country</strong>.
-                      </li>
-                      <li>
-                        You must have a clear idea, problem statement, and
-                        potential impact.
-                      </li>
-                      <li>
-                        Technical expertise is <strong>not mandatory</strong> —
-                        we're here to help you build.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      📝 Submission Guidelines
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>
-                        All entries must be submitted via the official form by{" "}
-                        <strong>20th May 2025</strong>.
-                      </li>
-                      <li>
-                        You may optionally include pitch decks, wireframes, or
-                        prototypes.
-                      </li>
-                      <li>
-                        Multiple submissions are allowed, but only one will be
-                        selected.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      🧠 Selection Criteria
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>Clarity and relevance of the problem being solved</li>
-                      <li>Potential for real-world impact</li>
-                      <li>
-                        Feasibility of building the product within 4–8 weeks
-                      </li>
-                      <li>Vision and commitment of the founder/team</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      🛠️ What We Offer (If Selected)
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>Complete MVP/product build by the Remote CTO team</li>
-                      <li>
-                        CTO-level tech strategy, architecture, and process
-                        design
-                      </li>
-                      <li>
-                        UI/UX design, full-stack development, and deployment
-                      </li>
-                      <li>Go-to-market guidance and post-launch advisory</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      ⚠️ What's Not Included
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>Funding or cash prize</li>
-                      <li>Equity dilution (unless mutually discussed later)</li>
-                      <li>Long-term maintenance unless agreed separately</li>
-                      <li>
-                        Cost of hosting or any 3rd party vendor licenses or any
-                        kind of other expense
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      💸 Third-Party Costs
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>
-                        While Remote CTO will cover the full product build,{" "}
-                        <strong>any third-party costs incurred</strong> during
-                        development (e.g., hosting, paid APIs, licensed
-                        products, SMS/email credits, cloud services, etc.){" "}
-                        <strong>
-                          will be the responsibility of the selected
-                          founder/team.
-                        </strong>
-                      </li>
-                      <li>
-                        We will inform you of these costs upfront and proceed
-                        only upon your approval.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      🔐 IP, Confidentiality & Rights
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>
-                        You <strong>retain full ownership</strong> of your idea
-                        and intellectual property.
-                      </li>
-                      <li>
-                        Remote CTO may document the journey for educational or
-                        promotional purposes, with your permission.
-                      </li>
-                      <li>
-                        Remote CTO will sign an NDA if requested post-selection.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      📖 Data Privacy & Compliance
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>
-                        By submitting your application, you agree that Remote
-                        CTO may store and process your personal information for
-                        the purposes of evaluating your idea and communicating
-                        with you regarding the Ideathon.
-                      </li>
-                      <li>
-                        All personal data will be handled in accordance with{" "}
-                        <strong>applicable data protection laws</strong>,
-                        including the{" "}
-                        <strong>
-                          General Data Protection Regulation (GDPR)
-                        </strong>{" "}
-                        for EU participants.
-                      </li>
-                      <li>
-                        Remote CTO will{" "}
-                        <strong>
-                          not sell, share, or use your data for any purpose
-                          unrelated to the Ideathon
-                        </strong>{" "}
-                        without your explicit consent.
-                      </li>
-                      <li>
-                        If at any point you wish to withdraw your submission or
-                        request data deletion, you may contact us at
-                        [connect@remotecto.in].
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      📌 Selection & Final Rights
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>
-                        Submissions will be evaluated by Remote CTO leadership
-                        and a panel of external advisors.
-                      </li>
-                      <li>
-                        Remote CTO{" "}
-                        <strong>
-                          reserves the full and final right to select the
-                          winning idea
-                        </strong>
-                        .
-                      </li>
-                      <li>
-                        The selection process is at the sole discretion of the
-                        organizers, and the decision is{" "}
-                        <strong>final and non-negotiable</strong>.
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-bold font-['Montserrat-Light']">
-                      📆 Timeline
-                    </h5>
-                    <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
-                      <li>
-                        Applications close: <strong>20 May 2025</strong>
-                      </li>
-                      <li>
-                        Finalists announced: <strong>1 June 2025</strong>
-                      </li>
-                      <li>
-                        Winner selected: <strong>5 June 2025</strong>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
               <div className="flex items-start mt-4">
                 <div className="flex items-center h-5">
                   <input
@@ -828,8 +621,15 @@ const Page: React.FC = () => {
                       errors.termsAgreed ? "text-red-500" : "text-blue-700"
                     }`}
                   >
-                    I have read and agree to the Terms & Conditions and Privacy
-                    Policy of the Remote CTO Global Ideathon.
+                    I have read and agree to the{" "}
+                    <button
+                      type="button"
+                      onClick={openTermsPopup}
+                      className="text-blue-600 underline hover:text-blue-800"
+                    >
+                      Terms & Conditions
+                    </button>{" "}
+                    and Privacy Policy of the Remote CTO Global Ideathon.
                     <span className="text-red-500"> *</span>
                   </label>
                 </div>
@@ -840,6 +640,261 @@ const Page: React.FC = () => {
                 </p>
               )}
             </section>
+
+            {/* Terms & Conditions Popup */}
+            {showTermsPopup && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className="bg-white rounded-lg p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-bold text-blue-700 font-['Montserrat']">
+                      📋 Rules & Terms — Remote CTO Global Ideathon
+                    </h3>
+                    <button
+                      onClick={closeTermsPopup}
+                      className="text-gray-500 hover:text-gray-700"
+                    >
+                      <svg
+                        className="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div className="space-y-4 text-sm">
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        ✅ Eligibility
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          Open to individuals, student innovators, and
+                          early-stage startup founders from{" "}
+                          <strong>any country</strong>.
+                        </li>
+                        <li>
+                          You must have a clear idea, problem statement, and
+                          potential impact.
+                        </li>
+                        <li>
+                          Technical expertise is <strong>not mandatory</strong>{" "}
+                          — we're here to help you build.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        📝 Submission Guidelines
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          All entries must be submitted via the official form by{" "}
+                          <strong>20th May 2025</strong>.
+                        </li>
+                        <li>
+                          You may optionally include pitch decks, wireframes, or
+                          prototypes.
+                        </li>
+                        <li>
+                          Multiple submissions are allowed, but only one will be
+                          selected.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        🧠 Selection Criteria
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          Clarity and relevance of the problem being solved
+                        </li>
+                        <li>Potential for real-world impact</li>
+                        <li>
+                          Feasibility of building the product within 4–8 weeks
+                        </li>
+                        <li>Vision and commitment of the founder/team</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        🛠️ What We Offer (If Selected)
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          Complete MVP/product build by the Remote CTO team
+                        </li>
+                        <li>
+                          CTO-level tech strategy, architecture, and process
+                          design
+                        </li>
+                        <li>
+                          UI/UX design, full-stack development, and deployment
+                        </li>
+                        <li>Go-to-market guidance and post-launch advisory</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        ⚠️ What's Not Included
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>Funding or cash prize</li>
+                        <li>
+                          Equity dilution (unless mutually discussed later)
+                        </li>
+                        <li>Long-term maintenance unless agreed separately</li>
+                        <li>
+                          Cost of hosting or any 3rd party vendor licenses or
+                          any kind of other expense
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        💸 Third-Party Costs
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          While Remote CTO will cover the full product build,{" "}
+                          <strong>any third-party costs incurred</strong> during
+                          development (e.g., hosting, paid APIs, licensed
+                          products, SMS/email credits, cloud services, etc.){" "}
+                          <strong>
+                            will be the responsibility of the selected
+                            founder/team.
+                          </strong>
+                        </li>
+                        <li>
+                          We will inform you of these costs upfront and proceed
+                          only upon your approval.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        🔐 IP, Confidentiality & Rights
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          You <strong>retain full ownership</strong> of your
+                          idea and intellectual property.
+                        </li>
+                        <li>
+                          Remote CTO may document the journey for educational or
+                          promotional purposes, with your permission.
+                        </li>
+                        <li>
+                          Remote CTO will sign an NDA if requested
+                          post-selection.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        📖 Data Privacy & Compliance
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          By submitting your application, you agree that Remote
+                          CTO may store and process your personal information
+                          for the purposes of evaluating your idea and
+                          communicating with you regarding the Ideathon.
+                        </li>
+                        <li>
+                          All personal data will be handled in accordance with{" "}
+                          <strong>applicable data protection laws</strong>,
+                          including the{" "}
+                          <strong>
+                            General Data Protection Regulation (GDPR)
+                          </strong>{" "}
+                          for EU participants.
+                        </li>
+                        <li>
+                          Remote CTO will{" "}
+                          <strong>
+                            not sell, share, or use your data for any purpose
+                            unrelated to the Ideathon
+                          </strong>{" "}
+                          without your explicit consent.
+                        </li>
+                        <li>
+                          If at any point you wish to withdraw your submission
+                          or request data deletion, you may contact us at
+                          [connect@remotecto.in].
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        📌 Selection & Final Rights
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          Submissions will be evaluated by Remote CTO leadership
+                          and a panel of external advisors.
+                        </li>
+                        <li>
+                          Remote CTO{" "}
+                          <strong>
+                            reserves the full and final right to select the
+                            winning idea
+                          </strong>
+                          .
+                        </li>
+                        <li>
+                          The selection process is at the sole discretion of the
+                          organizers, and the decision is{" "}
+                          <strong>final and non-negotiable</strong>.
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h5 className="font-bold font-['Montserrat-Light']">
+                        📆 Timeline
+                      </h5>
+                      <ul className="list-disc pl-5 space-y-1 font-['Montserrat-Light']">
+                        <li>
+                          Applications close: <strong>20 May 2025</strong>
+                        </li>
+                        <li>
+                          Finalists announced: <strong>1 June 2025</strong>
+                        </li>
+                        <li>
+                          Winner selected: <strong>5 June 2025</strong>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex justify-end">
+                    <button
+                      onClick={closeTermsPopup}
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded font-['Montserrat-Light']"
+                    >
+                      I Understand
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {submitError && (
               <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative font-['Montserrat-Light']">
