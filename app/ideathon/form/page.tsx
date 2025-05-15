@@ -1,3 +1,5 @@
+
+//app/ideathon/form/page.tsx
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { useRouter } from "next/navigation";
@@ -150,44 +152,51 @@ const Page: React.FC = () => {
     return newErrors;
   };
 
-  const handleSubmit = async (): Promise<void> => {
-    const formErrors = validateForm();
+ const handleSubmit = async (): Promise<void> => {
+  const formErrors = validateForm();
 
-    if (Object.keys(formErrors).length > 0) {
-      setErrors(formErrors);
-      return;
+  if (Object.keys(formErrors).length > 0) {
+    setErrors(formErrors);
+    return;
+  }
+
+  setIsSubmitting(true);
+  setSubmitError("");
+
+  try {
+    // Include the processing flag in the form data
+    // 0 = email only, 1 = database only, 2 = both (you can set this based on your requirements)
+    const submissionData = {
+      ...formData,
+      processingFlag: 1  // Set to 0 for email only, 1 for database only, 2 for both
+    };
+
+    const response = await fetch("/api/submit-idea", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(submissionData),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Something went wrong");
     }
 
-    setIsSubmitting(true);
-    setSubmitError("");
-
-    try {
-      const response = await fetch("/api/submit-idea", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Something went wrong");
-      }
-
-      setShowThankYouPopup(true);
-    } catch (error) {
-      console.error("Submission error:", error);
-      setSubmitError(
-        error instanceof Error
-          ? error.message
-          : "Failed to submit your idea. Please try again."
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    setShowThankYouPopup(true);
+  } catch (error) {
+    console.error("Submission error:", error);
+    setSubmitError(
+      error instanceof Error
+        ? error.message
+        : "Failed to submit your idea. Please try again."
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const closeThankYouPopup = (): void => {
     setShowThankYouPopup(false);
