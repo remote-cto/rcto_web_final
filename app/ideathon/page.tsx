@@ -12,7 +12,7 @@ const Page: React.FC = () => {
   }>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const deadline = new Date("2025-05-20T23:59:59").getTime();
+    const deadline = new Date("2025-05-22T23:59:59").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
