@@ -1,8 +1,9 @@
-// app/api/submit-idea/route.ts
 import { NextResponse } from "next/server";
 import { transporter } from "../../../lib/email/config";
+import connectDB from "../../../lib/db/connect";
+import IdeaSubmission from "../../../models/IdeaSubmission";
 
-interface IdeaSubmission {
+interface IdeaSubmissionData {
   name: string;
   email: string;
   website?: string;
@@ -22,8 +23,12 @@ interface IdeaSubmission {
 
 export async function POST(request: Request) {
   try {
-    const formData: IdeaSubmission = await request.json();
+    // Connect to MongoDB
+    await connectDB();
+    
+    const formData: IdeaSubmissionData = await request.json();
 
+    // Validate required fields
     if (
       !formData.name ||
       !formData.email ||
@@ -37,6 +42,7 @@ export async function POST(request: Request) {
       );
     }
 
+    // Validate email format
     const emailRegex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!emailRegex.test(String(formData.email).toLowerCase())) {
@@ -46,11 +52,17 @@ export async function POST(request: Request) {
       );
     }
 
+    // Save idea submission to MongoDB
+    const ideaSubmission = new IdeaSubmission(formData);
+    await ideaSubmission.save();
+
+    // Format help needed text for email
     const helpNeededText =
       formData.helpNeeded.length > 0
         ? formData.helpNeeded.join(", ")
         : "None specified";
 
+    // Create email content
     const emailHtml = `
       <h1>New Startup Idea Submission</h1>
       <h2>Founder Information</h2>
@@ -89,6 +101,7 @@ export async function POST(request: Request) {
       }</p>
     `;
 
+    // Configure email sending
     const mailOptions = {
       from: process.env.SMTP_USER,
       to: process.env.HOST_EMAIL,
@@ -97,11 +110,13 @@ export async function POST(request: Request) {
       replyTo: formData.email,
     };
 
+    // Send email
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({
       message: "Form submitted successfully! We'll review your idea and get back to you soon.",
-      success: true
+      success: true,
+      ideaId: ideaSubmission._id
     });
   } catch (error) {
     console.error("Error processing form submission:", error);

@@ -1,3 +1,5 @@
+
+//models/Enquiry.ts
 import mongoose from 'mongoose';
 
 const enquirySchema = new mongoose.Schema({
