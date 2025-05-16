@@ -173,7 +173,7 @@ const Page: React.FC = () => {
       // 0 = email only, 1 = database only, 2 = both (you can set this based on your requirements)
       const submissionData = {
         ...formData,
-        processingFlag: 1, // Set to 0 for email only, 1 for database only, 2 for both
+        processingFlag: 0, // Set to 0 for email only, 1 for database only, 2 for both
       };
 
       const response = await fetch("/api/submit-idea", {
