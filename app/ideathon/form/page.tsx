@@ -28,6 +28,7 @@ interface FormData {
 interface FormErrors {
   name?: string;
   email?: string;
+  referralSource?: string;
   ideaSentence?: string;
   problem?: string;
   solution?: string;
@@ -141,6 +142,9 @@ const Page: React.FC = () => {
     if (!formData.email.trim()) newErrors.email = "Email is required";
     else if (!validateEmail(formData.email))
       newErrors.email = "Please enter a valid email address";
+    if (!formData.referralSource)
+      // Add validation for referralSource
+      newErrors.referralSource = "Please select how you heard about Ideathon";
     if (!formData.ideaSentence.trim())
       newErrors.ideaSentence = "Idea summary is required";
     if (!formData.problem.trim())
@@ -286,30 +290,36 @@ const Page: React.FC = () => {
                 </div>
               </div>
             </section>
-            <div>
-              <label
-                className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
-                htmlFor="referralSource"
-              >
-                4. How did you come to know about Ideathon?
-              </label>
-              <select
-                id="referralSource"
-                name="referralSource"
-                value={formData.referralSource}
-                onChange={handleInputChange}
-                className="w-full p-3 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="">Select an option</option>
-                <option value="Remote CTO website">Remote CTO website</option>
-                <option value="Google">Google</option>
-                <option value="LinkedIn">LinkedIn</option>
-                <option value="WhatsApp Groups">WhatsApp Groups</option>
-                <option value="Email Invite">Email Invite</option>
-                <option value="Visey">Visey</option>
-                <option value="Startup Communities">Startup Communities</option>
-              </select>
-            </div>
+            <label
+              className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
+              htmlFor="referralSource"
+            >
+              4. How did you come to know about Ideathon?{" "}
+              <span className="text-red-500">*</span>
+            </label>
+            <select
+              id="referralSource"
+              name="referralSource"
+              value={formData.referralSource}
+              onChange={handleInputChange}
+              className={`w-full p-3 border ${
+                errors.referralSource ? "border-red-500" : "border-blue-300"
+              } rounded focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            >
+              <option value="">Select an option</option>
+              <option value="Remote CTO website">Remote CTO website</option>
+              <option value="Google">Google</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="WhatsApp Groups">WhatsApp Groups</option>
+              <option value="Email Invite">Email Invite</option>
+              <option value="Visey">Visey</option>
+              <option value="Startup Communities">Startup Communities</option>
+            </select>
+            {errors.referralSource && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.referralSource}
+              </p>
+            )}
 
             <section>
               <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4 font-['Montserrat']">
