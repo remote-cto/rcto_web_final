@@ -1,4 +1,3 @@
-
 //app/ideathon/form/page.tsx
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
@@ -9,6 +8,7 @@ interface FormData {
   name: string;
   email: string;
   website: string;
+  referralSource: string;
   ideaSentence: string;
   problem: string;
   solution: string;
@@ -40,6 +40,7 @@ const Page: React.FC = () => {
     name: "",
     email: "",
     website: "",
+    referralSource: "",
     ideaSentence: "",
     problem: "",
     solution: "",
@@ -71,7 +72,7 @@ const Page: React.FC = () => {
   };
 
   const handleInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ): void => {
     const { name, value } = e.target;
     setFormData({
@@ -152,51 +153,51 @@ const Page: React.FC = () => {
     return newErrors;
   };
 
- const handleSubmit = async (): Promise<void> => {
-  const formErrors = validateForm();
+  const handleSubmit = async (): Promise<void> => {
+    const formErrors = validateForm();
 
-  if (Object.keys(formErrors).length > 0) {
-    setErrors(formErrors);
-    return;
-  }
-
-  setIsSubmitting(true);
-  setSubmitError("");
-
-  try {
-    // Include the processing flag in the form data
-    // 0 = email only, 1 = database only, 2 = both (you can set this based on your requirements)
-    const submissionData = {
-      ...formData,
-      processingFlag: 0  // Set to 0 for email only, 1 for database only, 2 for both
-    };
-
-    const response = await fetch("/api/submit-idea", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(submissionData),
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.message || "Something went wrong");
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
     }
 
-    setShowThankYouPopup(true);
-  } catch (error) {
-    console.error("Submission error:", error);
-    setSubmitError(
-      error instanceof Error
-        ? error.message
-        : "Failed to submit your idea. Please try again."
-    );
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      // Include the processing flag in the form data
+      // 0 = email only, 1 = database only, 2 = both (you can set this based on your requirements)
+      const submissionData = {
+        ...formData,
+        processingFlag: 1, // Set to 0 for email only, 1 for database only, 2 for both
+      };
+
+      const response = await fetch("/api/submit-idea", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
+
+      setShowThankYouPopup(true);
+    } catch (error) {
+      console.error("Submission error:", error);
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Failed to submit your idea. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const closeThankYouPopup = (): void => {
     setShowThankYouPopup(false);
@@ -285,6 +286,30 @@ const Page: React.FC = () => {
                 </div>
               </div>
             </section>
+            <div>
+              <label
+                className="block text-blue-700 font-bold mb-2 font-['Montserrat-Light']"
+                htmlFor="referralSource"
+              >
+                4. How did you come to know about Ideathon?
+              </label>
+              <select
+                id="referralSource"
+                name="referralSource"
+                value={formData.referralSource}
+                onChange={handleInputChange}
+                className="w-full p-3 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="">Select an option</option>
+                <option value="Remote CTO website">Remote CTO website</option>
+                <option value="Google">Google</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="WhatsApp Groups">WhatsApp Groups</option>
+                <option value="Email Invite">Email Invite</option>
+                <option value="Visey">Visey</option>
+                <option value="Startup Communities">Startup Communities</option>
+              </select>
+            </div>
 
             <section>
               <h3 className="text-xl font-bold border-b-2 border-blue-500 pb-2 mb-4 font-['Montserrat']">

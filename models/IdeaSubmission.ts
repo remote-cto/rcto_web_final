@@ -4,6 +4,7 @@ const ideaSubmissionSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   website: { type: String },
+  referralSource: { type: String }, 
   ideaSentence: { type: String, required: true },
   problem: { type: String, required: true },
   solution: { type: String, required: true },

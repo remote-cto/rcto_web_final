@@ -8,6 +8,7 @@ interface IdeaSubmissionData {
   name: string;
   email: string;
   website?: string;
+  referralSource?: string;  
   ideaSentence: string;
   problem: string;
   solution: string;
@@ -77,6 +78,7 @@ export async function POST(request: Request) {
         <p><strong>Name:</strong> ${formData.name}</p>
         <p><strong>Email:</strong> ${formData.email}</p>
         <p><strong>Website:</strong> ${formData.website || "Not provided"}</p>
+         <p><strong>Referral Source:</strong> ${formData.referralSource || "Not specified"}</p>
         
         <h2>The Idea</h2>
         <p><strong>Idea in one sentence:</strong> ${formData.ideaSentence}</p>
