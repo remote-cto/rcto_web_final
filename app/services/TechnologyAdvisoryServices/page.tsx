@@ -74,7 +74,7 @@ const Page = () => {
           <div className="flex flex-col md:flex-row items-center mb-10">
             <div className="md:w-2/3 pr-8">
               <h1 className="text-xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-                Fractional CTO Services
+                Technology Advisory Services
               </h1>
               <p className="text-base lg:text-xl text-gray-200 mb-6">
                 Remote CTO provides businesses with on-demand technology leadership, strategic guidance, and scalable IT infrastructure solutions tailored to meet the unique needs of your organization.
