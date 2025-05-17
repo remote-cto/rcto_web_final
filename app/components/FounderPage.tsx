@@ -62,7 +62,12 @@ const FounderPage = () => {
                   XWORKS
                 </Link>{" "}
                 (Emerging Tech Skilling), and{" "}
-                <span className="font-medium text-blue-700">Aiofy</span> (AI
+                <Link 
+                 href="https://www.aiofy.co/"
+                  target="_blank"
+                  className="hover:underline text-blue-700 font-medium"
+                >
+                Aiofy</Link> (AI
                 Consulting & Agentic AI Solutions).
               </p>
 
