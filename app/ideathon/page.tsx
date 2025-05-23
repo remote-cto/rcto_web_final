@@ -371,6 +371,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Star, Globe, Heart, Lightbulb, Trophy, Rocket, Users, Sparkles } from 'lucide-react';
+import FormHeader from '../components/FormHeader';
 
 const Page: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -405,6 +406,7 @@ const Page: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white text-blue-900">
+    <FormHeader/>
       {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-64 h-64 bg-blue-50 rounded-full opacity-20 animate-pulse"></div>
