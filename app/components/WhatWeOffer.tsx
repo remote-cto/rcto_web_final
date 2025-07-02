@@ -67,6 +67,12 @@ const WhatWeOffer = () => {
         "Our Advisory & Strategic Technology Leadership services provide expert guidance on technology adoption, digital transformation, and enterprise architecture. We help organizations align technology with business goals, optimize IT investments, and stay ahead of the competition. Whether you need Fractional CTO services, AI strategy consulting, or digital roadmap planning, we bring deep technical expertise and strategic foresight to fuel your success.",
       link: "/services/TechnologyAdvisoryServices",
     },
+    {
+      image: "/images/HealthCare.jpg",
+      title: "Healthcare Technology Services",
+      description:"At Remote CTO, we empower healthcare organizations to harness the full potential of Artificial Intelligence to improve clinical efficiency, patient outcomes, and operational decision-making. Our **Healthcare Technology Services** are designed to support hospitals, health systems, and digital health startups in strategically adopting AI with confidence, compliance, and clinical impact. We don’t just implement technology — we align it with medical realities, ethical standards, and measurable value.",
+      link: "/services/HealthCareServices",
+    },
   ];
 
   return (
@@ -84,7 +90,8 @@ const WhatWeOffer = () => {
           What We Offer
         </motion.h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
           {services.map((service, index) => (
             <motion.div
               key={index}
