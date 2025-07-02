@@ -291,7 +291,6 @@ const TechChallengePage = () => {
                       }
                       helperText="Example: We run an online tutoring platform and need better management for our classes."
                     />
-
                     <TextField
                       sx={blueThemeStyles}
                       label="Briefly describe your tech challenge"

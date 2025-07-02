@@ -118,6 +118,7 @@ const Page = () => {
                   transformation.
                 </p>
               </div>
+              
               <div className="md:w-48 flex-shrink-0 flex items-start justify-center">
                 <a
                   href="https://www.aiofy.co/"
