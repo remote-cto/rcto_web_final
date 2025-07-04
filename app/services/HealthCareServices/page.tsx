@@ -10,8 +10,10 @@ import {
   ArrowLeft,
   Send,
 } from "lucide-react";
+import { useRouter } from 'next/navigation'
 
 const Page = () => {
+  const router = useRouter()
   const [activeService, setActiveService] = useState<number | null>(null);
 
 
@@ -61,7 +63,7 @@ const Page = () => {
   };
 
   const handleContactUs = () => {
-    console.log('Navigate to contact page');
+    router.push('/contact')
   };
 
   return (
