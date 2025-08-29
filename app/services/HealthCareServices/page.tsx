@@ -85,8 +85,8 @@ const Page = () => {
               </h1>
               <p className="text-base lg:text-xl text-gray-200 mb-6">
                  Vetta is our dedicated talent ecosystem — a premium pool of pre-vetted professionals across AI, Cybersecurity, Data Science, and other deep-tech domains.</p>
-              <p>For companies, Vetta means faster, risk-free hiring with professionals ready to deliver from day one. For professionals, Vetta is an ecosystem of growth, credibility, and opportunity, backed by Remote CTO’s 25+ years of deep-tech expertise.</p>
-              <p>Experience the future of hiring with Vetta.</p>              
+              <p className="text-base lg:text-xl text-gray-200 mb-6">For companies, Vetta means faster, risk-free hiring with professionals ready to deliver from day one. For professionals, Vetta is an ecosystem of growth, credibility, and opportunity, backed by Remote CTO’s 25+ years of deep-tech expertise.</p>
+              <p className="text-base lg:text-xl text-gray-200 mb-6">Experience the future of hiring with Vetta.</p>              
             </div>
             <div className="md:w-1/3 hidden md:block">
               <Activity size={200} className="text-blue-400 opacity-30" />
