@@ -69,8 +69,9 @@ const WhatWeOffer = () => {
     },
     {
       image: "/images/HealthCare.jpg",
-      title: "Vetta - Talent Management Solutions",
-      description:"At Remote CTO, we don’t just build technology, we build the talent that powers it. Vetta is our dedicated talent ecosystem — a premium pool of pre-vetted professionals across AI, Cybersecurity, Data Science, and other deep-tech domains. For companies, Vetta means faster, risk-free hiring with professionals ready to deliver from day one. For professionals, Vetta is an ecosystem of growth, credibility, and opportunity, backed by Remote CTO’s 25+ years of deep-tech expertise.",
+      title: "VETTA - NEW AGE TALENT MANAGEMENT SOLUTIONS",
+      description:"At Remote CTO, we don’t just build technology, we build the talent that powers it. Vetta is our dedicated talent ecosystem — a premium pool of pre-vetted professionals across AI, Cybersecurity, Data Science, and other deep-tech domains. 
+        For companies, Vetta means faster, risk-free hiring with professionals ready to deliver from day one. For professionals, Vetta is an ecosystem of growth, credibility, and opportunity, backed by Remote CTO’s 25+ years of deep-tech expertise.",
       link: "/services/HealthCareServices",
     },
   ];
