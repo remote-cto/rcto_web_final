@@ -81,13 +81,12 @@ const Page = () => {
           <div className="flex flex-col md:flex-row items-center mb-10">
             <div className="md:w-2/3 pr-8">
               <h1 className="text-xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-                Healthcare AI Solutions
+                Vetta – A division of Remote CTO
               </h1>
               <p className="text-base lg:text-xl text-gray-200 mb-6">
-                Transforming healthcare delivery through intelligent AI integration, advanced analytics, and clinical workflow optimization for better patient outcomes.
-              </p>
-             
-            </div>
+                 Vetta is our dedicated talent ecosystem — a premium pool of pre-vetted professionals across AI, Cybersecurity, Data Science, and other deep-tech domains.<nl> For companies, Vetta means faster, risk-free hiring with professionals ready to deliver from day one. For professionals, Vetta is an ecosystem of growth, credibility, and opportunity, backed by Remote CTO’s 25+ years of deep-tech expertise.</nl>
+                <nl>Experience the future of hiring with Vetta.</nl> </p>
+             </div>
             <div className="md:w-1/3 hidden md:block">
               <Activity size={200} className="text-blue-400 opacity-30" />
             </div>
