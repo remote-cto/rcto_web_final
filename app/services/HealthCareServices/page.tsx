@@ -19,40 +19,40 @@ const Page = () => {
 
   const services = [
     {
-      text: "AI Strategy & Planning",
+      text: "Rapid Talent Deployment",
       icon: Brain,
       description:
-        "Development of tailored AI roadmaps and ROI-focused business cases to align technology with clinical priorities and health system goals.",
+        "Access industry-ready professionals who can join and deliver impact at speed.",
     },
     {
-      text: "Clinical AI Integration",
+      text: "Domain-Specialized Pools",
       icon: Activity,
       description:
-        "Seamless embedding of AI tools into existing clinical workflows, ensuring adoption without disrupting the care continuum.",
+        "Pre-vetted experts across AI, Cybersecurity, Data Science, and other deep-tech verticals.",
     },
     {
-      text: "Healthcare Data Governance",
+      text: "Quality Assured Screening",
       icon: Shield,
       description:
-        "Creation of robust frameworks for data quality, privacy, compliance (HIPAA/GDPR), and interoperability across systems.",
+        "Multi-layered evaluation of skills, experience, and cultural fit before onboarding.",
     },
     {
-      text: "Custom Machine Learning Models",
+      text: "Reduced Hiring Risk",
       icon: Cpu,
       description:
-        "Design and deployment of domain-specific AI models for diagnosis, triage, risk scoring, and clinical decision support.",
+        "Replacement guarantees and transparent processes that safeguard your investment.",
     },
     {
-      text: "Predictive & Population Health Analytics",
+      text: "Scalable Workforce Solutions",
       icon: TrendingUp,
       description:
-        "Development of AI-driven insights for proactive care planning, chronic disease management, and hospital resource optimization.",
+        "Flexibly expand teams with pre-qualified professionals for projects or long-term roles.",
     },
     {
-      text: "Medical Imaging AI Solutions",
+      text: "Trusted by Remote CTO",
       icon: Eye,
       description:
-        "Implementation of computer vision models for radiology, pathology, and other diagnostic imaging workflows, enhancing speed and accuracy.",
+        "Backed by 25+ years of global deep-tech leadership and proven client trust.",
     },
   ];
 
@@ -85,7 +85,9 @@ const Page = () => {
               </h1>
               <p className="text-base lg:text-xl text-gray-200 mb-6">
                  Vetta is our dedicated talent ecosystem — a premium pool of pre-vetted professionals across AI, Cybersecurity, Data Science, and other deep-tech domains.</p>
-             </div>
+              <p>For companies, Vetta means faster, risk-free hiring with professionals ready to deliver from day one. For professionals, Vetta is an ecosystem of growth, credibility, and opportunity, backed by Remote CTO’s 25+ years of deep-tech expertise.</p>
+              <p>Experience the future of hiring with Vetta.</p>              
+            </div>
             <div className="md:w-1/3 hidden md:block">
               <Activity size={200} className="text-blue-400 opacity-30" />
             </div>
