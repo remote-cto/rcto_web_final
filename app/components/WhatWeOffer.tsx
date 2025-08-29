@@ -69,8 +69,8 @@ const WhatWeOffer = () => {
     },
     {
       image: "/images/HealthCare.jpg",
-      title: "Healthcare Technology Services",
-      description:"At Remote CTO, we empower healthcare organizations to harness the full potential of Artificial Intelligence to improve clinical efficiency, patient outcomes, and operational decision-making. Our **Healthcare Technology Services** are designed to support hospitals, health systems, and digital health startups in strategically adopting AI with confidence, compliance, and clinical impact. We don’t just implement technology — we align it with medical realities, ethical standards, and measurable value.",
+      title: "Vetta - Talent Management Solutions",
+      description:"At Remote CTO, we don’t just build technology, we build the talent that powers it. Vetta is our dedicated talent ecosystem — a premium pool of pre-vetted professionals across AI, Cybersecurity, Data Science, and other deep-tech domains. For companies, Vetta means faster, risk-free hiring with professionals ready to deliver from day one. For professionals, Vetta is an ecosystem of growth, credibility, and opportunity, backed by Remote CTO’s 25+ years of deep-tech expertise.",
       link: "/services/HealthCareServices",
     },
   ];
