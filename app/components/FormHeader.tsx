@@ -21,17 +21,7 @@ const FormHeader = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     setIsMobileMenuIconCross(!isMobileMenuIconCross);
   };
-  // const [isLoading, setIsLoading] = useState(true);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 1000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-  // if (isLoading) {
-  //   return <LoadingAnimation />;
-  // }
+  
   return (
     <header className="bg-gray-100 ">
       <div className="mx-auto max-w-screen-xl px-4 py-3 sm:px-6 lg:px-8">
@@ -69,7 +59,7 @@ const FormHeader = () => {
                     className="text-black transition relative hover:text-black pb-1 flex items-center
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300 "
+            after:transition-transform after:duration-300 font-bold"
                     href="/"
                   >
                     <HousePlus className="mr-2" />
@@ -81,7 +71,7 @@ const FormHeader = () => {
                     className="text-black transition relative hover:text-black pb-1 flex items-center
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300 "
+            after:transition-transform after:duration-300 font-bold"
                     href="/about"
                   >
                     <BookOpenCheck className="mr-2 " />
@@ -93,7 +83,7 @@ const FormHeader = () => {
                     className="text-black transition relative hover:text-black pb-1 flex items-center
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300 "
+            after:transition-transform after:duration-300 font-bold"
                     href="/services"
                   >
                     <UserCog className="mr-2" />
@@ -105,7 +95,7 @@ const FormHeader = () => {
                     className="text-black transition relative hover:text-black pb-1 flex items-center
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300 "
+            after:transition-transform after:duration-300 font-bold"
                     href="/contact"
                   >
                     <ContactRound className="mr-2" />
@@ -160,7 +150,7 @@ const FormHeader = () => {
                   className="text-black transition relative hover:text-black pb-1 flex items-center
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300"
+            after:transition-transform after:duration-300 font-bold"
                   href="/"
                 >
                   <HousePlus className="mr-2" />
@@ -172,7 +162,7 @@ const FormHeader = () => {
                   className="text-black transition relative hover:text-black pb-1 flex items-center
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300"
+            after:transition-transform after:duration-300 font-bold"
                   href="/about"
                 >
                   <BookOpenCheck className="mr-2 " />
@@ -184,7 +174,7 @@ const FormHeader = () => {
                   className="text-black transition relative hover:text-black pb-1 flex items-center
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300"
+            after:transition-transform after:duration-300 font-bold"
                   href="/services"
                 >
                   <UserCog className="mr-2" />
@@ -196,7 +186,7 @@ const FormHeader = () => {
                   className="text-black transition relative hover:text-black pb-1 flex items-center
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-            after:transition-transform after:duration-300"
+            after:transition-transform after:duration-300 font-bold"
                   href="/contact"
                 >
                   <ContactRound className="mr-2" />

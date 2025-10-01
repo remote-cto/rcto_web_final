@@ -412,6 +412,86 @@ const BannerPage = ({
 
 
 
+
+
+
+
+ <div className="py-8 sm:py-12 md:py-16">
+                <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 md:space-x-12 mb-4">
+                  <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-4/5 sm:w-2/5 mx-auto sm:mx-0"
+                  >
+                    <div className="relative">
+                      <Image
+                        src="/images/Ideathon.png"
+                        alt="Global Ideathon"
+                        width={600}
+                        height={600}
+                        className="rounded-lg object-contain"
+                        style={{ maxWidth: "100%", height: "auto" }}
+                        priority
+                      />
+                    </div>
+                  </motion.div>
+
+                  <div className="w-full sm:w-3/5 text-center sm:text-left px-4 sm:px-0">
+                    <motion.h1
+                      className="text-xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-thin"
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                      <span className="whitespace-nowrap font-['Agrandir-GrandLight'] text-black tracking-wider fon-bold">
+                        The Remote CTO
+                      </span>{" "}
+                      <br />
+                      <span className="relative whitespace-nowrap font-['Agrandir-GrandLight'] text-black bg-clip-text tracking-wider">
+                        Insider Circle
+                        <span className="absolute left-0 bottom-[-2px] w-full h-[2px] bg-yellow-500"></span>
+                      </span>
+                    </motion.h1>
+                    <motion.p
+                      className="text-sm sm:text-base md:text-lg mt-4 text-gray-700 max-w-lg mx-auto sm:mx-0"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                     Early Insights, Expert Guidance & Priority Access to Solutions
+                    </motion.p>
+                    <div className="mt-6 sm:mt-8 flex justify-center sm:justify-start">
+                      <Link href="/ic">
+                        <button
+                          type="button"
+                          className="flex items-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base sm:text-lg px-5 sm:px-6 py-2 sm:py-3 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none shadow-lg hover:shadow-xl transition-all duration-300"
+                        >
+                          <Image
+                            src="/images/Ideathon.png"
+                            alt="icon"
+                            width={24}
+                            height={24}
+                            className="mr-2"
+                          />
+                          Know More
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
               <div className="py-8 sm:py-12 md:py-16">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-6 sm:space-y-0 sm:space-x-8 md:space-x-12 mb-4">
                   <motion.div
