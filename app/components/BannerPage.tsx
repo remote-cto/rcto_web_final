@@ -358,7 +358,7 @@ const BannerPage = ({
                   >
                     <div className="relative">
                       <Image
-                        src="/images/insideCircle.png"
+                        src="/images/InsideCircle.png"
                         alt="Insider Circle"
                         width={900}
                         height={900}
