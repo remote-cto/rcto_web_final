@@ -154,7 +154,7 @@ const FooterForm = () => {
         group-hover:after:scale-x-100
         hover:text-blue-800 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
                 >
-                  +91 966-251-2899
+                  +91 079-45930555
                 </a>
               </div>
 
