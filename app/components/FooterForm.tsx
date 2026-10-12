@@ -311,6 +311,16 @@ const FooterForm = () => {
               </form>
             </div>
           </div>
+
+          {/* Footer */}
+          <footer className="mt-16 pt-8 border-t border-gray-200 text-center">
+            <p className="text-base sm:text-lg font-semibold text-[#061BB0] tracking-wide">
+              Remote CTO - A division of Parallel Ventures
+            </p>
+            <p className="text-sm text-gray-500 mt-2">
+              © {new Date().getFullYear()} Remote CTO. All rights reserved.
+            </p>
+          </footer>
         </div>
       </section>
     </div>

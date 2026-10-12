@@ -137,7 +137,7 @@ const Page = () => {
           </div>
 
           {/* Contact Us Section */}
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-6">
             <CoolMode>
               <button 
                 onClick={handleContactUs}
@@ -148,6 +148,11 @@ const Page = () => {
               </button>
             </CoolMode>
           </div>
+
+          {/* Footer Division Note */}
+          <footer className="text-center pt-6 border-t border-gray-800 text-xs sm:text-sm text-gray-400">
+            Remote CTO - A division of Parallel Ventures
+          </footer>
         </div>
       </div>
     </div>

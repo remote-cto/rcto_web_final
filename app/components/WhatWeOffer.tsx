@@ -55,10 +55,10 @@ const WhatWeOffer = () => {
   const services = [
     {
       image: "/images/DeepTech.jpg",
-      title: "DEEP TECH SOLUTIONS",
+      title: "TECHNOLOGY DUE DILIGENCE",
       description:
-        "At Remote CTO, we bring deep technology expertise across cybersecurity, data management, and AI solutions to help businesses thrive in a digital-first world. Our specialized divisions ensure you get expert guidance and solutions tailored to your unique challenges.",
-      link: "/services/DeepTechSolution",
+        "Remote CTO independently evaluates the technology behind a product or business. We examine architecture, code quality, scalability, security risks and engineering capability to uncover hidden liabilities, assess readiness and help founders, investors and acquirers make informed decisions.",
+      link: "/services/TechnologyDueDiligence",
     },
     {
       image: "/images/FractionalCTO.jpg",
@@ -68,10 +68,11 @@ const WhatWeOffer = () => {
       link: "/services/TechnologyAdvisoryServices",
     },
     {
-      image: "/images/HealthCare.jpg",
-      title: "VETTA - TALENT MANAGEMENT SOLUTIONS",
-      description:"At Remote CTO, we don’t just build technology, we build the talent that powers it. Vetta is our dedicated talent ecosystem — a premium pool of pre-vetted professionals across AI, Cybersecurity, Data Science, and other deep-tech domains.   For companies, Vetta means faster, risk-free hiring with professionals ready to deliver from day one.   For professionals, Vetta is an ecosystem of growth, credibility, and opportunity, backed by Remote CTO’s 25+ years of deep-tech expertise.",
-      link: "/services/HealthCareServices",
+      image: "/images/Emerging.jpg",
+      title: "PRODUCT DISCOVERY & TECHNOLOGY DESIGN",
+      description:
+        "Turn an idea into a product worth building. Remote CTO helps businesses shape technology product ideas into clear, feasible development plans. We explore the problem, define the essential capabilities, assess technology options and design the architecture—giving your team a stronger foundation before development begins.",
+      link: "/services/ProductDiscovery",
     },
   ];
 
@@ -133,7 +134,7 @@ const WhatWeOffer = () => {
                         whileTap={{ scale: 0.95 }}
                         className="flex items-center justify-center bg-[#061BB0] text-white py-2 rounded-lg hover:orange-400 transition-colors duration-300 ease-in-out"
                       >
-                        <span className="mr-2">Learn More</span>
+                        <span className="mr-2">Know More</span>
 
                         <motion.span
                           initial={{ x: 0 }}

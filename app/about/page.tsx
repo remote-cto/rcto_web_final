@@ -2,6 +2,7 @@
 import React from "react";
 import { CoolMode } from "../../components/ui/cool-mode";
 import RemoteCTOWay from "../components/RemoteCTOWay";
+import FooterForm from "../components/FooterForm";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -204,6 +205,7 @@ const Page = () => {
       <div className="flex-1">
         <RemoteCTOWay />
       </div>
+      <FooterForm />
     </div>
   );
 };

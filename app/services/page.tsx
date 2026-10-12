@@ -3,6 +3,7 @@ import React from "react";
 import { CoolMode } from "../../components/ui/cool-mode";
 import { useState } from "react";
 import WhatWeOffer from "../components/WhatWeOffer";
+import FooterForm from "../components/FooterForm";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -205,6 +206,7 @@ const Page = () => {
         </header>
       </div>
       <WhatWeOffer />
+      <FooterForm />
     </>
   );
 };
