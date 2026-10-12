@@ -33,29 +33,53 @@ const Navbar = () => {
     return <LoadingAnimation />;
   }
 
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    setIsMobileMenuIconCross(false);
+
+    if (typeof window !== "undefined") {
+      if (window.location.pathname === "/") {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, "", `/#${sectionId}`);
+          return;
+        }
+      }
+      window.location.href = `/#${sectionId}`;
+    }
+  };
+
   return (
     <>
-      <header className="bg-gray-100 ">
-        <div className="mx-auto max-w-screen-xl px-4 py-3 sm:px-6 lg:px-8">
-          <div className="flex h-30 lg:h-27 items-center justify-between">
+      <header className="sticky top-0 z-50 bg-gray-100/95 backdrop-blur-md shadow-sm border-b border-gray-200/50 transition-all duration-300">
+        <div className="mx-auto max-w-screen-xl px-4 py-2 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <motion.div
-                className="block text-teal-600  items-center"
+                className="block text-teal-600 items-center"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link href="/" className="flex items-center">
+                <a
+                  href="/#home"
+                  onClick={(e) => handleNavClick(e, "home")}
+                  className="flex items-center cursor-pointer"
+                >
                   <Image
                     src="/images/RCTO.png"
-                    width={220}
-                    height={220}
-                    alt="logo image"
-                    className="mr-2m max-w-[130px] lg:max-w-[220px]"
+                    width={140}
+                    height={140}
+                    alt="Remote CTO logo"
+                    className="h-auto max-w-[100px] sm:max-w-[120px] lg:max-w-[140px] object-contain"
+                    priority
                   />
-                  
-                  
-                </Link>
+                </a>
               </motion.div>
             </div>
 
@@ -69,52 +93,56 @@ const Navbar = () => {
               >
                 <ul className="flex items-center gap-6 text-sm">
                   <li>
-                    <Link
-                      className="text-black transition relative hover:text-black pb-1 flex items-center
+                    <a
+                      className="text-black transition relative hover:text-black pb-1 flex items-center cursor-pointer
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
-                after:transition-transform after:duration-300 "
-                      href="/"
+                after:transition-transform after:duration-300"
+                      href="/#home"
+                      onClick={(e) => handleNavClick(e, "home")}
                     >
                       <HousePlus className="mr-2" />
                       HOME
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
-                      className="text-black transition relative hover:text-black pb-1 flex items-center
+                    <a
+                      className="text-black transition relative hover:text-black pb-1 flex items-center cursor-pointer
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                      href="/about"
+                      href="/#about"
+                      onClick={(e) => handleNavClick(e, "about")}
                     >
                       <BookOpenCheck className="mr-2 " />
                       ABOUT US
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
-                      className="text-black transition relative hover:text-black pb-1 flex items-center
+                    <a
+                      className="text-black transition relative hover:text-black pb-1 flex items-center cursor-pointer
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                      href="/services"
+                      href="/#services"
+                      onClick={(e) => handleNavClick(e, "services")}
                     >
                       <UserCog className="mr-2" />
                       SERVICES
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
-                      className="text-black transition relative hover:text-black pb-1 flex items-center
+                    <a
+                      className="text-black transition relative hover:text-black pb-1 flex items-center cursor-pointer
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                      href="/contact"
+                      href="/#contact"
+                      onClick={(e) => handleNavClick(e, "contact")}
                     >
                       <ContactRound className="mr-2" />
                       CONTACT US
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </motion.nav>
@@ -158,54 +186,58 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <ul className="flex  flex-col items-center gap-2 mt-5 text-sm ">
+              <ul className="flex flex-col items-center gap-2 mt-5 text-sm">
                 <li>
-                  <Link
-                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                  <a
+                    className="text-black transition relative hover:text-black pb-1 flex items-center cursor-pointer
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                    href="/"
+                    href="/#home"
+                    onClick={(e) => handleNavClick(e, "home")}
                   >
                     <HousePlus className="mr-2" />
                     HOME
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                  <a
+                    className="text-black transition relative hover:text-black pb-1 flex items-center cursor-pointer
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                    href="/about"
+                    href="/#about"
+                    onClick={(e) => handleNavClick(e, "about")}
                   >
                     <BookOpenCheck className="mr-2 " />
                     ABOUT US
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                  <a
+                    className="text-black transition relative hover:text-black pb-1 flex items-center cursor-pointer
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                    href="/services"
+                    href="/#services"
+                    onClick={(e) => handleNavClick(e, "services")}
                   >
                     <UserCog className="mr-2" />
                     SERVICES
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    className="text-black transition relative hover:text-black pb-1 flex items-center
+                  <a
+                    className="text-black transition relative hover:text-black pb-1 flex items-center cursor-pointer
                 after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
                 after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
                 after:transition-transform after:duration-300"
-                    href="/contact"
+                    href="/#contact"
+                    onClick={(e) => handleNavClick(e, "contact")}
                   >
                     <ContactRound className="mr-2" />
                     CONTACT US
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </motion.nav>

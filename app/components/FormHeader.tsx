@@ -23,12 +23,12 @@ const FormHeader = () => {
   };
   
   return (
-    <header className="bg-gray-100 ">
-      <div className="mx-auto max-w-screen-xl px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex h-30 lg:h-27 items-center justify-between">
+    <header className="sticky top-0 z-50 bg-gray-100/95 backdrop-blur-md shadow-sm border-b border-gray-200/50 transition-all duration-300">
+      <div className="mx-auto max-w-screen-xl px-4 py-2 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <motion.div
-              className="block text-teal-600  items-center"
+              className="block text-teal-600 items-center"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -36,10 +36,11 @@ const FormHeader = () => {
               <Link href="/" className="flex items-center">
                 <Image
                   src="/images/RCTO.png"
-                  width={180}
-                  height={180}
-                  alt="logo image"
-                  className="max-w-[120px] lg:max-w-[180px] mr-2"
+                  width={140}
+                  height={140}
+                  alt="Remote CTO logo"
+                  className="h-auto max-w-[100px] sm:max-w-[120px] lg:max-w-[140px] object-contain mr-2"
+                  priority
                 />
               </Link>
             </motion.div>
@@ -60,7 +61,7 @@ const FormHeader = () => {
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 font-bold"
-                    href="/"
+                    href="/#home"
                   >
                     <HousePlus className="mr-2" />
                     HOME
@@ -72,7 +73,7 @@ const FormHeader = () => {
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 font-bold"
-                    href="/about"
+                    href="/#about"
                   >
                     <BookOpenCheck className="mr-2 " />
                     ABOUT US
@@ -84,7 +85,7 @@ const FormHeader = () => {
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 font-bold"
-                    href="/services"
+                    href="/#services"
                   >
                     <UserCog className="mr-2" />
                     SERVICES
@@ -96,7 +97,7 @@ const FormHeader = () => {
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 font-bold"
-                    href="/contact"
+                    href="/#contact"
                   >
                     <ContactRound className="mr-2" />
                     CONTACT US
@@ -151,7 +152,7 @@ const FormHeader = () => {
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 font-bold"
-                  href="/"
+                  href="/#home"
                 >
                   <HousePlus className="mr-2" />
                   HOME
@@ -163,7 +164,7 @@ const FormHeader = () => {
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 font-bold"
-                  href="/about"
+                  href="/#about"
                 >
                   <BookOpenCheck className="mr-2 " />
                   ABOUT US
@@ -175,7 +176,7 @@ const FormHeader = () => {
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 font-bold"
-                  href="/services"
+                  href="/#services"
                 >
                   <UserCog className="mr-2" />
                   SERVICES
@@ -187,7 +188,7 @@ const FormHeader = () => {
             after:absolute after:content-[''] after:w-full after:h-1 after:bg-black 
             after:left-0 after:bottom-[-2px] after:scale-x-0 hover:after:scale-x-100 
             after:transition-transform after:duration-300 font-bold"
-                  href="/contact"
+                  href="/#contact"
                 >
                   <ContactRound className="mr-2" />
                   CONTACT US

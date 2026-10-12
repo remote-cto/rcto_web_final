@@ -6,7 +6,6 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CoolMode } from "../../components/ui/cool-mode";
 import Image from "next/image";
-import Navbar from "./Navbar";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -343,7 +342,6 @@ const BannerPage = ({
     <div className="font-mono overflow-hidden relative">
       <section className="bg-gray-100 relative z-10">
         <ParticleBackground />
-        <Navbar />
 
         <div className="mx-auto lg:min-h-screen flex items-center">
           <div className="mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
