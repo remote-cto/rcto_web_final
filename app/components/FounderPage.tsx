@@ -45,33 +45,6 @@ const FounderPage = () => {
               </p>
 
               <p>
-                He is the founder of{" "}
-                <Link
-                  href="https://www.trcelabs.com"
-                  target="_blank"
-                  className="hover:underline text-blue-700 font-medium"
-                >
-                  Trcelabs
-                </Link>{" "}
-                (Cyber Security & Digital Forensics),{" "}
-                <Link
-                  href="https://www.xworks.live"
-                  target="_blank"
-                  className="hover:underline text-blue-700 font-medium"
-                >
-                  XWORKS
-                </Link>{" "}
-                (Emerging Tech Skilling), and{" "}
-                <Link 
-                 href="https://www.aiofy.co/"
-                  target="_blank"
-                  className="hover:underline text-blue-700 font-medium"
-                >
-                Aiofy</Link> (AI
-                Consulting & Agentic AI Solutions).
-              </p>
-
-              <p>
                 Nitesh is also an author of the book{" "}
                 <span className="italic">sQope</span> on Quantum Computing,
                 available on{" "}
